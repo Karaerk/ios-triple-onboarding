@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1056349093466-14gctdvm0isd33qeps1fd4btb4snfb42.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1056349093466-14gctdvm0isd33qeps1fd4btb4snfb42</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDv7VUHZHUwokZOxr3d4hdc2TmJrv09vkk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1056349093466</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wearetriple.tripleonboarding</string>
+	<key>PROJECT_ID</key>
+	<string>tripleonboarding</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tripleonboarding.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1056349093466:ios:ed48a6e83161b17857e263</string>
+	<key>DATABASE_URL</key>
+	<string>https://tripleonboarding.firebaseio.com</string>
+</dict>
+</plist>
