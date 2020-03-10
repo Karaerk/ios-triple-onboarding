@@ -19,7 +19,10 @@ class ViewController: UIViewController {
     var myref: DatabaseReference!
     
     var uiTitle: String!
+    var uiContent: [String] = []
+    
     var popUpTitle: String!
+    var popUpContent: String!
     
     
     
@@ -36,28 +39,34 @@ class ViewController: UIViewController {
         ref = Database.database().reference()
         myref = ref.child("info")
         var counter = 0
-        
+                
         myref.queryOrdered(byChild: "title").queryLimited(toLast: 5).observe(.childAdded) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }
             
             self.uiTitle = firebaseResponse["title"] as? String
-            //            let title = firebaseResponse["title"] as! String
-            
             self.titleButtons[counter].setTitle(self.uiTitle, for: .normal)
             counter += 1
+            
+            //Puts everything from info/content in Array "uiContent"
+            self.uiContent.append((firebaseResponse["content"] as? String)!)
         }
+        
     }
     
     @IBAction func infoBtn(_ sender: UIButton) {
         self.popUpTitle = sender.title(for: .normal)
+
+        //array uiContent is assigned to popUpContent
+        self.popUpContent = uiContent[sender.tag]
         performSegue(withIdentifier: "Identifier", sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! PopUpViewController
-        vc.titleLbl = self.popUpTitle
+        let popUpVC = segue.destination as! PopUpViewController
+        popUpVC.titleLbl = self.popUpTitle
+        popUpVC.contentLbl = self.popUpContent
     }
     
 }

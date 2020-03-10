@@ -10,13 +10,16 @@ import UIKit
 
 class PopUpViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     
     var titleLbl: String!
+    var contentLbl: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = titleLbl
+        
+//        titleLabel.text = titleLbl
+//        contentLabel.text = contentLbl
         // Do any additional setup after loading the view.
     }
 }

@@ -118,6 +118,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF8EC20B2410FD6500EC86F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
+				AFDC1DD0240E98C800CC0CDF /* ViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AF8EC20C24113EE100EC86F9 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC1DD2240E98C800CC0CDF /* Main.storyboard */,
+				AFDC1DD7240E98C900CC0CDF /* LaunchScreen.storyboard */,
+			);
+			name = Story;
+			sourceTree = "<group>";
+		};
 		AFDC1DC0240E98C800CC0CDF = {
 			isa = PBXGroup;
 			children = (
@@ -143,15 +161,13 @@
 		AFDC1DCB240E98C800CC0CDF /* TripleOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				AF8EC20C24113EE100EC86F9 /* Story */,
+				AF8EC20B2410FD6500EC86F9 /* View */,
 				AFDC1DFC240E992300CC0CDF /* GoogleService-Info.plist */,
 				AFDC1DCC240E98C800CC0CDF /* AppDelegate.swift */,
 				AFDC1DCE240E98C800CC0CDF /* SceneDelegate.swift */,
-				AFDC1DD0240E98C800CC0CDF /* ViewController.swift */,
-				AFDC1DD2240E98C800CC0CDF /* Main.storyboard */,
 				AFDC1DD5240E98C900CC0CDF /* Assets.xcassets */,
-				AFDC1DD7240E98C900CC0CDF /* LaunchScreen.storyboard */,
 				AFDC1DDA240E98C900CC0CDF /* Info.plist */,
-				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
 			);
 			path = TripleOnboarding;
 			sourceTree = "<group>";
