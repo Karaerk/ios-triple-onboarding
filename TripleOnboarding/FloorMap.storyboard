@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b7z-if-ONe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Floor Map View Controller-->
+        <scene sceneID="vqU-Va-Xby">
+            <objects>
+                <viewController storyboardIdentifier="FloorMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b7z-if-ONe" customClass="FloorMapViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8j-5A-ekk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" maximumZoomScale="15" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-AO-W50">
+                                <rect key="frame" x="-11" y="44" width="425" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lye-jq-myW">
+                                        <rect key="frame" x="20" y="20" width="2050" height="1166"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lye-jq-myW" firstAttribute="top" secondItem="I3t-AO-W50" secondAttribute="top" constant="20" symbolic="YES" id="Ff3-CS-tUv"/>
+                                    <constraint firstItem="lye-jq-myW" firstAttribute="leading" secondItem="I3t-AO-W50" secondAttribute="leading" constant="20" symbolic="YES" id="b1W-q0-Zx4"/>
+                                    <constraint firstAttribute="trailing" secondItem="lye-jq-myW" secondAttribute="trailing" constant="20" symbolic="YES" id="meq-BB-Rbi"/>
+                                    <constraint firstAttribute="bottom" secondItem="lye-jq-myW" secondAttribute="bottom" constant="20" symbolic="YES" id="myq-gx-Sln"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="F9i-pk-8Ep"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Qp9-1g-KZO"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-aY-jeG">
+                                <rect key="frame" x="10" y="696" width="196" height="166"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V5u-Je-Ruv">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="First floor">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstFloor:" destination="b7z-if-ONe" eventType="touchUpInside" id="mqE-MX-gM8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kyT-Ov-Zy1">
+                                        <rect key="frame" x="0.0" y="71" width="196" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Second floor">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondFloor:" destination="b7z-if-ONe" eventType="touchUpInside" id="vMm-8a-iw4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yvv-by-w76">
+                                        <rect key="frame" x="0.0" y="136" width="196" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Third floor">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="thirdFloor:" destination="b7z-if-ONe" eventType="touchUpInside" id="mjk-eu-nXL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Mn-JK-KvD" firstAttribute="bottom" secondItem="9dY-aY-jeG" secondAttribute="bottom" id="7lR-3g-sZq"/>
+                            <constraint firstItem="5Mn-JK-KvD" firstAttribute="bottom" secondItem="I3t-AO-W50" secondAttribute="bottom" id="Jw1-ps-m3b"/>
+                            <constraint firstItem="5Mn-JK-KvD" firstAttribute="trailing" secondItem="I3t-AO-W50" secondAttribute="trailing" id="TCL-xA-TAE"/>
+                            <constraint firstItem="9dY-aY-jeG" firstAttribute="leading" secondItem="5Mn-JK-KvD" secondAttribute="leading" constant="10" id="kLZ-0m-4Fk"/>
+                            <constraint firstItem="I3t-AO-W50" firstAttribute="top" secondItem="S8j-5A-ekk" secondAttribute="topMargin" id="kZc-OH-nSh"/>
+                            <constraint firstItem="I3t-AO-W50" firstAttribute="leading" secondItem="5Mn-JK-KvD" secondAttribute="leading" id="zMG-9E-93R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Mn-JK-KvD"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lye-jq-myW" id="8mU-au-PXd"/>
+                        <outlet property="scroll" destination="I3t-AO-W50" id="twf-xW-RQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZv-cV-NZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="2050" height="1166"/>
+    </resources>
+</document>
