@@ -18,8 +18,8 @@ class PopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        titleLabel.text = titleLbl
-//        contentLabel.text = contentLbl
+        titleLabel.text = titleLbl
+        contentLabel.text = contentLbl
         // Do any additional setup after loading the view.
     }
 }
