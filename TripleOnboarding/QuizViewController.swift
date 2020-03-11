@@ -22,16 +22,18 @@ class QuizViewController: UIViewController {
     
     var quesionText: String!
     
+    let haptic = UINotificationFeedbackGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateQuiz()
-        
     }
     
     func updateQuiz(){
+        resetUI()
+        //Database for Question title
         ref = Database.database().reference()
-        
         let questions = Database.database().reference().child("quiz")
         let singleQuestion = questions.child("\(questionCounter)")
         let answers = singleQuestion.child("answer")
@@ -42,7 +44,7 @@ class QuizViewController: UIViewController {
             }
             self.questionLabel.text = (firebaseResponse["question"]) as? String
         }
-        
+        //For question answer
         for i in 0..<answerBtns.count {
             answers.child("\(i)").queryOrdered(byChild: "content").observeSingleEvent(of: .value) { (snap) in
                 guard let content = snap.value as? [String:Any] else{
@@ -54,17 +56,28 @@ class QuizViewController: UIViewController {
             }
         }
     }
-
-    @IBAction func answerBtn(_ sender: UIButton) {
-        if sender.tag == 1 {
-            questionCounter += 1
-            updateQuiz()
-            print(questionCounter)
-        } else {
-            print("incorrect")
+    
+    func resetUI(){
+        for i in 0..<answerBtns.count{
+            answerBtns[i].setTitle("", for: .normal)
+            answerBtns[i].backgroundColor = UIColor.clear
         }
     }
-}
+        
+        @IBAction func answerBtn(_ sender: UIButton) {
+            if sender.tag == 1 {
+                haptic.notificationOccurred(.success)
+                sender.backgroundColor = UIColor.green
+                questionCounter += 1
+                updateQuiz()
+                
+            } else {
+                sender.backgroundColor = UIColor.red
+                haptic.notificationOccurred(.error)
+            }
+        }
+    }
+
 
 
 

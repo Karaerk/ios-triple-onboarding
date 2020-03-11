@@ -71,13 +71,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-0Z-gj5">
-                                        <rect key="frame" x="0.0" y="375" width="414.00000000000006" height="80"/>
+                                        <rect key="frame" x="0.0" y="375" width="414" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="bmy-wi-dZO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Antwoord A" backgroundImage="Rectangle">
+                                        <state key="normal" title="A" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -85,13 +85,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rt-BF-RuV">
-                                        <rect key="frame" x="0.0" y="465" width="414.00000000000006" height="80"/>
+                                        <rect key="frame" x="0.0" y="465" width="414" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="26x-BP-hhp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Antwoord B" backgroundImage="Rectangle">
+                                        <state key="normal" title="B" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -99,13 +99,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFs-Pl-fIu">
-                                        <rect key="frame" x="0.0" y="555" width="414.00000000000006" height="80"/>
+                                        <rect key="frame" x="0.0" y="555" width="414" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="X7A-2d-tad"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Antwoord C" backgroundImage="Rectangle">
+                                        <state key="normal" title="C" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -113,13 +113,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sul-rM-f7r">
-                                        <rect key="frame" x="0.0" y="645" width="414.00000000000006" height="80"/>
+                                        <rect key="frame" x="0.0" y="645" width="414" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Itx-u2-QTA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Antwoord D" backgroundImage="Rectangle">
+                                        <state key="normal" title="D" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
