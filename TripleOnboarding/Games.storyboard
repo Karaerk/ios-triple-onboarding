@@ -10,7 +10,6 @@
         <!--Games-->
         <scene sceneID="J63-iX-Kks">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0EZ-0L-mVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="GameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpf-Wm-7WU" customClass="GameController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hau-kU-by1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -50,6 +49,7 @@
                     <navigationItem key="navigationItem" title="Games" id="uo0-sG-6c6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EZ-0L-mVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018.840579710145" y="168.75"/>
         </scene>
@@ -71,7 +71,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-0Z-gj5">
-                                        <rect key="frame" x="0.0" y="375" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="375" width="414.00000000000006" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="bmy-wi-dZO"/>
                                         </constraints>
@@ -81,11 +81,11 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="button:" destination="zuG-vP-irD" eventType="touchUpInside" id="ipA-xZ-E2u"/>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="Dn2-sW-vL7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rt-BF-RuV">
-                                        <rect key="frame" x="0.0" y="465" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="465" width="414.00000000000006" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="26x-BP-hhp"/>
                                         </constraints>
@@ -94,9 +94,12 @@
                                         <state key="normal" title="Antwoord B" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="CbY-g4-fss"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFs-Pl-fIu">
-                                        <rect key="frame" x="0.0" y="555" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="555" width="414.00000000000006" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="X7A-2d-tad"/>
                                         </constraints>
@@ -105,9 +108,12 @@
                                         <state key="normal" title="Antwoord C" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="s9b-Dg-5My"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sul-rM-f7r">
-                                        <rect key="frame" x="0.0" y="645" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="645" width="414.00000000000006" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Itx-u2-QTA"/>
                                         </constraints>
@@ -116,6 +122,9 @@
                                         <state key="normal" title="Antwoord D" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="Jgh-61-1Jp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

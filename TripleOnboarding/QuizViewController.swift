@@ -49,33 +49,40 @@ class QuizViewController: UIViewController {
                     return
                 }
                 self.answerBtns[i].setTitle(content["content"] as? String, for: .normal)
-                //self.answerBtns[i].tag(content["is_correct"]) as? Int
+                let isCorrect = content["is_correct"] as! NSInteger
+                self.answerBtns[i].tag = isCorrect
             }
         }
     }
-    
-    
-    //            ref.child("quiz").child("\(questionCounter)").observeSingleEvent(of: .value) { (snapshot) in
-    //                guard let firebaseResponse = snapshot.value as? [String:Any] else{
-    //                    return
-    //                }
-    //                self.questionLabel.text = (firebaseResponse["question"]) as? String
-    //                let arrayQuestion = firebaseResponse["answer"] as Any
-    //                print(firebaseResponse["answers"] as Any)
-    //
-    //                //print(arrayQuestion["content"])
-    //
-    //
-    //    //            for i in 0..<arrayQuestion.count {
-    //    //                self.answerBtns[i].setTitle(arrayQuestion[i] as? String, for: .normal)
-    //    //            }
-    //            }
-    //    }
-    
-    
-    @IBAction func button(_ sender: Any) {
-        questionCounter += 1
-        updateQuiz()
+
+    @IBAction func answerBtn(_ sender: UIButton) {
+        if sender.tag == 1 {
+            questionCounter += 1
+            updateQuiz()
+            print(questionCounter)
+        } else {
+            print("incorrect")
+        }
     }
 }
 
+
+
+
+
+//            ref.child("quiz").child("\(questionCounter)").observeSingleEvent(of: .value) { (snapshot) in
+//                guard let firebaseResponse = snapshot.value as? [String:Any] else{
+//                    return
+//                }
+//                self.questionLabel.text = (firebaseResponse["question"]) as? String
+//                let arrayQuestion = firebaseResponse["answer"] as Any
+//                print(firebaseResponse["answers"] as Any)
+//
+//                //print(arrayQuestion["content"])
+//
+//
+//    //            for i in 0..<arrayQuestion.count {
+//    //                self.answerBtns[i].setTitle(arrayQuestion[i] as? String, for: .normal)
+//    //            }
+//            }
+//    }
