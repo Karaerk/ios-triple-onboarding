@@ -99,7 +99,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up" catalog="system" id="DYq-pO-ASk"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" id="DYq-pO-ASk"/>
                     <connections>
                         <outlet property="UITitle" destination="t4e-BZ-s11" id="NEJ-Nc-CYE"/>
                         <outletCollection property="titleButtons" destination="wmY-5g-YqY" collectionClass="NSMutableArray" id="acY-bm-yMP"/>
@@ -197,7 +197,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="info" catalog="system" width="46" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="i4L-HW-IKN"/>
