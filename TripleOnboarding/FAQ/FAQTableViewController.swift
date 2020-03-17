@@ -51,7 +51,7 @@ class FAQTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
         cell.textLabel?.text = questions[indexPath.row]
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.font = UIFont.systemFont(ofSize: fontSize)

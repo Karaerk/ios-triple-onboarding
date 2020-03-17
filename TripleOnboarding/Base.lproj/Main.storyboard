@@ -190,7 +190,7 @@
         <scene sceneID="Mjx-Tu-bVe">
             <objects>
                 <viewControllerPlaceholder storyboardName="FAQ" id="Xa0-ZT-56C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4jm-aI-vp5"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="questionmark" catalog="system" id="4jm-aI-vp5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vt-tu-AL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +209,7 @@
     </scenes>
     <resources>
         <image name="info" catalog="system" width="46" height="64"/>
+        <image name="questionmark" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WoR-Up-gQt"/>

@@ -2,7 +2,7 @@
 //  FAQpopupViewController.swift
 //  TripleOnboarding
 //
-//  Created by hva_1 on 17/03/2020.
+//  Created by Costa on 17/03/2020.
 //  Copyright © 2020 Triple. All rights reserved.
 //
 
