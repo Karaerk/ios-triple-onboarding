@@ -10,7 +10,7 @@
         <!--Games-->
         <scene sceneID="J63-iX-Kks">
             <objects>
-                <viewController storyboardIdentifier="GameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpf-Wm-7WU" customClass="GameController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpf-Wm-7WU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hau-kU-by1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

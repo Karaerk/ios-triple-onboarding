@@ -46,7 +46,7 @@ class QuizViewController: UIViewController {
         }
         //For question answer
         for i in 0..<answerBtns.count {
-            answers.child("\(i)").queryOrdered(byChild: "content").observeSingleEvent(of: .value) { (snap) in
+            answers.child("\(i)").observeSingleEvent(of: .value) { (snap) in
                 guard let content = snap.value as? [String:Any] else{
                     return
                 }
