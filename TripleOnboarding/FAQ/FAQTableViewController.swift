@@ -14,8 +14,8 @@ class FAQTableViewController: UITableViewController {
     var ref: DatabaseReference!
     var myref: DatabaseReference!
     
-    var categories : [String] = []
-    var content : [String] = []
+    var questions : [String] = []
+    var answers : [String] = []
     
     var popUpTitle: String!
     var popUpContent: String!
@@ -39,20 +39,20 @@ class FAQTableViewController: UITableViewController {
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }
-            //Puts everything from info/content in Array "uiContent"
-            self.categories.append((firebaseResponse["question"] as? String)!)
-            self.content.append((firebaseResponse["content"] as? String)!)
+            
+            self.questions.append((firebaseResponse["question"] as? String)!)
+            self.answers.append((firebaseResponse["answer"] as? String)!)
             self.tableView.reloadData()
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return questions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row]
+        cell.textLabel?.text = questions[indexPath.row]
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.font = UIFont.systemFont(ofSize: fontSize)
         cell.textLabel?.textColor = UIColor.white
@@ -65,8 +65,8 @@ class FAQTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        popUpContent = content[indexPath.row]
-        popUpTitle = categories[indexPath.row]
+        popUpContent = answers[indexPath.row]
+        popUpTitle = questions[indexPath.row]
         performSegue(withIdentifier: "PopUp", sender: self)
     }
     
