@@ -51,7 +51,7 @@ class QuizViewController: UIViewController {
                     return
                 }
                 self.answerBtns[i].setTitle(content["content"] as? String, for: .normal)
-                let isCorrect = content["is_correct"] as! NSInteger
+                let isCorrect = content["correct"] as! NSInteger
                 self.answerBtns[i].tag = isCorrect
             }
         }
