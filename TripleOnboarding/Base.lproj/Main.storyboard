@@ -180,21 +180,13 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="diY-FW-fPt"/>
                         <segue destination="ezO-SP-Hp5" kind="relationship" relationship="viewControllers" id="mDr-lA-ON5"/>
                         <segue destination="Xa0-ZT-56C" kind="relationship" relationship="viewControllers" id="rhx-V2-qHj"/>
+                        <segue destination="MfV-We-2yy" kind="relationship" relationship="viewControllers" id="WG6-DJ-4Zx"/>
+                        <segue destination="TFs-1P-1Ec" kind="relationship" relationship="viewControllers" id="BY0-9f-oya"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwy-GU-0gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="138.17733990147784"/>
-        </scene>
-        <!--FAQ-->
-        <scene sceneID="Mjx-Tu-bVe">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FAQ" id="Xa0-ZT-56C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="questionmark" catalog="system" id="4jm-aI-vp5"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vt-tu-AL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="886" y="567"/>
         </scene>
         <!--FloorMap-->
         <scene sceneID="pxj-IK-Ivl">
@@ -209,9 +201,8 @@
     </scenes>
     <resources>
         <image name="info" catalog="system" width="46" height="64"/>
-        <image name="questionmark" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WoR-Up-gQt"/>
+        <segue reference="i4L-HW-IKN"/>
     </inferredMetricsTieBreakers>
 </document>
