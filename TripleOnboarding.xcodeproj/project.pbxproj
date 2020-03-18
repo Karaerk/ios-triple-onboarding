@@ -14,6 +14,9 @@
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
 		AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A70472420CF9800BAD193 /* FactsController.swift */; };
 		AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */; };
+		AF5BE1D0242226AE00659120 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5BE1CF242226AE00659120 /* FAQ.storyboard */; };
+		AF5BE1D6242226D500659120 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BE1D4242226D500659120 /* FAQTableViewController.swift */; };
+		AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */; };
 		AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF823B3A240FF29100650AB0 /* PopUpViewController.swift */; };
 		AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF87FC4224193F450064A7A9 /* Facts.storyboard */; };
 		AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD8DD1924178C1500F50D07 /* Games.storyboard */; };
@@ -59,6 +62,9 @@
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		AF3A70472420CF9800BAD193 /* FactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsController.swift; sourceTree = "<group>"; };
 		AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPopUpController.swift; sourceTree = "<group>"; };
+		AF5BE1CF242226AE00659120 /* FAQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
+		AF5BE1D4242226D500659120 /* FAQTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
+		AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQpopupViewController.swift; sourceTree = "<group>"; };
 		AF823B3A240FF29100650AB0 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		AF87FC4224193F450064A7A9 /* Facts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Facts.storyboard; sourceTree = "<group>"; };
 		AFD8DD1924178C1500F50D07 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
@@ -148,12 +154,30 @@
 			name = Facts;
 			sourceTree = "<group>";
 		};
+		AF5BE1D3242226C700659120 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */,
+				AF5BE1D4242226D500659120 /* FAQTableViewController.swift */,
+			);
+			name = FAQ;
+			sourceTree = "<group>";
+		};
+		AF5BE1D8242227FB00659120 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
+				AFDC1DD0240E98C800CC0CDF /* ViewController.swift */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF5BE1D8242227FB00659120 /* Info */,
+				AF5BE1D3242226C700659120 /* FAQ */,
 				AF3A704D2420DE4400BAD193 /* Facts */,
-				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
-				AFDC1DD0240E98C800CC0CDF /* ViewController.swift */,
 				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
 				9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */,
 			);
@@ -168,6 +192,7 @@
 				AFD8DD1924178C1500F50D07 /* Games.storyboard */,
 				9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */,
 				AF87FC4224193F450064A7A9 /* Facts.storyboard */,
+				AF5BE1CF242226AE00659120 /* FAQ.storyboard */,
 			);
 			name = Story;
 			sourceTree = "<group>";
@@ -341,6 +366,7 @@
 				AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */,
 				AFDC1DFD240E992300CC0CDF /* GoogleService-Info.plist in Resources */,
 				AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */,
+				AF5BE1D0242226AE00659120 /* FAQ.storyboard in Resources */,
 				AFDC1DD6240E98C900CC0CDF /* Assets.xcassets in Resources */,
 				AFDC1DD4240E98C800CC0CDF /* Main.storyboard in Resources */,
 			);
@@ -474,6 +500,8 @@
 				AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
+				AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */,
+				AF5BE1D6242226D500659120 /* FAQTableViewController.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
 				AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */,
