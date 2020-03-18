@@ -52,7 +52,6 @@ class ViewController: UIViewController {
             //Puts everything from info/content in Array "uiContent"
             self.uiContent.append((firebaseResponse["content"] as? String)!)
         }
-        
     }
     
     @IBAction func infoBtn(_ sender: UIButton) {
