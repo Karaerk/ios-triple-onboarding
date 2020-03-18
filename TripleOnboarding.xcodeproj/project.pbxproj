@@ -10,8 +10,12 @@
 		29A49DA0D0257AD497A7132C /* Pods_TripleOnboarding_TripleOnboardingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418A5B863088D446CB11F3E6 /* Pods_TripleOnboarding_TripleOnboardingUITests.framework */; };
 		8965A13B435434C5AE4B8DAD /* Pods_TripleOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2E7183AB70B9E0D86B450 /* Pods_TripleOnboarding.framework */; };
 		9081C84B2A7A6982670B2F7E /* Pods_TripleOnboardingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4009EF36B353A5F87E5A01E2 /* Pods_TripleOnboardingTests.framework */; };
+		9B4FD01024210AFD00783B0F /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FD00F24210AFD00783B0F /* FAQTableViewController.swift */; };
+		9B4FD01224210B3900783B0F /* FAQpopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FD01124210B3900783B0F /* FAQpopupViewController.swift */; };
+		9B4FD01424210EB800783B0F /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4FD01324210EB800783B0F /* FAQ.storyboard */; };
 		9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */; };
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
+		9BB05ACE24191E8700BBB0C6 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05ACD24191E8700BBB0C6 /* FAQViewController.swift */; };
 		AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A70472420CF9800BAD193 /* FactsController.swift */; };
 		AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */; };
 		AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF823B3A240FF29100650AB0 /* PopUpViewController.swift */; };
@@ -55,8 +59,12 @@
 		8D1357D0DE306E97FDB513C0 /* Pods-TripleOnboarding-TripleOnboardingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding-TripleOnboardingUITests.debug.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding-TripleOnboardingUITests/Pods-TripleOnboarding-TripleOnboardingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		969AFF0ED7E38F9A5D3FF8EB /* Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding-TripleOnboardingUITests/Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97EBAEE9BB6B68FA78BEE3D9 /* Pods-TripleOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding.release.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding/Pods-TripleOnboarding.release.xcconfig"; sourceTree = "<group>"; };
+		9B4FD00F24210AFD00783B0F /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
+		9B4FD01124210B3900783B0F /* FAQpopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQpopupViewController.swift; sourceTree = "<group>"; };
+		9B4FD01324210EB800783B0F /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
+		9BB05ACD24191E8700BBB0C6 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		AF3A70472420CF9800BAD193 /* FactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsController.swift; sourceTree = "<group>"; };
 		AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPopUpController.swift; sourceTree = "<group>"; };
 		AF823B3A240FF29100650AB0 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9B4FD00A2421098B00783B0F /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				9B4FD00F24210AFD00783B0F /* FAQTableViewController.swift */,
+				9B4FD01124210B3900783B0F /* FAQpopupViewController.swift */,
+			);
+			path = FAQ;
 		AF3A70492420D69000BAD193 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,11 +166,13 @@
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B4FD00A2421098B00783B0F /* FAQ */,
 				AF3A704D2420DE4400BAD193 /* Facts */,
 				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
 				AFDC1DD0240E98C800CC0CDF /* ViewController.swift */,
 				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
 				9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */,
+				9BB05ACD24191E8700BBB0C6 /* FAQViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -167,6 +184,7 @@
 				AFDC1DD7240E98C900CC0CDF /* LaunchScreen.storyboard */,
 				AFD8DD1924178C1500F50D07 /* Games.storyboard */,
 				9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */,
+				9B4FD01324210EB800783B0F /* FAQ.storyboard */,
 				AF87FC4224193F450064A7A9 /* Facts.storyboard */,
 			);
 			name = Story;
@@ -343,6 +361,7 @@
 				AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */,
 				AFDC1DD6240E98C900CC0CDF /* Assets.xcassets in Resources */,
 				AFDC1DD4240E98C800CC0CDF /* Main.storyboard in Resources */,
+				9B4FD01424210EB800783B0F /* FAQ.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +492,10 @@
 				AFDC1DD1240E98C800CC0CDF /* ViewController.swift in Sources */,
 				AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
+				9B4FD01224210B3900783B0F /* FAQpopupViewController.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
+				9B4FD01024210AFD00783B0F /* FAQTableViewController.swift in Sources */,
+				9BB05ACE24191E8700BBB0C6 /* FAQViewController.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
 				AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */,
