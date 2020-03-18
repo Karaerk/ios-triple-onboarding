@@ -10,7 +10,7 @@
         <!--InfoVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="InfoVC" customClass="ViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="InfoVC" customClass="ViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,6 +180,9 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="diY-FW-fPt"/>
                         <segue destination="ezO-SP-Hp5" kind="relationship" relationship="viewControllers" id="mDr-lA-ON5"/>
                         <segue destination="Xa0-ZT-56C" kind="relationship" relationship="viewControllers" id="rhx-V2-qHj"/>
+                        <segue destination="MfV-We-2yy" kind="relationship" relationship="viewControllers" id="WG6-DJ-4Zx"/>
+                        <segue destination="TFs-1P-1Ec" kind="relationship" relationship="viewControllers" id="BY0-9f-oya"/>
+
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwy-GU-0gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -204,7 +207,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJT-5T-BPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294" y="568"/>
+            <point key="canvasLocation" x="1162" y="584"/>
+        </scene>
+        <!--Facts-->
+        <scene sceneID="cKb-zP-5xM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Facts" id="TFs-1P-1Ec" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6pv-ze-M7A"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6P-gV-BP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="584"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="WKE-t5-nPe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Games" id="MfV-We-2yy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FsG-yB-bDF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79m-sP-qLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="584"/>
         </scene>
     </scenes>
     <resources>
