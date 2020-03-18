@@ -10,6 +10,7 @@
 		29A49DA0D0257AD497A7132C /* Pods_TripleOnboarding_TripleOnboardingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418A5B863088D446CB11F3E6 /* Pods_TripleOnboarding_TripleOnboardingUITests.framework */; };
 		8965A13B435434C5AE4B8DAD /* Pods_TripleOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2E7183AB70B9E0D86B450 /* Pods_TripleOnboarding.framework */; };
 		9081C84B2A7A6982670B2F7E /* Pods_TripleOnboardingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4009EF36B353A5F87E5A01E2 /* Pods_TripleOnboardingTests.framework */; };
+		9B04FA96242239EB004522C5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04FA95242239EB004522C5 /* MemoryViewController.swift */; };
 		9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */; };
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
 		AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A70472420CF9800BAD193 /* FactsController.swift */; };
@@ -58,6 +59,7 @@
 		8D1357D0DE306E97FDB513C0 /* Pods-TripleOnboarding-TripleOnboardingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding-TripleOnboardingUITests.debug.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding-TripleOnboardingUITests/Pods-TripleOnboarding-TripleOnboardingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		969AFF0ED7E38F9A5D3FF8EB /* Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding-TripleOnboardingUITests/Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97EBAEE9BB6B68FA78BEE3D9 /* Pods-TripleOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding.release.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding/Pods-TripleOnboarding.release.xcconfig"; sourceTree = "<group>"; };
+		9B04FA95242239EB004522C5 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		AF3A70472420CF9800BAD193 /* FactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9B04FA94242239CF004522C5 /* Memory game */ = {
+			isa = PBXGroup;
+			children = (
+				9B04FA95242239EB004522C5 /* MemoryViewController.swift */,
+			);
+			path = "Memory game";
+			sourceTree = "<group>";
+		};
 		AF3A70492420D69000BAD193 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B04FA94242239CF004522C5 /* Memory game */,
 				AF5BE1D8242227FB00659120 /* Info */,
 				AF5BE1D3242226C700659120 /* FAQ */,
 				AF3A704D2420DE4400BAD193 /* Facts */,
@@ -497,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDC1DD1240E98C800CC0CDF /* ViewController.swift in Sources */,
+				9B04FA96242239EB004522C5 /* MemoryViewController.swift in Sources */,
 				AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
