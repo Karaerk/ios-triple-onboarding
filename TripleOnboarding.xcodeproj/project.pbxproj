@@ -15,9 +15,6 @@
 		AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A70472420CF9800BAD193 /* FactsController.swift */; };
 		AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */; };
 		AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF823B3A240FF29100650AB0 /* PopUpViewController.swift */; };
-		AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF87FC4224193F450064A7A9 /* Facts.storyboard */; };
-		AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD8DD1924178C1500F50D07 /* Games.storyboard */; };
-		AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */; };
 		AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1DCC240E98C800CC0CDF /* AppDelegate.swift */; };
 		AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1DCE240E98C800CC0CDF /* SceneDelegate.swift */; };
 		AFDC1DD1240E98C800CC0CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1DD0240E98C800CC0CDF /* ViewController.swift */; };
@@ -60,9 +57,6 @@
 		AF3A70472420CF9800BAD193 /* FactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsController.swift; sourceTree = "<group>"; };
 		AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPopUpController.swift; sourceTree = "<group>"; };
 		AF823B3A240FF29100650AB0 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
-		AF87FC4224193F450064A7A9 /* Facts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Facts.storyboard; sourceTree = "<group>"; };
-		AFD8DD1924178C1500F50D07 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
-		AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		AFDC1DC9240E98C800CC0CDF /* TripleOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripleOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDC1DCC240E98C800CC0CDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFDC1DCE240E98C800CC0CDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +148,6 @@
 				AF3A704D2420DE4400BAD193 /* Facts */,
 				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
 				AFDC1DD0240E98C800CC0CDF /* ViewController.swift */,
-				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
 				9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */,
 			);
 			name = View;
@@ -165,7 +158,6 @@
 			children = (
 				AFDC1DD2240E98C800CC0CDF /* Main.storyboard */,
 				AFDC1DD7240E98C900CC0CDF /* LaunchScreen.storyboard */,
-				AFD8DD1924178C1500F50D07 /* Games.storyboard */,
 				9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */,
 				AF87FC4224193F450064A7A9 /* Facts.storyboard */,
 			);
@@ -197,7 +189,6 @@
 		AFDC1DCB240E98C800CC0CDF /* TripleOnboarding */ = {
 			isa = PBXGroup;
 			children = (
-				AF3A70492420D69000BAD193 /* Model */,
 				AF8EC20C24113EE100EC86F9 /* Story */,
 				AF8EC20B2410FD6500EC86F9 /* View */,
 				AFDC1DFC240E992300CC0CDF /* GoogleService-Info.plist */,
@@ -338,9 +329,7 @@
 			files = (
 				9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */,
 				AFDC1DD9240E98C900CC0CDF /* LaunchScreen.storyboard in Resources */,
-				AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */,
 				AFDC1DFD240E992300CC0CDF /* GoogleService-Info.plist in Resources */,
-				AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */,
 				AFDC1DD6240E98C900CC0CDF /* Assets.xcassets in Resources */,
 				AFDC1DD4240E98C800CC0CDF /* Main.storyboard in Resources */,
 			);
@@ -471,13 +460,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDC1DD1240E98C800CC0CDF /* ViewController.swift in Sources */,
-				AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
-				AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */,
-				AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
