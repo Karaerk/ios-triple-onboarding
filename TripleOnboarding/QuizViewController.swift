@@ -44,8 +44,8 @@ class QuizViewController: UIViewController {
             }
             self.questionLabel.text = (firebaseResponse["question"]) as? String
         }
-        //For question answer
         
+        //For question answer
         for i in 0..<answerBtns.count {
             answers.child("\(i)").observeSingleEvent(of: .value) { (snap) in
                 guard let content = snap.value as? [String:Any] else{
