@@ -6,21 +6,33 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Bold.ttf">
+            <string>Dosis-Bold</string>
+        </array>
+        <array key="Dosis-Medium.ttf">
+            <string>Dosis-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Games-->
+        <!--GAMES-->
         <scene sceneID="J63-iX-Kks">
             <objects>
-                <viewController storyboardIdentifier="GameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpf-Wm-7WU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpf-Wm-7WU" customClass="GamesViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hau-kU-by1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="119" translatesAutoresizingMaskIntoConstraints="NO" id="0fD-mu-63x">
-                                <rect key="frame" x="119" y="316.66666666666669" width="176" height="263.00000000000006"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="dHY-vU-Y0q">
+                                <rect key="frame" x="25" y="173.66666666666669" width="364" height="461.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-31-uup">
-                                        <rect key="frame" x="39" y="0.0" width="98" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="150"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="pGa-SN-99U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="50"/>
                                         <state key="normal" title="Quiz">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -29,8 +41,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeS-vi-tCr">
-                                        <rect key="frame" x="0.0" y="191" width="176" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <rect key="frame" x="0.0" y="310.99999999999994" width="364" height="150"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="ICu-wh-d6u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="50"/>
                                         <state key="normal" title="Memory">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -38,16 +54,21 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0079189809040000007" green="0.1433664858" blue="0.33727353809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0fD-mu-63x" firstAttribute="centerY" secondItem="hau-kU-by1" secondAttribute="centerY" id="kX9-WL-EU1"/>
-                            <constraint firstItem="0fD-mu-63x" firstAttribute="centerX" secondItem="hau-kU-by1" secondAttribute="centerX" id="pTo-g9-TUm"/>
+                            <constraint firstItem="GUk-Ry-3YH" firstAttribute="trailing" secondItem="dHY-vU-Y0q" secondAttribute="trailing" constant="25" id="B1o-tV-JiN"/>
+                            <constraint firstItem="dHY-vU-Y0q" firstAttribute="leading" secondItem="GUk-Ry-3YH" secondAttribute="leading" constant="25" id="KbW-LR-j1Y"/>
+                            <constraint firstItem="dHY-vU-Y0q" firstAttribute="centerY" secondItem="hau-kU-by1" secondAttribute="centerY" id="prl-HM-kBJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GUk-Ry-3YH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Games" image="gamecontroller" catalog="system" id="zcP-If-kVO"/>
-                    <navigationItem key="navigationItem" title="Games" id="uo0-sG-6c6"/>
+                    <navigationItem key="navigationItem" title="GAMES" id="uo0-sG-6c6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outletCollection property="choiceBtns" destination="VRK-31-uup" collectionClass="NSMutableArray" id="Pco-WJ-Kj5"/>
+                        <outletCollection property="choiceBtns" destination="MeS-vi-tCr" collectionClass="NSMutableArray" id="9TQ-pW-zNY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EZ-0L-mVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,26 +79,27 @@
             <objects>
                 <viewController id="zuG-vP-irD" userLabel="QuizVC" customClass="QuizViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cCL-w8-m9i">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9L4-Ih-Res">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="10" y="0.0" width="394" height="720"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfS-DG-agT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="365"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="360"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="30"/>
+                                        <color key="textColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-0Z-gj5">
-                                        <rect key="frame" x="0.0" y="375" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="370" width="394" height="80"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="bmy-wi-dZO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="A" backgroundImage="Rectangle">
+                                        <state key="normal" title="A">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -85,13 +107,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rt-BF-RuV">
-                                        <rect key="frame" x="0.0" y="465" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="460" width="394" height="80"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="26x-BP-hhp"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="B" backgroundImage="Rectangle">
+                                        <state key="normal" title="B">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -99,13 +122,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFs-Pl-fIu">
-                                        <rect key="frame" x="0.0" y="555" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="550" width="394" height="80"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="X7A-2d-tad"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="C" backgroundImage="Rectangle">
+                                        <state key="normal" title="C">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -113,13 +137,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sul-rM-f7r">
-                                        <rect key="frame" x="0.0" y="645" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="640" width="394" height="80"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Itx-u2-QTA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="D" backgroundImage="Rectangle">
+                                        <state key="normal" title="D">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -129,12 +154,12 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0079189809040000007" green="0.1433664858" blue="0.33727353809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9L4-Ih-Res" firstAttribute="top" secondItem="ENk-of-Eue" secondAttribute="top" id="MlB-wl-UsB"/>
-                            <constraint firstItem="9L4-Ih-Res" firstAttribute="leading" secondItem="ENk-of-Eue" secondAttribute="leading" id="g0O-ro-8zb"/>
-                            <constraint firstItem="ENk-of-Eue" firstAttribute="bottom" secondItem="9L4-Ih-Res" secondAttribute="bottom" id="tV8-6a-RWz"/>
-                            <constraint firstItem="ENk-of-Eue" firstAttribute="trailing" secondItem="9L4-Ih-Res" secondAttribute="trailing" id="uwc-lA-vGZ"/>
+                            <constraint firstItem="9L4-Ih-Res" firstAttribute="leading" secondItem="ENk-of-Eue" secondAttribute="leading" constant="10" id="g0O-ro-8zb"/>
+                            <constraint firstItem="ENk-of-Eue" firstAttribute="bottom" secondItem="9L4-Ih-Res" secondAttribute="bottom" constant="5" id="tV8-6a-RWz"/>
+                            <constraint firstItem="ENk-of-Eue" firstAttribute="trailing" secondItem="9L4-Ih-Res" secondAttribute="trailing" constant="10" id="uwc-lA-vGZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ENk-of-Eue"/>
                     </view>
@@ -157,9 +182,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g7b-nh-eyd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Games" image="gamecontroller" catalog="system" id="XOW-gK-5f9"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WTX-aM-g69">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="WTX-aM-g69">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -172,7 +202,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Rectangle" width="322" height="68"/>
         <image name="gamecontroller" catalog="system" width="64" height="40"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

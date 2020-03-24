@@ -12,7 +12,8 @@ class FloorMapViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scroll:UIScrollView!
     @IBOutlet weak var imageView:UIImageView!
- 
+    @IBOutlet var floorBtns: [UIButton]!
+    
     @IBAction func firstFloor(_ sender: UIButton) {
         if(self.imageView.image != UIImage(named: "Image")){
             imageView.image = UIImage(named: "Image")
@@ -31,6 +32,10 @@ class FloorMapViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scroll.delegate = self
+        
+        for buttons in floorBtns{
+            buttons.layer.cornerRadius = 10
+        }
     }
 
     /*

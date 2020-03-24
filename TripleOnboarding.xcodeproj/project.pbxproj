@@ -17,6 +17,14 @@
 		AF5BE1D0242226AE00659120 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5BE1CF242226AE00659120 /* FAQ.storyboard */; };
 		AF5BE1D6242226D500659120 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BE1D4242226D500659120 /* FAQTableViewController.swift */; };
 		AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */; };
+		AF7BCA7D242A11BD00550EBD /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */; };
+		AF7BCA87242A17BF00550EBD /* Dosis-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA80242A17BF00550EBD /* Dosis-ExtraBold.ttf */; };
+		AF7BCA88242A17BF00550EBD /* Dosis-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA81242A17BF00550EBD /* Dosis-Medium.ttf */; };
+		AF7BCA89242A17BF00550EBD /* Dosis-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA82242A17BF00550EBD /* Dosis-SemiBold.ttf */; };
+		AF7BCA8A242A17BF00550EBD /* Dosis-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA83242A17BF00550EBD /* Dosis-ExtraLight.ttf */; };
+		AF7BCA8B242A17BF00550EBD /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA84242A17BF00550EBD /* Dosis-Light.ttf */; };
+		AF7BCA8C242A17BF00550EBD /* Dosis-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA85242A17BF00550EBD /* Dosis-Regular.ttf */; };
+		AF7BCA8D242A17BF00550EBD /* Dosis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA86242A17BF00550EBD /* Dosis-Bold.ttf */; };
 		AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF823B3A240FF29100650AB0 /* PopUpViewController.swift */; };
 		AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF87FC4224193F450064A7A9 /* Facts.storyboard */; };
 		AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD8DD1924178C1500F50D07 /* Games.storyboard */; };
@@ -65,6 +73,14 @@
 		AF5BE1CF242226AE00659120 /* FAQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		AF5BE1D4242226D500659120 /* FAQTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
 		AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQpopupViewController.swift; sourceTree = "<group>"; };
+		AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		AF7BCA80242A17BF00550EBD /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AF7BCA81242A17BF00550EBD /* Dosis-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Medium.ttf"; sourceTree = "<group>"; };
+		AF7BCA82242A17BF00550EBD /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
+		AF7BCA83242A17BF00550EBD /* Dosis-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-ExtraLight.ttf"; sourceTree = "<group>"; };
+		AF7BCA84242A17BF00550EBD /* Dosis-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.ttf"; sourceTree = "<group>"; };
+		AF7BCA85242A17BF00550EBD /* Dosis-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Regular.ttf"; sourceTree = "<group>"; };
+		AF7BCA86242A17BF00550EBD /* Dosis-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Bold.ttf"; sourceTree = "<group>"; };
 		AF823B3A240FF29100650AB0 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		AF87FC4224193F450064A7A9 /* Facts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Facts.storyboard; sourceTree = "<group>"; };
 		AFD8DD1924178C1500F50D07 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
@@ -172,13 +188,44 @@
 			name = Info;
 			sourceTree = "<group>";
 		};
+		AF7BCA7B242A11A500550EBD /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
+				AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		AF7BCA7E242A177300550EBD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF7BCA7F242A17A700550EBD /* Dosis */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AF7BCA7F242A17A700550EBD /* Dosis */ = {
+			isa = PBXGroup;
+			children = (
+				AF7BCA86242A17BF00550EBD /* Dosis-Bold.ttf */,
+				AF7BCA80242A17BF00550EBD /* Dosis-ExtraBold.ttf */,
+				AF7BCA83242A17BF00550EBD /* Dosis-ExtraLight.ttf */,
+				AF7BCA84242A17BF00550EBD /* Dosis-Light.ttf */,
+				AF7BCA81242A17BF00550EBD /* Dosis-Medium.ttf */,
+				AF7BCA85242A17BF00550EBD /* Dosis-Regular.ttf */,
+				AF7BCA82242A17BF00550EBD /* Dosis-SemiBold.ttf */,
+			);
+			name = Dosis;
+			sourceTree = "<group>";
+		};
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF7BCA7B242A11A500550EBD /* Games */,
 				AF5BE1D8242227FB00659120 /* Info */,
 				AF5BE1D3242226C700659120 /* FAQ */,
 				AF3A704D2420DE4400BAD193 /* Facts */,
-				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
 				9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */,
 			);
 			name = View;
@@ -201,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				AFDC1DCB240E98C800CC0CDF /* TripleOnboarding */,
+				AF7BCA7E242A177300550EBD /* Fonts */,
 				AFDC1DE2240E98C900CC0CDF /* TripleOnboardingTests */,
 				AFDC1DED240E98C900CC0CDF /* TripleOnboardingUITests */,
 				AFDC1DCA240E98C800CC0CDF /* Products */,
@@ -361,14 +409,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7BCA8C242A17BF00550EBD /* Dosis-Regular.ttf in Resources */,
 				9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */,
+				AF7BCA87242A17BF00550EBD /* Dosis-ExtraBold.ttf in Resources */,
 				AFDC1DD9240E98C900CC0CDF /* LaunchScreen.storyboard in Resources */,
+				AF7BCA89242A17BF00550EBD /* Dosis-SemiBold.ttf in Resources */,
 				AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */,
 				AFDC1DFD240E992300CC0CDF /* GoogleService-Info.plist in Resources */,
 				AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */,
+				AF7BCA88242A17BF00550EBD /* Dosis-Medium.ttf in Resources */,
+				AF7BCA8D242A17BF00550EBD /* Dosis-Bold.ttf in Resources */,
 				AF5BE1D0242226AE00659120 /* FAQ.storyboard in Resources */,
 				AFDC1DD6240E98C900CC0CDF /* Assets.xcassets in Resources */,
+				AF7BCA8B242A17BF00550EBD /* Dosis-Light.ttf in Resources */,
 				AFDC1DD4240E98C800CC0CDF /* Main.storyboard in Resources */,
+				AF7BCA8A242A17BF00550EBD /* Dosis-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +558,7 @@
 				AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */,
 				AF5BE1D6242226D500659120 /* FAQTableViewController.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
+				AF7BCA7D242A11BD00550EBD /* GamesViewController.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
 				AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */,
 				AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */,

@@ -55,6 +55,11 @@ class QuizViewController: UIViewController {
                 self.answerBtns[i].tag = isCorrect
             }
         }
+        
+        for buttons in answerBtns{
+            buttons.layer.cornerRadius = 40
+            buttons.backgroundColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+        }
     }
     
     func resetUI(){
