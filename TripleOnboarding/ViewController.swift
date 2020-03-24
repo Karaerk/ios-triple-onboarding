@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     var popUpContent: String!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -51,6 +50,10 @@ class ViewController: UIViewController {
             
             //Puts everything from info/content in Array "uiContent"
             self.uiContent.append((firebaseResponse["content"] as? String)!)
+        }
+        
+        for buttons in titleButtons{
+            buttons.layer.cornerRadius = 50
         }
     }
     

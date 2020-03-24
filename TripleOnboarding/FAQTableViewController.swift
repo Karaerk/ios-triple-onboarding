@@ -23,6 +23,8 @@ class FAQTableViewController: UITableViewController {
     var rowHeight : CGFloat = 75
     var fontSize : CGFloat = 25
     
+    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,9 +56,15 @@ class FAQTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
         cell.textLabel?.text = questions[indexPath.row]
         cell.textLabel?.textAlignment = .center
-        cell.textLabel?.font = UIFont.systemFont(ofSize: fontSize)
+        cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: 25)
         cell.textLabel?.textColor = UIColor.white
-        cell.backgroundColor = UIColor(red: 0/255, green: 42/255, blue: 103/255, alpha: 1)
+        
+        let whiteRoundedView : UIView = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 70))
+        whiteRoundedView.layer.backgroundColor = pinkColor.cgColor
+        whiteRoundedView.layer.masksToBounds = false
+        whiteRoundedView.layer.cornerRadius = 10.0
+        cell.contentView.addSubview(whiteRoundedView)
+        cell.contentView.sendSubviewToBack(whiteRoundedView)
         return cell
     }
     

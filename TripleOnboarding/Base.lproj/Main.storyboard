@@ -6,6 +6,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Bold.ttf">
+            <string>Dosis-Bold</string>
+        </array>
+        <array key="Dosis-Medium.ttf">
+            <string>Dosis-Medium</string>
+        </array>
+        <array key="Dosis-Regular.ttf">
+            <string>Dosis-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--InfoVC-->
         <scene sceneID="tne-QT-ifu">
@@ -16,23 +27,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2bi-CJ-hqW">
-                                <rect key="frame" x="0.0" y="44" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="57"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informatie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4e-BZ-s11">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="45"/>
+                                        <color key="textColor" red="0.078431372549019607" green="0.12549019607843137" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-Ci-hHb">
-                                <rect key="frame" x="0.0" y="92" width="375" height="602"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-Ci-hHb">
+                                <rect key="frame" x="15" y="121" width="345" height="588"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-5g-YqY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112.33333333333333"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="101.66666666666667"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title="  ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -42,8 +54,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wua-QT-43V">
-                                        <rect key="frame" x="0.0" y="122.33333333333334" width="375" height="112.33333333333334"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="121.66666666666666" width="345" height="101.66666666666666"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title="  ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -53,8 +66,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUQ-Uo-09v">
-                                        <rect key="frame" x="0.0" y="244.66666666666666" width="375" height="112.66666666666666"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="243.33333333333334" width="345" height="101.33333333333334"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -64,8 +78,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-fX-qWz">
-                                        <rect key="frame" x="0.0" y="367.33333333333331" width="375" height="112.33333333333331"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="364.66666666666669" width="345" height="101.66666666666669"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -75,8 +90,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L43-ns-gn8">
-                                        <rect key="frame" x="0.0" y="489.66666666666657" width="375" height="112.33333333333331"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="486.33333333333343" width="345" height="101.66666666666669"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -87,13 +103,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0073617608289999999" green="0.143874377" blue="0.32550799850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2bi-CJ-hqW" secondAttribute="trailing" id="BRQ-is-Qwl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pds-Ci-hHb" secondAttribute="trailing" id="GgZ-dk-buu"/>
-                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QIy-Sa-VEN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pds-Ci-hHb" secondAttribute="bottom" constant="35" id="SoU-BP-GHf"/>
-                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="top" secondItem="2bi-CJ-hqW" secondAttribute="bottom" id="iNx-hJ-eaW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pds-Ci-hHb" secondAttribute="trailing" constant="15" id="GgZ-dk-buu"/>
+                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QIy-Sa-VEN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pds-Ci-hHb" secondAttribute="bottom" constant="20" id="SoU-BP-GHf"/>
+                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="top" secondItem="2bi-CJ-hqW" secondAttribute="bottom" constant="20" id="iNx-hJ-eaW"/>
                             <constraint firstItem="2bi-CJ-hqW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ste-Ch-3lH"/>
                             <constraint firstItem="2bi-CJ-hqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z38-bc-DMq"/>
                         </constraints>
@@ -125,15 +141,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mk1-bB-Hbm">
-                                        <rect key="frame" x="20" y="10" width="335" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <rect key="frame" x="20" y="10" width="335" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="32"/>
+                                        <color key="textColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1we-tn-5uV">
-                                        <rect key="frame" x="20" y="56.000000000000007" width="335" height="20.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <rect key="frame" x="20" y="60.666666666666664" width="335" height="25.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="20"/>
+                                        <color key="textColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
