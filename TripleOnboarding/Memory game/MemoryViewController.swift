@@ -2,7 +2,7 @@
 //  MemoryViewController.swift
 //  TripleOnboarding
 //
-//  Created by hva_1 on 18/03/2020.
+//  Created by Costa van Elsas on 18/03/2020.
 //  Copyright © 2020 Triple. All rights reserved.
 //
 
@@ -13,14 +13,15 @@ import FirebaseDatabase
 class MemoryViewController: UIViewController {
 
     @IBOutlet var answerBtns: [UIButton]!
-    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var employeePhoto: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
     
     var ref: DatabaseReference!
     var counter: Int = 0
-    var quesionText: String!
-    
-    // Initialize an array for pictures
-    var picArray: [UIImage]!
+    var score = 0
+    var questionNumber = 1
     
     let haptic = UINotificationFeedbackGenerator()
     
@@ -34,15 +35,15 @@ class MemoryViewController: UIViewController {
         resetUI()
 
         ref = Database.database().reference()
-        let questions = Database.database().reference().child("memory")
-        let singleQuestion = questions.child("\(counter)")
-        let answers = singleQuestion.child("answer")
+        let empoloyeePhotos = Database.database().reference().child("memory")
+        let empoloyeePhoto = empoloyeePhotos.child("\(counter)")
+        let answers = empoloyeePhoto.child("answer")
        
-        singleQuestion.observeSingleEvent(of: .value) { (snapshot) in
+        empoloyeePhoto.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }
-            self.imageView.image = (firebaseResponse["image"]) as? UIImage
+            self.employeePhoto.text = (firebaseResponse["image"]) as? String
         }
         
         for i in 0..<answerBtns.count {
@@ -55,6 +56,12 @@ class MemoryViewController: UIViewController {
                 self.answerBtns[i].tag = isCorrect
             }
         }
+        
+        for buttons in answerBtns {
+            buttons.layer.cornerRadius = 40
+            buttons.backgroundColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+        }
+        
         answerBtns.shuffle()
     }
     
@@ -70,8 +77,9 @@ class MemoryViewController: UIViewController {
                 haptic.notificationOccurred(.success)
                 sender.backgroundColor = UIColor.green
                 counter += 1
+                score += 1
+                questionNumber += 1
                 updateMemory()
-                
             } else {
                 sender.backgroundColor = UIColor.red
                 haptic.notificationOccurred(.error)
