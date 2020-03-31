@@ -1,5 +1,5 @@
 //
-//  TabBarController.swift
+//  DepartmentsViewController.swift
 //  TripleOnboarding
 //
 //  Created by Youri Berentsen on 24/03/2020.
@@ -8,19 +8,14 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class DepartmentsViewController: UIViewController {
 
-    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
-    let blueColor = UIColor(red: 20/255, green: 32/255, blue: 67/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.barTintColor = blueColor
-    }
 
     /*
     // MARK: - Navigation

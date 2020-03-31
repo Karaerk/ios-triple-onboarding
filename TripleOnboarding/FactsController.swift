@@ -58,7 +58,7 @@ class FactsController: UITableViewController {
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: 25)
         cell.textLabel?.textColor = UIColor.white
-
+        
         let whiteRoundedView : UIView = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 70))
         whiteRoundedView.layer.backgroundColor = pinkColor.cgColor
         whiteRoundedView.layer.masksToBounds = false

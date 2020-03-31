@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7b-nh-eyd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7b-nh-eyd">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--GAMES-->
+        <!--Games-->
         <scene sceneID="J63-iX-Kks">
             <objects>
                 <viewController storyboardIdentifier="GameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpf-Wm-7WU" customClass="GamesViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="GUk-Ry-3YH" firstAttribute="trailing" secondItem="dHY-vU-Y0q" secondAttribute="trailing" constant="25" id="B1o-tV-JiN"/>
                             <constraint firstItem="dHY-vU-Y0q" firstAttribute="leading" secondItem="GUk-Ry-3YH" secondAttribute="leading" constant="25" id="KbW-LR-j1Y"/>
@@ -63,7 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="GUk-Ry-3YH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Games" image="gamecontroller" catalog="system" id="zcP-If-kVO"/>
-                    <navigationItem key="navigationItem" title="GAMES" id="uo0-sG-6c6"/>
+                    <navigationItem key="navigationItem" title="Games" id="uo0-sG-6c6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outletCollection property="choiceBtns" destination="VRK-31-uup" collectionClass="NSMutableArray" id="Pco-WJ-Kj5"/>
@@ -154,7 +154,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9L4-Ih-Res" firstAttribute="top" secondItem="ENk-of-Eue" secondAttribute="top" id="MlB-wl-UsB"/>
                             <constraint firstItem="9L4-Ih-Res" firstAttribute="leading" secondItem="ENk-of-Eue" secondAttribute="leading" constant="10" id="g0O-ro-8zb"/>
@@ -185,9 +185,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="WTX-aM-g69">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="19"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -201,8 +202,8 @@
             <point key="canvasLocation" x="108.69565217391305" y="168.75"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="gamecontroller" catalog="system" width="64" height="40"/>
-    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="gamecontroller" catalog="system" width="128" height="82"/>
+    </resources>
 </document>
