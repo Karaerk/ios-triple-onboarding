@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xzp-CL-JOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xzp-CL-JOW">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,26 +23,14 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="InfoVC" customClass="ViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2bi-CJ-hqW">
-                                <rect key="frame" x="0.0" y="44" width="375" height="57"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informatie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4e-BZ-s11">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
-                                        <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="45"/>
-                                        <color key="textColor" red="0.078431372549019607" green="0.12549019607843137" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-Ci-hHb">
-                                <rect key="frame" x="15" y="121" width="345" height="588"/>
+                                <rect key="frame" x="15" y="108" width="345" height="601"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-5g-YqY">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="101.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="104.33333333333333"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title="  ">
@@ -54,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wua-QT-43V">
-                                        <rect key="frame" x="0.0" y="121.66666666666666" width="345" height="101.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="124.33333333333334" width="345" height="104"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title="  ">
@@ -66,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUQ-Uo-09v">
-                                        <rect key="frame" x="0.0" y="243.33333333333334" width="345" height="101.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="248.33333333333334" width="345" height="104.33333333333334"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
@@ -78,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-fX-qWz">
-                                        <rect key="frame" x="0.0" y="364.66666666666669" width="345" height="101.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="372.66666666666669" width="345" height="104"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
@@ -90,7 +78,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L43-ns-gn8">
-                                        <rect key="frame" x="0.0" y="486.33333333333343" width="345" height="101.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="496.66666666666657" width="345" height="104.33333333333331"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
@@ -105,19 +93,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2bi-CJ-hqW" secondAttribute="trailing" id="BRQ-is-Qwl"/>
+                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2KH-nD-4YA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pds-Ci-hHb" secondAttribute="trailing" constant="15" id="GgZ-dk-buu"/>
                             <constraint firstItem="Pds-Ci-hHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QIy-Sa-VEN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pds-Ci-hHb" secondAttribute="bottom" constant="20" id="SoU-BP-GHf"/>
-                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="top" secondItem="2bi-CJ-hqW" secondAttribute="bottom" constant="20" id="iNx-hJ-eaW"/>
-                            <constraint firstItem="2bi-CJ-hqW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ste-Ch-3lH"/>
-                            <constraint firstItem="2bi-CJ-hqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z38-bc-DMq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" id="DYq-pO-ASk"/>
+                    <navigationItem key="navigationItem" title="Informatie" id="Tem-HS-hH4"/>
                     <connections>
-                        <outlet property="UITitle" destination="t4e-BZ-s11" id="NEJ-Nc-CYE"/>
                         <outletCollection property="titleButtons" destination="wmY-5g-YqY" collectionClass="NSMutableArray" id="acY-bm-yMP"/>
                         <outletCollection property="titleButtons" destination="wua-QT-43V" collectionClass="NSMutableArray" id="USY-Vv-Bp4"/>
                         <outletCollection property="titleButtons" destination="jUQ-Uo-09v" collectionClass="NSMutableArray" id="Rnd-1u-L7z"/>
@@ -127,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.5999999999999" y="138.17733990147784"/>
+            <point key="canvasLocation" x="2964" y="138.17733990147784"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="2bI-JT-nhC">
@@ -143,17 +127,17 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mk1-bB-Hbm">
                                         <rect key="frame" x="20" y="10" width="335" height="40.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="32"/>
-                                        <color key="textColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1we-tn-5uV">
                                         <rect key="frame" x="20" y="60.666666666666664" width="335" height="25.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="20"/>
-                                        <color key="textColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="1we-tn-5uV" firstAttribute="leading" secondItem="Ydf-QQ-dlk" secondAttribute="leading" constant="20" symbolic="YES" id="0dt-yK-JXB"/>
                                     <constraint firstAttribute="trailing" secondItem="Mk1-bB-Hbm" secondAttribute="trailing" constant="20" symbolic="YES" id="Fsy-YQ-Mat"/>
@@ -180,29 +164,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZc-m1-neO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692" y="140.39408866995075"/>
+            <point key="canvasLocation" x="3634.4000000000001" y="140.39408866995075"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="n4S-mP-XpI">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xzp-CL-JOW" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xzp-CL-JOW" customClass="TabBarController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9jo-F4-mHt">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9jo-F4-mHt">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="diY-FW-fPt"/>
+                        <segue destination="qIk-Vp-Vvj" kind="relationship" relationship="viewControllers" id="diY-FW-fPt"/>
                         <segue destination="ezO-SP-Hp5" kind="relationship" relationship="viewControllers" id="mDr-lA-ON5"/>
                         <segue destination="MfV-We-2yy" kind="relationship" relationship="viewControllers" id="WG6-DJ-4Zx"/>
                         <segue destination="TFs-1P-1Ec" kind="relationship" relationship="viewControllers" id="BY0-9f-oya"/>
                         <segue destination="9Rg-nh-VS4" kind="relationship" relationship="viewControllers" id="Ulv-eF-dRU"/>
+                        <segue destination="w0M-6S-QL8" kind="relationship" relationship="viewControllers" id="2NA-Kc-OCh"/>
+                        <segue destination="v04-PW-ie6" kind="relationship" relationship="viewControllers" id="oRV-8f-fXI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwy-GU-0gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="138.17733990147784"/>
+            <point key="canvasLocation" x="791" y="140"/>
         </scene>
         <!--FloorMap-->
         <scene sceneID="pxj-IK-Ivl">
@@ -214,16 +202,36 @@
             </objects>
             <point key="canvasLocation" x="1162" y="584"/>
         </scene>
-        <!--FAQ-->
+        <!--Department-->
         <scene sceneID="o81-co-FSf">
             <objects>
-                <viewControllerPlaceholder storyboardName="FAQ" id="9Rg-nh-VS4" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Department" id="9Rg-nh-VS4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="hrs-UD-lyn"/>
                     <navigationItem key="navigationItem" id="DTC-Rs-aDt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9e-Vq-Qz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1547" y="590"/>
+            <point key="canvasLocation" x="1358" y="584"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="wBK-Fw-hKH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FAQ" id="w0M-6S-QL8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PCV-t3-bGH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXs-FL-m2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="584"/>
+        </scene>
+        <!--UrenBoek-->
+        <scene sceneID="9Qd-fO-3Xn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UrenBoek" id="v04-PW-ie6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aj7-gl-uhj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8C-Lj-ar7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="582"/>
         </scene>
         <!--Facts-->
         <scene sceneID="cKb-zP-5xM">
@@ -233,7 +241,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6P-gV-BP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="584"/>
+            <point key="canvasLocation" x="873" y="584"/>
         </scene>
         <!--Games-->
         <scene sceneID="WKE-t5-nPe">
@@ -243,13 +251,32 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79m-sP-qLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="584"/>
+            <point key="canvasLocation" x="1013" y="584"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="1Rc-0j-KmL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qIk-Vp-Vvj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" id="DYq-pO-ASk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mj6-FF-Xua">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qVo-fV-x5e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Wr-mE-FIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.5999999999999" y="138.17733990147784"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="info" catalog="system" width="46" height="64"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="i4L-HW-IKN"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="info" catalog="system" width="93" height="128"/>
+    </resources>
 </document>

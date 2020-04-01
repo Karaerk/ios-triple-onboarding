@@ -13,6 +13,11 @@
 		9B04FA96242239EB004522C5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04FA95242239EB004522C5 /* MemoryViewController.swift */; };
 		9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */; };
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
+		AF3666E324348479009007C9 /* UrenBoek.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3666E224348479009007C9 /* UrenBoek.storyboard */; };
+		AF3666E924348BBD009007C9 /* UrenboekController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666E824348BBD009007C9 /* UrenboekController.swift */; };
+		AF3666EB24348C4D009007C9 /* UrenboekNewPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666EA24348C4D009007C9 /* UrenboekNewPageController.swift */; };
+		AF3666F12434B982009007C9 /* UrenboekTableContrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666F02434B982009007C9 /* UrenboekTableContrl.swift */; };
+		AF3666F32434BACD009007C9 /* UrenboekPopUpContrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666F22434BACD009007C9 /* UrenboekPopUpContrl.swift */; };
 		AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A70472420CF9800BAD193 /* FactsController.swift */; };
 		AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */; };
 		AF5BE1D0242226AE00659120 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5BE1CF242226AE00659120 /* FAQ.storyboard */; };
@@ -27,7 +32,12 @@
 		AF7BCA8C242A17BF00550EBD /* Dosis-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA85242A17BF00550EBD /* Dosis-Regular.ttf */; };
 		AF7BCA8D242A17BF00550EBD /* Dosis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA86242A17BF00550EBD /* Dosis-Bold.ttf */; };
 		AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF823B3A240FF29100650AB0 /* PopUpViewController.swift */; };
+		AF85624B242A6D5800F995F5 /* Department.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF85624A242A6D5800F995F5 /* Department.storyboard */; };
+		AF85625E242A72F600F995F5 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85625D242A72F600F995F5 /* DepartmentCell.swift */; };
+		AF856260242A7E6100F995F5 /* DepartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85625F242A7E6100F995F5 /* DepartmentController.swift */; };
+		AF856262242A8F3800F995F5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF856261242A8F3800F995F5 /* TabBarController.swift */; };
 		AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF87FC4224193F450064A7A9 /* Facts.storyboard */; };
+		AFAD7857242BA2B3006735D0 /* DepartmentPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD7856242BA2B3006735D0 /* DepartmentPopUpController.swift */; };
 		AFD8DD1A24178C1500F50D07 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD8DD1924178C1500F50D07 /* Games.storyboard */; };
 		AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */; };
 		AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC1DCC240E98C800CC0CDF /* AppDelegate.swift */; };
@@ -70,6 +80,11 @@
 		9B04FA95242239EB004522C5 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
+		AF3666E224348479009007C9 /* UrenBoek.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UrenBoek.storyboard; sourceTree = "<group>"; };
+		AF3666E824348BBD009007C9 /* UrenboekController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrenboekController.swift; sourceTree = "<group>"; };
+		AF3666EA24348C4D009007C9 /* UrenboekNewPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrenboekNewPageController.swift; sourceTree = "<group>"; };
+		AF3666F02434B982009007C9 /* UrenboekTableContrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrenboekTableContrl.swift; sourceTree = "<group>"; };
+		AF3666F22434BACD009007C9 /* UrenboekPopUpContrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrenboekPopUpContrl.swift; sourceTree = "<group>"; };
 		AF3A70472420CF9800BAD193 /* FactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsController.swift; sourceTree = "<group>"; };
 		AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPopUpController.swift; sourceTree = "<group>"; };
 		AF5BE1CF242226AE00659120 /* FAQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
@@ -84,7 +99,12 @@
 		AF7BCA85242A17BF00550EBD /* Dosis-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Regular.ttf"; sourceTree = "<group>"; };
 		AF7BCA86242A17BF00550EBD /* Dosis-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Bold.ttf"; sourceTree = "<group>"; };
 		AF823B3A240FF29100650AB0 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		AF85624A242A6D5800F995F5 /* Department.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Department.storyboard; sourceTree = "<group>"; };
+		AF85625D242A72F600F995F5 /* DepartmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
+		AF85625F242A7E6100F995F5 /* DepartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentController.swift; sourceTree = "<group>"; };
+		AF856261242A8F3800F995F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AF87FC4224193F450064A7A9 /* Facts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Facts.storyboard; sourceTree = "<group>"; };
+		AFAD7856242BA2B3006735D0 /* DepartmentPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentPopUpController.swift; sourceTree = "<group>"; };
 		AFD8DD1924178C1500F50D07 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		AFDC1DC9240E98C800CC0CDF /* TripleOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripleOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +184,17 @@
 			path = "Memory game";
 			sourceTree = "<group>";
 		};
+		AF3666E724348B76009007C9 /* Urenboek */ = {
+			isa = PBXGroup;
+			children = (
+				AF3666E824348BBD009007C9 /* UrenboekController.swift */,
+				AF3666EA24348C4D009007C9 /* UrenboekNewPageController.swift */,
+				AF3666F02434B982009007C9 /* UrenboekTableContrl.swift */,
+				AF3666F22434BACD009007C9 /* UrenboekPopUpContrl.swift */,
+			);
+			name = Urenboek;
+			sourceTree = "<group>";
+		};
 		AF3A70492420D69000BAD193 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,15 +260,28 @@
 			name = Dosis;
 			sourceTree = "<group>";
 		};
+		AF7BCA92242A342100550EBD /* Departments */ = {
+			isa = PBXGroup;
+			children = (
+				AF85625D242A72F600F995F5 /* DepartmentCell.swift */,
+				AF85625F242A7E6100F995F5 /* DepartmentController.swift */,
+				AFAD7856242BA2B3006735D0 /* DepartmentPopUpController.swift */,
+			);
+			name = Departments;
+			sourceTree = "<group>";
+		};
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF3666E724348B76009007C9 /* Urenboek */,
+				AF7BCA92242A342100550EBD /* Departments */,
 				AF7BCA7B242A11A500550EBD /* Games */,
 				9B04FA94242239CF004522C5 /* Memory game */,
 				AF5BE1D8242227FB00659120 /* Info */,
 				AF5BE1D3242226C700659120 /* FAQ */,
 				AF3A704D2420DE4400BAD193 /* Facts */,
 				9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */,
+				AF856261242A8F3800F995F5 /* TabBarController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -251,6 +295,8 @@
 				9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */,
 				AF87FC4224193F450064A7A9 /* Facts.storyboard */,
 				AF5BE1CF242226AE00659120 /* FAQ.storyboard */,
+				AF85624A242A6D5800F995F5 /* Department.storyboard */,
+				AF3666E224348479009007C9 /* UrenBoek.storyboard */,
 			);
 			name = Story;
 			sourceTree = "<group>";
@@ -420,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF85624B242A6D5800F995F5 /* Department.storyboard in Resources */,
 				AF7BCA8C242A17BF00550EBD /* Dosis-Regular.ttf in Resources */,
 				9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */,
 				AF7BCA87242A17BF00550EBD /* Dosis-ExtraBold.ttf in Resources */,
@@ -434,6 +481,7 @@
 				AFDC1DD6240E98C900CC0CDF /* Assets.xcassets in Resources */,
 				AF7BCA8B242A17BF00550EBD /* Dosis-Light.ttf in Resources */,
 				AFDC1DD4240E98C800CC0CDF /* Main.storyboard in Resources */,
+				AF3666E324348479009007C9 /* UrenBoek.storyboard in Resources */,
 				AF7BCA8A242A17BF00550EBD /* Dosis-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,14 +613,22 @@
 				AFDC1DD1240E98C800CC0CDF /* ViewController.swift in Sources */,
 				9B04FA96242239EB004522C5 /* MemoryViewController.swift in Sources */,
 				AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */,
+				AF3666EB24348C4D009007C9 /* UrenboekNewPageController.swift in Sources */,
+				AF3666F32434BACD009007C9 /* UrenboekPopUpContrl.swift in Sources */,
+				AF3666E924348BBD009007C9 /* UrenboekController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
 				AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */,
 				AF5BE1D6242226D500659120 /* FAQTableViewController.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
+				AF85625E242A72F600F995F5 /* DepartmentCell.swift in Sources */,
 				AF7BCA7D242A11BD00550EBD /* GamesViewController.swift in Sources */,
+				AF856260242A7E6100F995F5 /* DepartmentController.swift in Sources */,
+				AF3666F12434B982009007C9 /* UrenboekTableContrl.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
+				AF856262242A8F3800F995F5 /* TabBarController.swift in Sources */,
 				AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */,
+				AFAD7857242BA2B3006735D0 /* DepartmentPopUpController.swift in Sources */,
 				AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

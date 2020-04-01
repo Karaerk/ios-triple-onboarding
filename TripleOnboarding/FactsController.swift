@@ -9,14 +9,17 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
+struct factsContent{
+    var categorie: String!
+    var content: String!
+}
+
 class FactsController: UITableViewController {
     
     var ref: DatabaseReference!
     var myref: DatabaseReference!
-    
-    var categories : [String] = []
-    var content : [String] = []
-    
+    var factsCont = [factsContent]()
+    //Used for the pop up controller
     var popUpTitle: String!
     var popUpContent: String!
     
@@ -34,31 +37,33 @@ class FactsController: UITableViewController {
     
     func updateContent(){
         
-        ref = Database.database().reference()
-        myref = ref.child("facts")
-        
-        myref.queryOrdered(byChild: "title").observe(.childAdded) { (snapshot) in
+        ref = Database.database().reference().child("facts")
+        ref.queryOrdered(byChild: "title").observe(.childAdded) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }
-            //Puts everything from info/content in Array "uiContent"
-            self.categories.append((firebaseResponse["title"] as? String)!)
-            self.content.append((firebaseResponse["content"] as? String)!)
+            //Append the content and categorie to the struct
+            let categorieTitle = (firebaseResponse["title"] as? String)!
+            let contentText = (firebaseResponse["content"] as? String)!
+            self.factsCont.append(factsContent(categorie: categorieTitle, content: contentText))
+
             self.tableView.reloadData()
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return factsCont.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategorieCell", for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row]
+        let content = factsCont[indexPath.row]
+        cell.textLabel?.text = content.categorie
         cell.textLabel?.textAlignment = .center
-        cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: 25)
+        cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: fontSize)
         cell.textLabel?.textColor = UIColor.white
-
+        
+        //Is used for the lay-out from the tableview
         let whiteRoundedView : UIView = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 70))
         whiteRoundedView.layer.backgroundColor = pinkColor.cgColor
         whiteRoundedView.layer.masksToBounds = false
@@ -73,8 +78,9 @@ class FactsController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        popUpContent = content[indexPath.row]
-        popUpTitle = categories[indexPath.row]
+        let content = factsCont[indexPath.row]
+        popUpContent = content.content
+        popUpTitle = content.categorie
         performSegue(withIdentifier: "PopUp", sender: self)
     }
     

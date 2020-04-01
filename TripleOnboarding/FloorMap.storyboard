@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b7z-if-ONe">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mBq-dw-gcf">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,16 +12,16 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Map-->
+        <!--Plattegrond-->
         <scene sceneID="vqU-Va-Xby">
             <objects>
                 <viewController storyboardIdentifier="FloorMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b7z-if-ONe" customClass="FloorMapViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S8j-5A-ekk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="15" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-AO-W50">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="52" width="375" height="677"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lye-jq-myW">
                                         <rect key="frame" x="0.0" y="20" width="2050" height="1166"/>
@@ -37,10 +37,10 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="Qp9-1g-KZO"/>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-aY-jeG">
-                                <rect key="frame" x="10" y="654.5" width="196" height="158.5"/>
+                                <rect key="frame" x="10" y="570" width="196" height="159"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V5u-Je-Ruv">
-                                        <rect key="frame" x="0.0" y="0.0" width="196" height="39.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="39.666666666666664"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="18"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kyT-Ov-Zy1">
-                                        <rect key="frame" x="0.0" y="59.5" width="196" height="39.5"/>
+                                        <rect key="frame" x="0.0" y="59.666666666666657" width="196" height="39.333333333333343"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="18"/>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yvv-by-w76">
-                                        <rect key="frame" x="0.0" y="119" width="196" height="39.5"/>
+                                        <rect key="frame" x="0.0" y="119.00000000000001" width="196" height="39.666666666666671"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="18"/>
@@ -77,26 +77,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsw-8i-Z9V">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="kJa-LC-hEn"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="I3t-AO-W50" firstAttribute="top" secondItem="S8j-5A-ekk" secondAttribute="topMargin" constant="-36" id="11K-Rm-k9X"/>
                             <constraint firstItem="5Mn-JK-KvD" firstAttribute="bottom" secondItem="9dY-aY-jeG" secondAttribute="bottom" id="7lR-3g-sZq"/>
                             <constraint firstItem="5Mn-JK-KvD" firstAttribute="bottom" secondItem="I3t-AO-W50" secondAttribute="bottom" id="Jw1-ps-m3b"/>
                             <constraint firstItem="5Mn-JK-KvD" firstAttribute="trailing" secondItem="I3t-AO-W50" secondAttribute="trailing" id="TCL-xA-TAE"/>
                             <constraint firstItem="9dY-aY-jeG" firstAttribute="leading" secondItem="5Mn-JK-KvD" secondAttribute="leading" constant="10" id="kLZ-0m-4Fk"/>
-                            <constraint firstItem="I3t-AO-W50" firstAttribute="top" secondItem="S8j-5A-ekk" secondAttribute="topMargin" id="kZc-OH-nSh"/>
                             <constraint firstItem="I3t-AO-W50" firstAttribute="leading" secondItem="5Mn-JK-KvD" secondAttribute="leading" id="zMG-9E-93R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Mn-JK-KvD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="gEF-CL-2iL"/>
+                    <navigationItem key="navigationItem" title="Plattegrond" id="8dI-kw-end"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="lye-jq-myW" id="8mU-au-PXd"/>
@@ -108,11 +101,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZv-cV-NZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="123.88392857142857"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="nak-Bk-3JX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mBq-dw-gcf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="gEF-CL-2iL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yHM-SN-aNd">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b7z-if-ONe" kind="relationship" relationship="rootViewController" id="M9t-FQ-3cP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PiT-ML-6eS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="31.884057971014496" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="2050" height="1166"/>
-        <image name="map" catalog="system" width="64" height="56"/>
+        <image name="map" catalog="system" width="128" height="113"/>
     </resources>
 </document>

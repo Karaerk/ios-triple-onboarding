@@ -13,11 +13,18 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var ref: DatabaseReference!
+    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+    let blueColor = UIColor(red: 20/255, green: 32/255, blue: 67/255, alpha: 1)
     //var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.barTintColor = blueColor
+        navigationBarAppearace.isTranslucent = false
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: UIFont(name: "Dosis-Medium", size: 25)!]
         return true
     }
 
