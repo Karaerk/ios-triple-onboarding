@@ -29,6 +29,7 @@ class MemoryViewController: UIViewController {
         super.viewDidLoad()
         
         updateMemory()
+        updateLabels()
     }
     
     func updateMemory(){
@@ -65,25 +66,34 @@ class MemoryViewController: UIViewController {
         answerBtns.shuffle()
     }
     
+    @IBAction func answerButtons(_ sender: UIButton) {
+        if sender.tag == 1 {
+            haptic.notificationOccurred(.success)
+            sender.backgroundColor = UIColor.green
+            counter += 1
+            
+            score += 1
+            questionNumber += 1
+            updateLabels()
+            
+            updateMemory()
+        } else if sender.tag == 0{
+            sender.backgroundColor = UIColor.red
+            haptic.notificationOccurred(.error)
+        }
+    }
+    
+    
     func resetUI(){
         for i in 0..<answerBtns.count{
             answerBtns[i].setTitle("", for: .normal)
             answerBtns[i].backgroundColor = UIColor.clear
         }
     }
-        
-        @IBAction func answerBtn(_ sender: UIButton) {
-            if sender.tag == 1 {
-                haptic.notificationOccurred(.success)
-                sender.backgroundColor = UIColor.green
-                counter += 1
-                score += 1
-                questionNumber += 1
-                updateMemory()
-            } else {
-                sender.backgroundColor = UIColor.red
-                haptic.notificationOccurred(.error)
-            }
-        }
+    
+    func updateLabels(){
+        scoreLabel.text = String(score)
+        questionNumberLabel.text = String(questionNumber)
     }
+}
 

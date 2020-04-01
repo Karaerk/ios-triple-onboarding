@@ -211,66 +211,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="L9c-rv-gGv">
-                                <rect key="frame" x="20" y="17" width="374" height="304"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Szi-Au-5jg">
                                 <rect key="frame" x="0.0" y="363" width="414" height="302"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI2-8S-heL">
                                         <rect key="frame" x="0.0" y="0.0" width="414.00000000000006" height="68"/>
+                                        <color key="backgroundColor" red="0.92503076790000005" green="0.39960414170000003" blue="0.4638588428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="A" backgroundImage="Rectangle">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" title="A" backgroundImage="Rectangle"/>
                                         <connections>
-                                            <action selector="answerBtn:" destination="aVs-94-Rnm" eventType="touchUpInside" id="7PD-ef-hna"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="Tvm-c1-JXf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNi-PW-XIl">
                                         <rect key="frame" x="0.0" y="78" width="414.00000000000006" height="68"/>
+                                        <color key="backgroundColor" red="0.92503076790000005" green="0.39960414170000003" blue="0.4638588428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="B" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerBtn:" destination="aVs-94-Rnm" eventType="touchUpInside" id="um9-rN-7GE"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="PcA-Db-MMA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skm-hY-f8m">
                                         <rect key="frame" x="0.0" y="156" width="414.00000000000006" height="68"/>
+                                        <color key="backgroundColor" red="0.92503076790000005" green="0.39960414170000003" blue="0.4638588428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="C" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerBtn:" destination="aVs-94-Rnm" eventType="touchUpInside" id="FTr-Ic-1BO"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="hUH-hz-Di5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvN-2Z-7az">
                                         <rect key="frame" x="0.0" y="234" width="414.00000000000006" height="68"/>
+                                        <color key="backgroundColor" red="0.92503076790000005" green="0.39960414170000003" blue="0.4638588428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="D" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerBtn:" destination="aVs-94-Rnm" eventType="touchUpInside" id="nv8-LP-HP6"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="fgN-rQ-2lz"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text van de image in dit geval..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3P-1b-qv7">
+                                <rect key="frame" x="30" y="27" width="346" height="292"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu7-pV-7ji">
+                                <rect key="frame" x="138" y="36" width="8" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vraag nummer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-Ff-tui">
+                                <rect key="frame" x="20" y="36" width="117" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-8w-sFZ">
+                                <rect key="frame" x="292" y="36" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUB-ni-Idq">
+                                <rect key="frame" x="350" y="36" width="21" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0079189809040000007" green="0.1433664858" blue="0.33727353809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="L9c-rv-gGv" firstAttribute="leading" secondItem="rOq-aW-TAt" secondAttribute="leadingMargin" id="32f-BF-Wky"/>
                             <constraint firstItem="qIi-hV-Ksz" firstAttribute="trailing" secondItem="Szi-Au-5jg" secondAttribute="trailing" id="IhX-fC-9IW"/>
-                            <constraint firstItem="Szi-Au-5jg" firstAttribute="centerX" secondItem="L9c-rv-gGv" secondAttribute="centerX" id="J6W-Qm-Esr"/>
-                            <constraint firstItem="L9c-rv-gGv" firstAttribute="top" secondItem="qIi-hV-Ksz" secondAttribute="top" constant="17" id="fBP-ww-Sef"/>
-                            <constraint firstItem="Szi-Au-5jg" firstAttribute="top" secondItem="L9c-rv-gGv" secondAttribute="bottom" constant="42" id="hJu-TH-Ssk"/>
                             <constraint firstItem="Szi-Au-5jg" firstAttribute="leading" secondItem="qIi-hV-Ksz" secondAttribute="leading" id="i18-Ol-ETu"/>
                             <constraint firstItem="qIi-hV-Ksz" firstAttribute="bottom" secondItem="Szi-Au-5jg" secondAttribute="bottom" constant="60" id="ic5-Ro-9Yh"/>
                         </constraints>
@@ -278,11 +308,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="aF6-iF-7O8"/>
                     <connections>
-                        <outlet property="imageView" destination="L9c-rv-gGv" id="33y-lj-i2Y"/>
-                        <outletCollection property="answerBtns" destination="CI2-8S-heL" collectionClass="NSMutableArray" id="gHS-Ee-d2s"/>
-                        <outletCollection property="answerBtns" destination="GNi-PW-XIl" collectionClass="NSMutableArray" id="MTy-UW-pi6"/>
-                        <outletCollection property="answerBtns" destination="Skm-hY-f8m" collectionClass="NSMutableArray" id="By5-bC-Nke"/>
-                        <outletCollection property="answerBtns" destination="mvN-2Z-7az" collectionClass="NSMutableArray" id="KOC-nL-ziX"/>
+                        <outlet property="employeePhoto" destination="j3P-1b-qv7" id="iJM-Nj-4is"/>
+                        <outlet property="questionNumberLabel" destination="Wu7-pV-7ji" id="S8s-0r-r2B"/>
+                        <outlet property="scoreLabel" destination="pUB-ni-Idq" id="Zhc-jL-UII"/>
+                        <outletCollection property="answerBtns" destination="CI2-8S-heL" collectionClass="NSMutableArray" id="x0h-95-Hba"/>
+                        <outletCollection property="answerBtns" destination="GNi-PW-XIl" collectionClass="NSMutableArray" id="pP7-OV-JHH"/>
+                        <outletCollection property="answerBtns" destination="Skm-hY-f8m" collectionClass="NSMutableArray" id="nbD-dx-F9u"/>
+                        <outletCollection property="answerBtns" destination="mvN-2Z-7az" collectionClass="NSMutableArray" id="X8j-rq-8z2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSE-Pp-ow5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,7 +325,6 @@
     <resources>
         <image name="Rectangle" width="322" height="68"/>
         <image name="gamecontroller" catalog="system" width="64" height="40"/>
-        <image name="image3" width="1170" height="586"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
