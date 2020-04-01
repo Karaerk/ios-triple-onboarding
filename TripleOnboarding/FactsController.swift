@@ -19,7 +19,7 @@ class FactsController: UITableViewController {
     var ref: DatabaseReference!
     var myref: DatabaseReference!
     var factsCont = [factsContent]()
-    
+    //Used for the pop up controller
     var popUpTitle: String!
     var popUpContent: String!
     
@@ -42,7 +42,7 @@ class FactsController: UITableViewController {
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }
-            
+            //Append the content and categorie to the struct
             let categorieTitle = (firebaseResponse["title"] as? String)!
             let contentText = (firebaseResponse["content"] as? String)!
             self.factsCont.append(factsContent(categorie: categorieTitle, content: contentText))
@@ -60,9 +60,10 @@ class FactsController: UITableViewController {
         let content = factsCont[indexPath.row]
         cell.textLabel?.text = content.categorie
         cell.textLabel?.textAlignment = .center
-        cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: 25)
+        cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: fontSize)
         cell.textLabel?.textColor = UIColor.white
         
+        //Is used for the lay-out from the tableview
         let whiteRoundedView : UIView = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 70))
         whiteRoundedView.layer.backgroundColor = pinkColor.cgColor
         whiteRoundedView.layer.masksToBounds = false

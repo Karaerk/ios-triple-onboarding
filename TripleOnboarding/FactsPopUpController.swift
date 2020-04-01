@@ -10,7 +10,6 @@ import UIKit
 
 class FactsPopUpController: UIViewController {
 
-
     @IBOutlet weak var titleUI: UILabel!
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var popUpContainer: UIView!
@@ -25,7 +24,6 @@ class FactsPopUpController: UIViewController {
         content.text = contentLbl
         popUpContainer.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
-
     }
 
 }

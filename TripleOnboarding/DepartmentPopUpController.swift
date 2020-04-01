@@ -35,7 +35,6 @@ class DepartmentPopUpController: UIViewController {
     }
 }
 
-
 extension String {
     func htmlAttributed(family: String?, size: CGFloat, color: UIColor) -> NSAttributedString? {
         do {

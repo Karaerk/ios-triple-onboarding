@@ -20,17 +20,12 @@ class DepartmentController: UITableViewController {
     
     var ref: DatabaseReference!
     
-    var departTitles: [String] = []
-    var thumbnailImage = [UIImage]()
-    var imageDepart = [UIImage]()
-    
-    var departContents: [String] = []
-    
+    //Used for the popup controller
     var departPageTitle: String!
     var departPageContent: String!
     var departPageImage: UIImage!
     
-    var DepartContents = [departmentContent]()
+    var departContents = [departmentContent]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,26 +54,29 @@ class DepartmentController: UITableViewController {
             let imageData = try! Data(contentsOf: imageUrl!)
             let image = UIImage(data: imageData)
             
-            self.DepartContents.append(departmentContent(thumbnail: thumbnail, image: image, title: departTitle, content: departContent))
+            //Append the title and content from firebase to the struct
+            self.departContents.append(departmentContent(thumbnail: thumbnail, image: image, title: departTitle, content: departContent))
             self.tableView.reloadData()
         }
     }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DepartContents.count
+        return departContents.count     //Size of the struct
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //Uses the variables from departmentcell
         let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentCell", for: indexPath) as! DepartmentCell
-        let content = DepartContents[indexPath.row]
+        let content = departContents[indexPath.row]
         cell.departTitle.text = content.title
         cell.departImage.image = content.thumbnail
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let content = DepartContents[indexPath.row]
+        let content = departContents[indexPath.row]
+        //Is used to show the correct labels at the pop up controller
         departPageTitle = content.title
         departPageContent = content.content
         departPageImage = content.image
