@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import FirebaseDatabase
-import FirebaseStorage
 
 struct departmentContent{
     var thumbnail : UIImage!

@@ -12,6 +12,11 @@
 		9081C84B2A7A6982670B2F7E /* Pods_TripleOnboardingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4009EF36B353A5F87E5A01E2 /* Pods_TripleOnboardingTests.framework */; };
 		9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */; };
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
+		AF3666E324348479009007C9 /* UrenBoek.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3666E224348479009007C9 /* UrenBoek.storyboard */; };
+		AF3666E924348BBD009007C9 /* UrenboekController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666E824348BBD009007C9 /* UrenboekController.swift */; };
+		AF3666EB24348C4D009007C9 /* UrenboekNewPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666EA24348C4D009007C9 /* UrenboekNewPageController.swift */; };
+		AF3666F12434B982009007C9 /* UrenboekTableContrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666F02434B982009007C9 /* UrenboekTableContrl.swift */; };
+		AF3666F32434BACD009007C9 /* UrenboekPopUpContrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666F22434BACD009007C9 /* UrenboekPopUpContrl.swift */; };
 		AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A70472420CF9800BAD193 /* FactsController.swift */; };
 		AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */; };
 		AF5BE1D0242226AE00659120 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5BE1CF242226AE00659120 /* FAQ.storyboard */; };
@@ -73,6 +78,11 @@
 		97EBAEE9BB6B68FA78BEE3D9 /* Pods-TripleOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding.release.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding/Pods-TripleOnboarding.release.xcconfig"; sourceTree = "<group>"; };
 		9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
+		AF3666E224348479009007C9 /* UrenBoek.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UrenBoek.storyboard; sourceTree = "<group>"; };
+		AF3666E824348BBD009007C9 /* UrenboekController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrenboekController.swift; sourceTree = "<group>"; };
+		AF3666EA24348C4D009007C9 /* UrenboekNewPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrenboekNewPageController.swift; sourceTree = "<group>"; };
+		AF3666F02434B982009007C9 /* UrenboekTableContrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrenboekTableContrl.swift; sourceTree = "<group>"; };
+		AF3666F22434BACD009007C9 /* UrenboekPopUpContrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrenboekPopUpContrl.swift; sourceTree = "<group>"; };
 		AF3A70472420CF9800BAD193 /* FactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsController.swift; sourceTree = "<group>"; };
 		AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPopUpController.swift; sourceTree = "<group>"; };
 		AF5BE1CF242226AE00659120 /* FAQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
@@ -164,6 +174,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF3666E724348B76009007C9 /* Urenboek */ = {
+			isa = PBXGroup;
+			children = (
+				AF3666E824348BBD009007C9 /* UrenboekController.swift */,
+				AF3666EA24348C4D009007C9 /* UrenboekNewPageController.swift */,
+				AF3666F02434B982009007C9 /* UrenboekTableContrl.swift */,
+				AF3666F22434BACD009007C9 /* UrenboekPopUpContrl.swift */,
+			);
+			name = Urenboek;
+			sourceTree = "<group>";
+		};
 		AF3A70492420D69000BAD193 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +263,7 @@
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF3666E724348B76009007C9 /* Urenboek */,
 				AF7BCA92242A342100550EBD /* Departments */,
 				AF7BCA7B242A11A500550EBD /* Games */,
 				AF5BE1D8242227FB00659120 /* Info */,
@@ -263,6 +285,7 @@
 				AF87FC4224193F450064A7A9 /* Facts.storyboard */,
 				AF5BE1CF242226AE00659120 /* FAQ.storyboard */,
 				AF85624A242A6D5800F995F5 /* Department.storyboard */,
+				AF3666E224348479009007C9 /* UrenBoek.storyboard */,
 			);
 			name = Story;
 			sourceTree = "<group>";
@@ -447,6 +470,7 @@
 				AFDC1DD6240E98C900CC0CDF /* Assets.xcassets in Resources */,
 				AF7BCA8B242A17BF00550EBD /* Dosis-Light.ttf in Resources */,
 				AFDC1DD4240E98C800CC0CDF /* Main.storyboard in Resources */,
+				AF3666E324348479009007C9 /* UrenBoek.storyboard in Resources */,
 				AF7BCA8A242A17BF00550EBD /* Dosis-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +601,9 @@
 			files = (
 				AFDC1DD1240E98C800CC0CDF /* ViewController.swift in Sources */,
 				AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */,
+				AF3666EB24348C4D009007C9 /* UrenboekNewPageController.swift in Sources */,
+				AF3666F32434BACD009007C9 /* UrenboekPopUpContrl.swift in Sources */,
+				AF3666E924348BBD009007C9 /* UrenboekController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
 				AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */,
@@ -585,6 +612,7 @@
 				AF85625E242A72F600F995F5 /* DepartmentCell.swift in Sources */,
 				AF7BCA7D242A11BD00550EBD /* GamesViewController.swift in Sources */,
 				AF856260242A7E6100F995F5 /* DepartmentController.swift in Sources */,
+				AF3666F12434B982009007C9 /* UrenboekTableContrl.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
 				AF856262242A8F3800F995F5 /* TabBarController.swift in Sources */,
 				AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */,

@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet var titleButtons: [UIButton]!
     
     var ref: DatabaseReference!
-    var myref: DatabaseReference!
     
     var uiTitle: String!
     var uiContent: [String] = []
@@ -35,11 +34,10 @@ class ViewController: UIViewController {
     
     func UpdateUI(){
         
-        ref = Database.database().reference()
-        myref = ref.child("info")
+        ref = Database.database().reference().child("info")
         var counter = 0
                 
-        myref.queryOrdered(byChild: "title").queryLimited(toLast: 5).observe(.childAdded) { (snapshot) in
+        ref.queryOrdered(byChild: "title").queryLimited(toLast: 5).observe(.childAdded) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }

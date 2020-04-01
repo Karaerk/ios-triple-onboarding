@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ct-xh-JdX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Medium.ttf">
+            <string>Dosis-Medium</string>
+        </array>
+        <array key="Dosis-Regular.ttf">
+            <string>Dosis-Regular</string>
+        </array>
+        <array key="Dosis-SemiBold.ttf">
+            <string>Dosis-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Urenboek-->
+        <scene sceneID="One-bA-BbO">
+            <objects>
+                <viewController id="eFQ-m5-aqG" customClass="UrenboekController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iRq-49-2zn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="jxj-qC-eND">
+                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSl-ci-yEo">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="195"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
+                                        <state key="normal" title="Hoe boek je uren">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choiceBtns:" destination="eFQ-m5-aqG" eventType="touchUpInside" id="RpN-qx-OCs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57l-CO-ONR">
+                                        <rect key="frame" x="0.0" y="245" width="374" height="195"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
+                                        <state key="normal" title=" Algemene projectcodes">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="projectCodeBtn:" destination="eFQ-m5-aqG" eventType="touchUpInside" id="A60-OF-QI8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTH-wO-DvB">
+                                        <rect key="frame" x="0.0" y="490" width="374" height="195"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
+                                        <state key="normal" title="Uren registratie ZZP collega’s">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choiceBtns:" destination="eFQ-m5-aqG" eventType="touchUpInside" id="jK3-d9-kYy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jxj-qC-eND" firstAttribute="centerX" secondItem="iRq-49-2zn" secondAttribute="centerX" id="0mH-qa-1ZG"/>
+                            <constraint firstItem="76y-jf-K7L" firstAttribute="trailing" secondItem="jxj-qC-eND" secondAttribute="trailing" constant="20" id="4v1-oE-oVY"/>
+                            <constraint firstItem="76y-jf-K7L" firstAttribute="bottom" secondItem="jxj-qC-eND" secondAttribute="bottom" constant="20" id="Eon-U6-dod"/>
+                            <constraint firstItem="jxj-qC-eND" firstAttribute="leading" secondItem="76y-jf-K7L" secondAttribute="leading" constant="20" id="U1F-Vb-OC7"/>
+                            <constraint firstItem="jxj-qC-eND" firstAttribute="top" secondItem="76y-jf-K7L" secondAttribute="top" constant="20" id="bZh-5a-JMw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="76y-jf-K7L"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Urenboek" image="clock" catalog="system" id="7XE-4n-Tcu"/>
+                    <navigationItem key="navigationItem" title="Urenboek" id="W2F-8K-HBZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outletCollection property="urenBoekBtns" destination="YSl-ci-yEo" collectionClass="NSMutableArray" id="nKa-j4-tZQ"/>
+                        <outletCollection property="urenBoekBtns" destination="57l-CO-ONR" collectionClass="NSMutableArray" id="fcy-tr-lmm"/>
+                        <outletCollection property="urenBoekBtns" destination="xTH-wO-DvB" collectionClass="NSMutableArray" id="voX-ES-qx0"/>
+                        <segue destination="Yek-Ng-H1w" kind="show" identifier="UrenboekPage" id="oX8-1f-3vd"/>
+                        <segue destination="Uea-85-lez" kind="show" identifier="UrenboekTable" id="DHZ-Lj-baa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KH-g4-92x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="112.5"/>
+        </scene>
+        <!--Projectcodes Table-->
+        <scene sceneID="J57-Hq-JIl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XV2-DC-rnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="Uea-85-lez" userLabel="Projectcodes Table" customClass="UrenboekTableContrl" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ASi-uc-b3n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CodeCell" id="N5D-Wh-3qF">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N5D-Wh-3qF" id="JYd-xA-Ozg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Uea-85-lez" id="asP-I2-pSA"/>
+                            <outlet property="delegate" destination="Uea-85-lez" id="R4V-K2-1KF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="8YC-9c-Yb8"/>
+                    <connections>
+                        <segue destination="ppR-uK-6Vd" kind="presentation" identifier="UrenboekPopUp" id="U3w-hq-mKh"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1823" y="350"/>
+        </scene>
+        <!--Urenboek Pop Up Contrl-->
+        <scene sceneID="kjl-vk-emC">
+            <objects>
+                <viewController id="ppR-uK-6Vd" customClass="UrenboekPopUpContrl" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Zy-7i-uGg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGE-iG-c8t">
+                                <rect key="frame" x="0.0" y="20" width="414" height="32"/>
+                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRb-4w-JJz">
+                                <rect key="frame" x="20" y="60" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uGE-iG-c8t" firstAttribute="leading" secondItem="UPf-KY-mhH" secondAttribute="leading" id="5Oz-1j-hHE"/>
+                            <constraint firstItem="DRb-4w-JJz" firstAttribute="leading" secondItem="UPf-KY-mhH" secondAttribute="leading" constant="20" id="D7w-le-h5z"/>
+                            <constraint firstItem="DRb-4w-JJz" firstAttribute="top" secondItem="uGE-iG-c8t" secondAttribute="bottom" constant="8" id="EcU-1M-4uK"/>
+                            <constraint firstItem="UPf-KY-mhH" firstAttribute="trailing" secondItem="DRb-4w-JJz" secondAttribute="trailing" constant="20" id="IbZ-Qh-Iaz"/>
+                            <constraint firstItem="UPf-KY-mhH" firstAttribute="trailing" secondItem="uGE-iG-c8t" secondAttribute="trailing" id="TUn-5E-cSG"/>
+                            <constraint firstItem="uGE-iG-c8t" firstAttribute="top" secondItem="UPf-KY-mhH" secondAttribute="top" constant="20" id="xj6-tK-bFA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UPf-KY-mhH"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentLblUI" destination="DRb-4w-JJz" id="k32-iI-bLO"/>
+                        <outlet property="titleLblUI" destination="uGE-iG-c8t" id="w5P-dq-Txc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YEI-zQ-Y96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628.985507246377" y="349.55357142857139"/>
+        </scene>
+        <!--PopOver -->
+        <scene sceneID="hAk-W9-Wy3">
+            <objects>
+                <viewController storyboardIdentifier="UrenboekNewPageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yek-Ng-H1w" userLabel="PopOver " customClass="UrenboekNewPageController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fg7-gI-6Gq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24s-cZ-aau">
+                                <rect key="frame" x="0.0" y="88" width="414" height="658"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="pbY-En-yeV">
+                                        <rect key="frame" x="10" y="10" width="394" height="51"/>
+                                        <string key="text">Label
+</string>
+                                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="G6P-c1-9n1" firstAttribute="trailing" secondItem="pbY-En-yeV" secondAttribute="trailing" constant="10" id="7il-Na-EsH"/>
+                                    <constraint firstItem="pbY-En-yeV" firstAttribute="top" secondItem="24s-cZ-aau" secondAttribute="top" constant="10" id="Tmt-dy-kIR"/>
+                                    <constraint firstAttribute="trailing" secondItem="pbY-En-yeV" secondAttribute="trailing" constant="10" id="Zez-Yz-pEh"/>
+                                    <constraint firstItem="pbY-En-yeV" firstAttribute="leading" secondItem="24s-cZ-aau" secondAttribute="leading" constant="10" id="upH-ZB-bjs"/>
+                                    <constraint firstAttribute="bottom" secondItem="pbY-En-yeV" secondAttribute="bottom" id="yD4-gq-ucJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vFo-k5-vCn"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="G6P-c1-9n1"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elY-1j-pde">
+                                <rect key="frame" x="20" y="754" width="374" height="44"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="25"/>
+                                <state key="normal" title="Ga naar de website">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="websiteBtn:" destination="Yek-Ng-H1w" eventType="touchUpInside" id="h8W-5Y-EoJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OcF-6I-wvl" firstAttribute="trailing" secondItem="elY-1j-pde" secondAttribute="trailing" constant="20" id="KgZ-7K-8VC"/>
+                            <constraint firstItem="24s-cZ-aau" firstAttribute="top" secondItem="OcF-6I-wvl" secondAttribute="top" id="SyU-R2-WV0"/>
+                            <constraint firstItem="24s-cZ-aau" firstAttribute="leading" secondItem="OcF-6I-wvl" secondAttribute="leading" id="ag7-ih-fRH"/>
+                            <constraint firstItem="OcF-6I-wvl" firstAttribute="bottom" secondItem="elY-1j-pde" secondAttribute="bottom" constant="15" id="nIf-PR-hCm"/>
+                            <constraint firstItem="elY-1j-pde" firstAttribute="leading" secondItem="OcF-6I-wvl" secondAttribute="leading" constant="20" id="u9D-Gd-upv"/>
+                            <constraint firstItem="24s-cZ-aau" firstAttribute="trailing" secondItem="OcF-6I-wvl" secondAttribute="trailing" id="uT6-SZ-JA1"/>
+                            <constraint firstItem="elY-1j-pde" firstAttribute="top" secondItem="24s-cZ-aau" secondAttribute="bottom" constant="8" id="uvN-qN-pml"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OcF-6I-wvl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pcY-FN-uHe"/>
+                    <connections>
+                        <outlet property="button" destination="elY-1j-pde" id="6lD-PE-meE"/>
+                        <outlet property="contentLblUI" destination="pbY-En-yeV" id="OdR-Mc-sDA"/>
+                        <outlet property="scrollView" destination="24s-cZ-aau" id="VKj-ZU-Ws5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55e-Ur-Rqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="-295.3125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wNi-Hi-pLX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ct-xh-JdX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BUa-Nz-avD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eFQ-m5-aqG" kind="relationship" relationship="rootViewController" id="q28-6j-8gZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aN0-RR-euq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91.304347826086968" y="112.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
