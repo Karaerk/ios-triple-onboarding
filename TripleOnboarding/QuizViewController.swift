@@ -14,6 +14,8 @@ class QuizViewController: UIViewController {
     
     @IBOutlet var answerBtns: [UIButton]!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var ref: DatabaseReference!
     var myref: DatabaseReference!
@@ -22,12 +24,17 @@ class QuizViewController: UIViewController {
     
     var quesionText: String!
     
+    //variables for the score and round
+    var score = 0
+    var questionNumber = 1
+    
     let haptic = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateQuiz()
+        updateLabels()
     }
     
     func updateQuiz(){
@@ -49,7 +56,7 @@ class QuizViewController: UIViewController {
         for i in 0..<answerBtns.count {
             answers.child("\(i)").observeSingleEvent(of: .value) { (snap) in
                 guard let content = snap.value as? [String:Any] else{
-                    return
+                    return self.alertEndGame()
                 }
                 self.answerBtns[i].setTitle(content["content"] as? String, for: .normal)
                 let isCorrect = content["correct"] as! NSInteger
@@ -76,13 +83,39 @@ class QuizViewController: UIViewController {
                 haptic.notificationOccurred(.success)
                 sender.backgroundColor = UIColor.green
                 questionCounter += 1
-                updateQuiz()
-                
+                questionNumber += 1
+                onRightAnswer()
             } else {
                 sender.backgroundColor = UIColor.red
                 haptic.notificationOccurred(.error)
+                onWrongAnswer()
             }
         }
+    
+    
+       func updateLabels(){
+           scoreLabel.text = String(score)
+           questionNumberLabel.text = String(questionNumber)
+       }
+       
+       func onWrongAnswer(){
+           score -= 1
+       }
+       
+       func onRightAnswer(){
+           score += 10
+           updateLabels()
+           updateQuiz()
+       }
+       
+       func alertEndGame(){
+           let alert = UIAlertController(title: "Je hebt alle vragen beantwoord!", message: "Je score: \(score) \n Nog te doen" , preferredStyle: .alert)
+
+           alert.addAction(UIAlertAction(title: "todo", style: .default, handler: nil))
+           alert.addAction(UIAlertAction(title: "Nee", style: .cancel, handler: nil))
+
+           self.present(alert, animated: true)
+       }
     }
 
 

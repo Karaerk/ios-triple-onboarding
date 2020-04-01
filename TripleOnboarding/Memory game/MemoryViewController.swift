@@ -20,12 +20,10 @@ class MemoryViewController: UIViewController {
     
     var ref: DatabaseReference!
     var counter: Int = 0
+    
+    //variables for the score and round
     var score = 0
     var questionNumber = 1
-    
-    var maxPoints = 10
-    var currentPoints = 0
-    var totalPoints = 0
     
     let haptic = UINotificationFeedbackGenerator()
     
@@ -43,7 +41,7 @@ class MemoryViewController: UIViewController {
         let empoloyeePhotos = Database.database().reference().child("memory")
         let empoloyeePhoto = empoloyeePhotos.child("\(counter)")
         let answers = empoloyeePhoto.child("answer")
-       
+
         empoloyeePhoto.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
@@ -54,7 +52,7 @@ class MemoryViewController: UIViewController {
         for i in 0..<answerBtns.count {
             answers.child("\(i)").observeSingleEvent(of: .value) { (snap) in
                 guard let content = snap.value as? [String:Any] else{
-                    return
+                    return self.alertEndGame()
                 }
                 self.answerBtns[i].setTitle(content["content"] as? String, for: .normal)
                 let isCorrect = content["correct"] as! NSInteger
@@ -84,7 +82,6 @@ class MemoryViewController: UIViewController {
         }
     }
     
-    
     func resetUI(){
         for i in 0..<answerBtns.count{
             answerBtns[i].setTitle("", for: .normal)
@@ -105,6 +102,15 @@ class MemoryViewController: UIViewController {
         score += 10
         updateLabels()
         updateMemory()
+    }
+    
+    func alertEndGame(){
+        let alert = UIAlertController(title: "Je hebt alle vragen beantwoord!", message: "Je score: \(score) \n Nog te doen" , preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "todo", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Nee", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
     }
 }
 
