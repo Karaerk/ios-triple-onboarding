@@ -23,6 +23,10 @@ class MemoryViewController: UIViewController {
     var score = 0
     var questionNumber = 1
     
+    var maxPoints = 10
+    var currentPoints = 0
+    var totalPoints = 0
+    
     let haptic = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
@@ -71,15 +75,12 @@ class MemoryViewController: UIViewController {
             haptic.notificationOccurred(.success)
             sender.backgroundColor = UIColor.green
             counter += 1
-            
-            score += 1
             questionNumber += 1
-            updateLabels()
-            
-            updateMemory()
+            onRightAnswer()
         } else if sender.tag == 0{
             sender.backgroundColor = UIColor.red
             haptic.notificationOccurred(.error)
+            onWrongAnswer()
         }
     }
     
@@ -94,6 +95,16 @@ class MemoryViewController: UIViewController {
     func updateLabels(){
         scoreLabel.text = String(score)
         questionNumberLabel.text = String(questionNumber)
+    }
+    
+    func onWrongAnswer(){
+        score -= 1
+    }
+    
+    func onRightAnswer(){
+        score += 10
+        updateLabels()
+        updateMemory()
     }
 }
 
