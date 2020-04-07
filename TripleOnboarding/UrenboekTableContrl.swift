@@ -29,17 +29,16 @@ class UrenboekTableContrl: UITableViewController {
     }
     
     func updateContent(){
-        ref = Database.database().reference().child("urenboek")
-        
-        ref.child("projectcodes").queryOrdered(byChild: "code").observe(.childAdded) { (snapshot) in
-            guard let firebaseResponse = snapshot.value as? [String:Any] else{
-                return
-            }
-            let codeTitle = (firebaseResponse["code"] as? String)!
-            let codeContent = (firebaseResponse["content"] as? String)!
-            
-            self.projectcode.append(projectCodes(code: codeTitle, content: codeContent))
-            self.tableView.reloadData()
+        Database.database().reference().child("/hours/1/child/")
+            .observe(.childAdded) { (snapshot) in
+                guard let firebaseResponse = snapshot.value as? [String:Any] else{
+                    return
+                }
+                let codeTitle = (firebaseResponse["code"] as? String)!
+                let codeContent = (firebaseResponse["content"] as? String)!
+                
+                self.projectcode.append(projectCodes(code: codeTitle, content: codeContent))
+                self.tableView.reloadData()
         }
     }
     

@@ -88,12 +88,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KH-g4-92x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818.84057971014499" y="112.5"/>
+            <point key="canvasLocation" x="880" y="113"/>
         </scene>
         <!--Projectcodes Table-->
         <scene sceneID="J57-Hq-JIl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XV2-DC-rnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Uea-85-lez" userLabel="Projectcodes Table" customClass="UrenboekTableContrl" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ASi-uc-b3n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -119,6 +118,7 @@
                         <segue destination="ppR-uK-6Vd" kind="presentation" identifier="UrenboekPopUp" id="U3w-hq-mKh"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XV2-DC-rnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823" y="350"/>
         </scene>

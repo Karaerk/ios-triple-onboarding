@@ -34,7 +34,7 @@ class UrenboekController: UIViewController {
     }
     
     func updateContent(){
-        ref = Database.database().reference().child("urenboek")
+        ref = Database.database().reference().child("hours")
         
         ref.observe(.childAdded) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
