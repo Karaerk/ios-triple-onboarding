@@ -17,13 +17,8 @@ class GamePopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         ScoreLabel.text = scoreLbl
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func CloseBtn(_ sender: UIButton) {
