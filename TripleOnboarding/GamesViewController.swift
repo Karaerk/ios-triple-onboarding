@@ -20,6 +20,4 @@ class GamesViewController: UIViewController {
             buttons.layer.cornerRadius = 50
         }
     }
-    
-
 }

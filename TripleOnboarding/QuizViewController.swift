@@ -18,15 +18,15 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     var ref: DatabaseReference!
-    var myref: DatabaseReference!
     
     var questionCounter: Int = 0
-    
     var quesionText: String!
     
     //variables for the score and round
     var score = 0
     var questionNumber = 1
+    
+    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     
     let haptic = UINotificationFeedbackGenerator()
     
@@ -63,56 +63,55 @@ class QuizViewController: UIViewController {
                 self.answerBtns[i].tag = isCorrect
             }
         }
-        
+        //Color and layout buttons
         for buttons in answerBtns{
             buttons.layer.cornerRadius = 40
-            buttons.backgroundColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+            buttons.backgroundColor = pinkColor
         }
         answerBtns.shuffle()
     }
-    
+    //Reset function for every new question
     func resetUI(){
         for i in 0..<answerBtns.count{
             answerBtns[i].setTitle("", for: .normal)
             answerBtns[i].backgroundColor = UIColor.clear
         }
     }
-        
-        @IBAction func answerBtn(_ sender: UIButton) {
-            if sender.tag == 1 {
-                haptic.notificationOccurred(.success)
-                sender.backgroundColor = UIColor.green
-                questionCounter += 1
-                questionNumber += 1
-                onRightAnswer()
-            } else {
-                sender.backgroundColor = UIColor.red
-                haptic.notificationOccurred(.error)
-                onWrongAnswer()
-            }
-        }
     
-       func updateLabels(){
-           scoreLabel.text = String(score)
-           questionNumberLabel.text = String(questionNumber)
-       }
-       
-       func onWrongAnswer(){
-           score -= 1
-       }
-       
-       func onRightAnswer(){
-           score += 10
-           updateLabels()
-           updateQuiz()
-       }
-       
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if (segue.identifier == "QuizEndPopUp") {
-                let gamePopUpVC = segue.destination as! GamePopUpViewController
-               
-               gamePopUpVC.scoreLbl = String("Je score: \(score)")
-            }
+    @IBAction func answerBtn(_ sender: UIButton) {
+        if sender.tag == 1 {
+            haptic.notificationOccurred(.success)
+            sender.backgroundColor = UIColor.green
+            questionCounter += 1
+            questionNumber += 1
+            onRightAnswer()
+        } else {
+            sender.backgroundColor = UIColor.red
+            haptic.notificationOccurred(.error)
+            onWrongAnswer()
         }
-       
     }
+    
+    func updateLabels(){
+        scoreLabel.text = String(score)
+        questionNumberLabel.text = String(questionNumber)
+    }
+    
+    func onWrongAnswer(){
+        score -= 1
+    }
+    
+    func onRightAnswer(){
+        score += 10
+        updateLabels()
+        updateQuiz()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "QuizEndPopUp") {
+            let gamePopUpVC = segue.destination as! GamePopUpViewController
+            gamePopUpVC.scoreLbl = String("Je score: \(score)")
+        }
+    }
+    
+}

@@ -18,7 +18,7 @@ class GamePopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ScoreLabel.text = scoreLbl
-        
+        self.navigationItem.hidesBackButton = true
     }
     
     @IBAction func CloseBtn(_ sender: UIButton) {

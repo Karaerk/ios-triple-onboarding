@@ -178,15 +178,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		9B04FA94242239CF004522C5 /* Memory game */ = {
-			isa = PBXGroup;
-			children = (
-				9B04FA95242239EB004522C5 /* MemoryViewController.swift */,
-				9B641247243C681800DBA942 /* GamePopUpViewController.swift */,
-			);
-			path = "Memory game";
-			sourceTree = "<group>";
-		};
 		AF3666E724348B76009007C9 /* Urenboek */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +228,8 @@
 			children = (
 				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
 				AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */,
+				9B04FA95242239EB004522C5 /* MemoryViewController.swift */,
+				9B641247243C681800DBA942 /* GamePopUpViewController.swift */,
 			);
 			name = Games;
 			sourceTree = "<group>";
@@ -279,7 +272,6 @@
 				AF3666E724348B76009007C9 /* Urenboek */,
 				AF7BCA92242A342100550EBD /* Departments */,
 				AF7BCA7B242A11A500550EBD /* Games */,
-				9B04FA94242239CF004522C5 /* Memory game */,
 				AF5BE1D8242227FB00659120 /* Info */,
 				AF5BE1D3242226C700659120 /* FAQ */,
 				AF3A704D2420DE4400BAD193 /* Facts */,

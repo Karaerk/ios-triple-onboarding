@@ -406,9 +406,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G71-zQ-EaO">
-                                        <rect key="frame" x="157" y="263" width="60" height="212.33333333333337"/>
+                                        <rect key="frame" x="147" y="263" width="80" height="212.33333333333337"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="23"/>
                                         <state key="normal" title="Afsluiten">
-                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="CloseBtn:" destination="xjG-2M-UnW" eventType="touchUpInside" id="xE4-Ch-TN2"/>
