@@ -27,9 +27,7 @@ class GamePopUpViewController: UIViewController {
     }
     
     @IBAction func CloseBtn(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "TODO", sender: self)
+        navigationController?.popToRootViewController(animated: true)
     }
-    
-    @IBAction func Restartbtn(_ sender: UIButton) {
-    }
+
 }
