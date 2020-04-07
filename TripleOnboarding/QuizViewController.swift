@@ -14,6 +14,8 @@ class QuizViewController: UIViewController {
     
     @IBOutlet var answerBtns: [UIButton]!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var ref: DatabaseReference!
     var myref: DatabaseReference!
@@ -22,12 +24,17 @@ class QuizViewController: UIViewController {
     
     var quesionText: String!
     
+    //variables for the score and round
+    var score = 0
+    var questionNumber = 1
+    
     let haptic = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateQuiz()
+        updateLabels()
     }
     
     func updateQuiz(){
@@ -40,7 +47,7 @@ class QuizViewController: UIViewController {
         
         singleQuestion.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
-                return
+                return self.performSegue(withIdentifier: "QuizEndPopUp", sender: self)
             }
             self.questionLabel.text = (firebaseResponse["question"]) as? String
         }
@@ -76,33 +83,36 @@ class QuizViewController: UIViewController {
                 haptic.notificationOccurred(.success)
                 sender.backgroundColor = UIColor.green
                 questionCounter += 1
-                updateQuiz()
-                
+                questionNumber += 1
+                onRightAnswer()
             } else {
                 sender.backgroundColor = UIColor.red
                 haptic.notificationOccurred(.error)
+                onWrongAnswer()
             }
         }
+    
+       func updateLabels(){
+           scoreLabel.text = String(score)
+           questionNumberLabel.text = String(questionNumber)
+       }
+       
+       func onWrongAnswer(){
+           score -= 1
+       }
+       
+       func onRightAnswer(){
+           score += 10
+           updateLabels()
+           updateQuiz()
+       }
+       
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if (segue.identifier == "QuizEndPopUp") {
+                let gamePopUpVC = segue.destination as! GamePopUpViewController
+               
+               gamePopUpVC.scoreLbl = String("Je score: \(score)")
+            }
+        }
+       
     }
-
-
-
-
-
-
-//            ref.child("quiz").child("\(questionCounter)").observeSingleEvent(of: .value) { (snapshot) in
-//                guard let firebaseResponse = snapshot.value as? [String:Any] else{
-//                    return
-//                }
-//                self.questionLabel.text = (firebaseResponse["question"]) as? String
-//                let arrayQuestion = firebaseResponse["answer"] as Any
-//                print(firebaseResponse["answers"] as Any)
-//
-//                //print(arrayQuestion["content"])
-//
-//
-//    //            for i in 0..<arrayQuestion.count {
-//    //                self.answerBtns[i].setTitle(arrayQuestion[i] as? String, for: .normal)
-//    //            }
-//            }
-//    }

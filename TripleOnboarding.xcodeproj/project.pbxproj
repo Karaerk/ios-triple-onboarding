@@ -11,6 +11,7 @@
 		8965A13B435434C5AE4B8DAD /* Pods_TripleOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2E7183AB70B9E0D86B450 /* Pods_TripleOnboarding.framework */; };
 		9081C84B2A7A6982670B2F7E /* Pods_TripleOnboardingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4009EF36B353A5F87E5A01E2 /* Pods_TripleOnboardingTests.framework */; };
 		9B04FA96242239EB004522C5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04FA95242239EB004522C5 /* MemoryViewController.swift */; };
+		9B641248243C681800DBA942 /* GamePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B641247243C681800DBA942 /* GamePopUpViewController.swift */; };
 		9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */; };
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
 		AF3666E324348479009007C9 /* UrenBoek.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3666E224348479009007C9 /* UrenBoek.storyboard */; };
@@ -78,6 +79,7 @@
 		969AFF0ED7E38F9A5D3FF8EB /* Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding-TripleOnboardingUITests/Pods-TripleOnboarding-TripleOnboardingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97EBAEE9BB6B68FA78BEE3D9 /* Pods-TripleOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripleOnboarding.release.xcconfig"; path = "Target Support Files/Pods-TripleOnboarding/Pods-TripleOnboarding.release.xcconfig"; sourceTree = "<group>"; };
 		9B04FA95242239EB004522C5 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
+		9B641247243C681800DBA942 /* GamePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePopUpViewController.swift; sourceTree = "<group>"; };
 		9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		AF3666E224348479009007C9 /* UrenBoek.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UrenBoek.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				9B04FA95242239EB004522C5 /* MemoryViewController.swift */,
+				9B641247243C681800DBA942 /* GamePopUpViewController.swift */,
 			);
 			path = "Memory game";
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				AF3666EB24348C4D009007C9 /* UrenboekNewPageController.swift in Sources */,
 				AF3666F32434BACD009007C9 /* UrenboekPopUpContrl.swift in Sources */,
 				AF3666E924348BBD009007C9 /* UrenboekController.swift in Sources */,
+				9B641248243C681800DBA942 /* GamePopUpViewController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
 				AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */,

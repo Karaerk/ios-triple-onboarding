@@ -2,7 +2,7 @@
 //  MemoryViewController.swift
 //  TripleOnboarding
 //
-//  Created by hva_1 on 18/03/2020.
+//  Created by Costa van Elsas on 18/03/2020.
 //  Copyright © 2020 Triple. All rights reserved.
 //
 
@@ -13,14 +13,17 @@ import FirebaseDatabase
 class MemoryViewController: UIViewController {
 
     @IBOutlet var answerBtns: [UIButton]!
-    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var employeePhoto: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
     
     var ref: DatabaseReference!
     var counter: Int = 0
-    var quesionText: String!
     
-    // Initialize an array for pictures
-    var picArray: [UIImage]!
+    //variables for the score and round
+    var score = 0
+    var questionNumber = 1
     
     let haptic = UINotificationFeedbackGenerator()
     
@@ -28,21 +31,22 @@ class MemoryViewController: UIViewController {
         super.viewDidLoad()
         
         updateMemory()
+        updateLabels()
     }
     
     func updateMemory(){
         resetUI()
 
         ref = Database.database().reference()
-        let questions = Database.database().reference().child("memory")
-        let singleQuestion = questions.child("\(counter)")
-        let answers = singleQuestion.child("answer")
-       
-        singleQuestion.observeSingleEvent(of: .value) { (snapshot) in
+        let empoloyeePhotos = Database.database().reference().child("memory")
+        let empoloyeePhoto = empoloyeePhotos.child("\(counter)")
+        let answers = empoloyeePhoto.child("answer")
+
+        empoloyeePhoto.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
-                return
+                return self.performSegue(withIdentifier: "EndGamePopUp", sender: self)
             }
-            self.imageView.image = (firebaseResponse["image"]) as? UIImage
+            self.employeePhoto.text = (firebaseResponse["image"]) as? String
         }
         
         for i in 0..<answerBtns.count {
@@ -55,7 +59,27 @@ class MemoryViewController: UIViewController {
                 self.answerBtns[i].tag = isCorrect
             }
         }
+        
+        for buttons in answerBtns {
+            buttons.layer.cornerRadius = 40
+            buttons.backgroundColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+        }
+        
         answerBtns.shuffle()
+    }
+    
+    @IBAction func answerButtons(_ sender: UIButton) {
+        if sender.tag == 1 {
+            haptic.notificationOccurred(.success)
+            sender.backgroundColor = UIColor.green
+            counter += 1
+            questionNumber += 1
+            onRightAnswer()
+        } else if sender.tag == 0{
+            sender.backgroundColor = UIColor.red
+            haptic.notificationOccurred(.error)
+            onWrongAnswer()
+        }
     }
     
     func resetUI(){
@@ -64,18 +88,28 @@ class MemoryViewController: UIViewController {
             answerBtns[i].backgroundColor = UIColor.clear
         }
     }
-        
-        @IBAction func answerBtn(_ sender: UIButton) {
-            if sender.tag == 1 {
-                haptic.notificationOccurred(.success)
-                sender.backgroundColor = UIColor.green
-                counter += 1
-                updateMemory()
-                
-            } else {
-                sender.backgroundColor = UIColor.red
-                haptic.notificationOccurred(.error)
-            }
-        }
+    
+    func updateLabels(){
+        scoreLabel.text = String(score)
+        questionNumberLabel.text = String(questionNumber)
     }
+    
+    func onWrongAnswer(){
+        score -= 1
+    }
+    
+    func onRightAnswer(){
+        score += 10
+        updateLabels()
+        updateMemory()
+    }
+    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if (segue.identifier == "EndGamePopUp") {
+             let gamePopUpVC = segue.destination as! GamePopUpViewController
+            
+            gamePopUpVC.scoreLbl = String("Je score: \(score)")
+         }
+     }
+}
 
