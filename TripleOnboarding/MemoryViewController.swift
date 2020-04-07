@@ -14,9 +14,11 @@ class MemoryViewController: UIViewController {
 
     @IBOutlet var answerBtns: [UIButton]!
     
-    @IBOutlet weak var employeePhoto: UILabel!
+    //@IBOutlet weak var employeePhoto: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var employeePhotoUI: UIImageView!
+    var image : UIImage!
     
     var ref: DatabaseReference!
     var counter: Int = 0
@@ -46,7 +48,11 @@ class MemoryViewController: UIViewController {
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return self.performSegue(withIdentifier: "EndGamePopUp", sender: self)
             }
-            self.employeePhoto.text = (firebaseResponse["image"]) as? String
+//            self.employeePhoto.text = (firebaseResponse["image"]) as? String
+            
+            let imageUrl = URL(string: (firebaseResponse["image"] as? String)!)
+            let imageData = try! Data(contentsOf: imageUrl!)
+            self.employeePhotoUI.image = UIImage(data: imageData)
         }
         
         for i in 0..<answerBtns.count {
