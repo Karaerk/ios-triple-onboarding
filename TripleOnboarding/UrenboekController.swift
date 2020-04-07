@@ -14,7 +14,7 @@ struct urenBoekContent{
     var title: String
     var content: String
 }
-class UrenboekController: UIViewController {
+class UrenboekController: UIViewController {            //BEGIN SCHERM URENBOEK
     
     var urenContents = [urenBoekContent]()
     var ref: DatabaseReference!
@@ -26,13 +26,13 @@ class UrenboekController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Layout for buttons
         for buttons in urenBoekBtns{
-            buttons.layer.cornerRadius = 50
+            buttons.layer.cornerRadius = 50     
         }
         updateContent()
     }
-    
+    //Puts all te titles with content in the "urenboekContent" Struct
     func updateContent(){
         ref = Database.database().reference().child("hours")
         
@@ -45,18 +45,18 @@ class UrenboekController: UIViewController {
             self.urenContents.append(urenBoekContent(title: urenTitle, content: urenContent))
         }
     }
-    
+    //Button for "Hoe boek je uren" & "Uren registratie"
     @IBAction func choiceBtns(_ sender: UIButton) {
         let urenContent = urenContents[sender.tag]
         titleNPage = urenContent.title
         contentNPage = urenContent.content
         performSegue(withIdentifier: "UrenboekPage", sender: self)
     }
-    
+    //Button for "algemene projectcodes"
     @IBAction func projectCodeBtn(_ sender: Any) {
         performSegue(withIdentifier: "UrenboekTable", sender: self)
     }
-    
+    //Prepare seque for the buttons
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "UrenboekPage"{
             let popUpVC = segue.destination as! UrenboekNewPageController

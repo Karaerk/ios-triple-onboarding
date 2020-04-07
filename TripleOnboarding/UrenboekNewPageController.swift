@@ -17,7 +17,7 @@ class UrenboekNewPageController: UIViewController {
     
     var contentLbl: String!
     var titleLbl: String!
-    
+    //Is tijdelijk, moet nog worden opgehaald van database
     let urenWebsite = URL(string: "https://uren.wearetriple.com/")
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class UrenboekNewPageController: UIViewController {
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: contentLblUI.bottomAnchor).isActive = true
         self.navigationItem.title = titleLbl
     }
-
+    //Laat internet pagina laden in de app zelf
     @IBAction func websiteBtn(_ sender: UIButton) {
         let vc = SFSafariViewController(url: urenWebsite!)
         present(vc, animated: true, completion: nil)

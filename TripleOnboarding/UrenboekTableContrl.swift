@@ -15,7 +15,7 @@ struct projectCodes{
     var content: String
 }
 
-class UrenboekTableContrl: UITableViewController {
+class UrenboekTableContrl: UITableViewController {          //Algemene projectcodes scherm
     
     var projectcode = [projectCodes]()
     var ref: DatabaseReference!
@@ -27,7 +27,7 @@ class UrenboekTableContrl: UITableViewController {
         super.viewDidLoad()
         updateContent()
     }
-    
+    //Appends all code and content to a struct
     func updateContent(){
         Database.database().reference().child("/hours/1/child/")
             .observe(.childAdded) { (snapshot) in
@@ -36,7 +36,7 @@ class UrenboekTableContrl: UITableViewController {
                 }
                 let codeTitle = (firebaseResponse["code"] as? String)!
                 let codeContent = (firebaseResponse["content"] as? String)!
-                
+                //Struct is used in tableview func
                 self.projectcode.append(projectCodes(code: codeTitle, content: codeContent))
                 self.tableView.reloadData()
         }
@@ -47,7 +47,7 @@ class UrenboekTableContrl: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return projectcode.count
     }
-    
+    //For every "code" in struct tableview will show it
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CodeCell", for: indexPath)
         let content = projectcode[indexPath.row]
@@ -57,7 +57,7 @@ class UrenboekTableContrl: UITableViewController {
         cell.textLabel?.adjustsFontSizeToFitWidth = true
         return cell
     }
-    
+    //When row is selected urenPUCode = code & UrenPUContent = content (All from struct)
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let content = projectcode[indexPath.row]
         urenPUCode = content.code

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UrenboekPopUpContrl: UIViewController {
+class UrenboekPopUpContrl: UIViewController {           //Pop up for hoe boek je uren & uren registratie
 
     @IBOutlet weak var titleLblUI: UILabel!
     @IBOutlet weak var contentLblUI: UILabel!
