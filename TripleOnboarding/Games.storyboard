@@ -345,11 +345,67 @@
                         <outletCollection property="answerBtns" destination="GNi-PW-XIl" collectionClass="NSMutableArray" id="pP7-OV-JHH"/>
                         <outletCollection property="answerBtns" destination="Skm-hY-f8m" collectionClass="NSMutableArray" id="nbD-dx-F9u"/>
                         <outletCollection property="answerBtns" destination="mvN-2Z-7az" collectionClass="NSMutableArray" id="X8j-rq-8z2"/>
+                        <segue destination="xjG-2M-UnW" kind="show" identifier="EndGamePopUp" id="Ha6-5r-a85"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSE-Pp-ow5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018.840579710145" y="927.45535714285711"/>
+            <point key="canvasLocation" x="1019" y="927"/>
+        </scene>
+        <!--Game Pop Up View Controller-->
+        <scene sceneID="f45-zS-gRw">
+            <objects>
+                <viewController id="xjG-2M-UnW" customClass="GamePopUpViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jQw-DM-T1f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gefeliciteerd!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4r-J7-2VF">
+                                <rect key="frame" x="147" y="111" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fin-b0-OPG">
+                                <rect key="frame" x="147" y="368" width="176" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G71-zQ-EaO">
+                                <rect key="frame" x="84" y="459" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Afsluiten">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CloseBtn:" destination="xjG-2M-UnW" eventType="touchUpInside" id="xE4-Ch-TN2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgX-JK-ZEq">
+                                <rect key="frame" x="224" y="459" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Opnieuw spelen">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Restartbtn:" destination="xjG-2M-UnW" eventType="touchUpInside" id="1Ip-eM-LEf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uMd-hq-y8Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Bq-i8-at2"/>
+                    <connections>
+                        <outlet property="ScoreLabel" destination="fin-b0-OPG" id="oyN-tk-akh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCN-8Y-TmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879.7101449275365" y="926.78571428571422"/>
         </scene>
     </scenes>
     <resources>

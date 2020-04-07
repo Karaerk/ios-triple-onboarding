@@ -44,7 +44,7 @@ class MemoryViewController: UIViewController {
 
         empoloyeePhoto.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
-                return
+                return self.performSegue(withIdentifier: "EndGamePopUp", sender: self)
             }
             self.employeePhoto.text = (firebaseResponse["image"]) as? String
         }
@@ -52,7 +52,7 @@ class MemoryViewController: UIViewController {
         for i in 0..<answerBtns.count {
             answers.child("\(i)").observeSingleEvent(of: .value) { (snap) in
                 guard let content = snap.value as? [String:Any] else{
-                    return self.alertEndGame()
+                    return
                 }
                 self.answerBtns[i].setTitle(content["content"] as? String, for: .normal)
                 let isCorrect = content["correct"] as! NSInteger
@@ -112,5 +112,13 @@ class MemoryViewController: UIViewController {
 
         self.present(alert, animated: true)
     }
+    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if (segue.identifier == "EndGamePopUp") {
+             let gamePopUpVC = segue.destination as! GamePopUpViewController
+            
+            gamePopUpVC.scoreLbl = String("Je score: \(score)")
+         }
+     }
 }
 
