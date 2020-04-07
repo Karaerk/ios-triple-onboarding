@@ -18,9 +18,12 @@ class GamePopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ScoreLabel.text = scoreLbl
+        
+        //hide the back button
         self.navigationItem.hidesBackButton = true
     }
     
+    //function to to return too the gamesview when close is pressed
     @IBAction func CloseBtn(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }

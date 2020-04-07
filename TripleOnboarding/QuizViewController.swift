@@ -37,6 +37,7 @@ class QuizViewController: UIViewController {
         updateLabels()
     }
     
+    //function for the quiz to get info from the database and show it
     func updateQuiz(){
         resetUI()
         //Database for Question title
@@ -45,6 +46,7 @@ class QuizViewController: UIViewController {
         let singleQuestion = questions.child("\(questionCounter)")
         let answers = singleQuestion.child("answer")
         
+        //returns the end game popup after the last quistion is answered
         singleQuestion.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return self.performSegue(withIdentifier: "QuizEndPopUp", sender: self)
@@ -68,6 +70,7 @@ class QuizViewController: UIViewController {
             buttons.layer.cornerRadius = 40
             buttons.backgroundColor = pinkColor
         }
+        //random answer buttons
         answerBtns.shuffle()
     }
     //Reset function for every new question
@@ -78,7 +81,9 @@ class QuizViewController: UIViewController {
         }
     }
     
+    //function for the answer buttons
     @IBAction func answerBtn(_ sender: UIButton) {
+        //when the tag is 1 the answer = correct, tag 0 = incorrect
         if sender.tag == 1 {
             haptic.notificationOccurred(.success)
             sender.backgroundColor = UIColor.green
@@ -92,21 +97,25 @@ class QuizViewController: UIViewController {
         }
     }
     
+    //function to update the score and questionnmb labels
     func updateLabels(){
         scoreLabel.text = String(score)
         questionNumberLabel.text = String(questionNumber)
     }
     
+    //function score when its incorrect
     func onWrongAnswer(){
         score -= 1
     }
     
+    //function score when its correct
     func onRightAnswer(){
         score += 10
         updateLabels()
         updateQuiz()
     }
     
+    //function to set the segue towards the gamepopupviewcontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "QuizEndPopUp") {
             let gamePopUpVC = segue.destination as! GamePopUpViewController
