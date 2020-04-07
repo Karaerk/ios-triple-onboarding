@@ -36,20 +36,23 @@ class MemoryViewController: UIViewController {
         updateLabels()
     }
     
+    //function for the memory to get info from the database and show it
     func updateMemory(){
         resetUI()
 
+        //database for the memory
         ref = Database.database().reference()
         let empoloyeePhotos = Database.database().reference().child("memory")
         let empoloyeePhoto = empoloyeePhotos.child("\(counter)")
         let answers = empoloyeePhoto.child("answer")
 
+        //returns the end game popup after the last quistion is answered
         empoloyeePhoto.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return self.performSegue(withIdentifier: "EndGamePopUp", sender: self)
             }
-//            self.employeePhoto.text = (firebaseResponse["image"]) as? String
-            
+        
+            //get the image from the db
             let imageUrl = URL(string: (firebaseResponse["image"] as? String)!)
             let imageData = try! Data(contentsOf: imageUrl!)
             self.employeePhotoUI.image = UIImage(data: imageData)
@@ -70,11 +73,13 @@ class MemoryViewController: UIViewController {
             buttons.layer.cornerRadius = 40
             buttons.backgroundColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
         }
-        
+        // random answer buttons
         answerBtns.shuffle()
     }
     
+    //function for the answer buttons
     @IBAction func answerButtons(_ sender: UIButton) {
+        //when the tag is 1 the answer = correct, tag 0 = incorrect
         if sender.tag == 1 {
             haptic.notificationOccurred(.success)
             sender.backgroundColor = UIColor.green
@@ -88,6 +93,7 @@ class MemoryViewController: UIViewController {
         }
     }
     
+    //Reset function for every new question
     func resetUI(){
         for i in 0..<answerBtns.count{
             answerBtns[i].setTitle("", for: .normal)
@@ -95,27 +101,30 @@ class MemoryViewController: UIViewController {
         }
     }
     
+    //function to update the score and questionnmb labels
     func updateLabels(){
         scoreLabel.text = String(score)
         questionNumberLabel.text = String(questionNumber)
     }
     
+    //function score when its incorrect
     func onWrongAnswer(){
         score -= 1
     }
     
+    //function score when its correct
     func onRightAnswer(){
         score += 10
         updateLabels()
         updateMemory()
     }
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if (segue.identifier == "EndGamePopUp") {
-             let gamePopUpVC = segue.destination as! GamePopUpViewController
-            
-            gamePopUpVC.scoreLbl = String("Je score: \(score)")
-         }
+    //function to set the segue towards the gamepopupviewcontroller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     if (segue.identifier == "EndGamePopUp") {
+         let gamePopUpVC = segue.destination as! GamePopUpViewController
+        
+        gamePopUpVC.scoreLbl = String("Je score: \(score)")
      }
+    }
 }
-
