@@ -104,15 +104,6 @@ class MemoryViewController: UIViewController {
         updateMemory()
     }
     
-    func alertEndGame(){
-        let alert = UIAlertController(title: "Je hebt alle vragen beantwoord!", message: "Je score: \(score) \n Nog te doen" , preferredStyle: .alert)
-
-        alert.addAction(UIAlertAction(title: "todo", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Nee", style: .cancel, handler: nil))
-
-        self.present(alert, animated: true)
-    }
-    
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if (segue.identifier == "EndGamePopUp") {
              let gamePopUpVC = segue.destination as! GamePopUpViewController

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7b-nh-eyd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7b-nh-eyd">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -203,6 +203,7 @@
                         <outletCollection property="answerBtns" destination="8rt-BF-RuV" collectionClass="NSMutableArray" id="cAQ-cL-v7b"/>
                         <outletCollection property="answerBtns" destination="rFs-Pl-fIu" collectionClass="NSMutableArray" id="756-Or-FkE"/>
                         <outletCollection property="answerBtns" destination="sul-rM-f7r" collectionClass="NSMutableArray" id="6Ar-f9-fS2"/>
+                        <segue destination="xjG-2M-UnW" kind="show" identifier="QuizEndPopUp" id="DB9-IK-Wfj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fas-5I-GoO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -242,7 +243,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jP4-fS-ipC">
-                                <rect key="frame" x="10" y="10" width="125.66666666666669" height="20.333333333333329"/>
+                                <rect key="frame" x="10.000000000000007" y="9.9999999999999982" width="125.66666666666669" height="20.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vraag nummer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-Ff-tui">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="20.333333333333332"/>
@@ -430,9 +431,12 @@
             <point key="canvasLocation" x="1879.7101449275365" y="926.78571428571422"/>
         </scene>
     </scenes>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Triple Logo" width="66.666664123535156" height="66.666664123535156"/>
-        <image name="gamecontroller" catalog="system" width="128" height="82"/>
+        <image name="gamecontroller" catalog="system" width="64" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DB9-IK-Wfj"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

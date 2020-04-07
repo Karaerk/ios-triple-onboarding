@@ -47,7 +47,7 @@ class QuizViewController: UIViewController {
         
         singleQuestion.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
-                return
+                return self.performSegue(withIdentifier: "QuizEndPopUp", sender: self)
             }
             self.questionLabel.text = (firebaseResponse["question"]) as? String
         }
@@ -56,7 +56,7 @@ class QuizViewController: UIViewController {
         for i in 0..<answerBtns.count {
             answers.child("\(i)").observeSingleEvent(of: .value) { (snap) in
                 guard let content = snap.value as? [String:Any] else{
-                    return self.alertEndGame()
+                    return
                 }
                 self.answerBtns[i].setTitle(content["content"] as? String, for: .normal)
                 let isCorrect = content["correct"] as! NSInteger
@@ -92,7 +92,6 @@ class QuizViewController: UIViewController {
             }
         }
     
-    
        func updateLabels(){
            scoreLabel.text = String(score)
            questionNumberLabel.text = String(questionNumber)
@@ -108,34 +107,12 @@ class QuizViewController: UIViewController {
            updateQuiz()
        }
        
-       func alertEndGame(){
-           let alert = UIAlertController(title: "Je hebt alle vragen beantwoord!", message: "Je score: \(score) \n Nog te doen" , preferredStyle: .alert)
-
-           alert.addAction(UIAlertAction(title: "todo", style: .default, handler: nil))
-           alert.addAction(UIAlertAction(title: "Nee", style: .cancel, handler: nil))
-
-           self.present(alert, animated: true)
-       }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if (segue.identifier == "QuizEndPopUp") {
+                let gamePopUpVC = segue.destination as! GamePopUpViewController
+               
+               gamePopUpVC.scoreLbl = String("Je score: \(score)")
+            }
+        }
+       
     }
-
-
-
-
-
-
-//            ref.child("quiz").child("\(questionCounter)").observeSingleEvent(of: .value) { (snapshot) in
-//                guard let firebaseResponse = snapshot.value as? [String:Any] else{
-//                    return
-//                }
-//                self.questionLabel.text = (firebaseResponse["question"]) as? String
-//                let arrayQuestion = firebaseResponse["answer"] as Any
-//                print(firebaseResponse["answers"] as Any)
-//
-//                //print(arrayQuestion["content"])
-//
-//
-//    //            for i in 0..<arrayQuestion.count {
-//    //                self.answerBtns[i].setTitle(arrayQuestion[i] as? String, for: .normal)
-//    //            }
-//            }
-//    }
