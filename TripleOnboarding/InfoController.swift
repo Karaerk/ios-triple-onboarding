@@ -10,29 +10,26 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-class ViewController: UIViewController {
+class InfoController: UIViewController {
     
-    @IBOutlet weak var UITitle: UILabel!
-    @IBOutlet var titleButtons: [UIButton]!
+    @IBOutlet weak private var UITitle: UILabel!
+    @IBOutlet private var titleButtons: [UIButton]!
     
-    var ref: DatabaseReference!
+    private var ref: DatabaseReference!
     
-    var uiTitle: String!
-    var uiContent: [String] = []
+    private var uiContent: [String] = []
     
-    var popUpTitle: String!
-    var popUpContent: String!
+    private var popUpTitle: String!
+    private var popUpContent: String!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        UpdateUI()
+        UpdateContent()
     }
     
-    
-    
-    func UpdateUI(){
+    func UpdateContent(){
         
         ref = Database.database().reference().child("info")
         var counter = 0
@@ -42,8 +39,8 @@ class ViewController: UIViewController {
                 return
             }
             
-            self.uiTitle = firebaseResponse["title"] as? String
-            self.titleButtons[counter].setTitle(self.uiTitle, for: .normal)
+            let uiTitle = firebaseResponse["title"] as? String
+            self.titleButtons[counter].setTitle(uiTitle, for: .normal)
             counter += 1
             
             //Puts everything from info/content in Array "uiContent"

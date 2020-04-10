@@ -10,24 +10,24 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-struct urenBoekContent{
+struct HourContent{
     var title: String
     var content: String
 }
-class UrenboekController: UIViewController {            //BEGIN SCHERM URENBOEK
+class HourController: UIViewController {            //BEGIN SCHERM URENBOEK
     
-    var urenContents = [urenBoekContent]()
-    var ref: DatabaseReference!
+    private var hourContents = [HourContent]()
+    private var ref: DatabaseReference!
     
-    var titleNPage: String!
-    var contentNPage: String!
+    private var titleNPage: String!
+    private var contentNPage: String!
     
-    @IBOutlet var urenBoekBtns: [UIButton]!
+    @IBOutlet private var hourBtns: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //Layout for buttons
-        for buttons in urenBoekBtns{
+        for buttons in hourBtns{
             buttons.layer.cornerRadius = 50     
         }
         updateContent()
@@ -40,16 +40,16 @@ class UrenboekController: UIViewController {            //BEGIN SCHERM URENBOEK
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }
-            let urenTitle = (firebaseResponse["title"] as? String)!
-            let urenContent = (firebaseResponse["content"] as? String)!
-            self.urenContents.append(urenBoekContent(title: urenTitle, content: urenContent))
+            let hourTitle = (firebaseResponse["title"] as? String)!
+            let hourContent = (firebaseResponse["content"] as? String)!
+            self.hourContents.append(HourContent(title: hourTitle, content: hourContent))
         }
     }
     //Button for "Hoe boek je uren" & "Uren registratie"
     @IBAction func choiceBtns(_ sender: UIButton) {
-        let urenContent = urenContents[sender.tag]
-        titleNPage = urenContent.title
-        contentNPage = urenContent.content
+        let hourContent = hourContents[sender.tag]
+        titleNPage = hourContent.title
+        contentNPage = hourContent.content
         performSegue(withIdentifier: "UrenboekPage", sender: self)
     }
     //Button for "algemene projectcodes"
@@ -59,7 +59,7 @@ class UrenboekController: UIViewController {            //BEGIN SCHERM URENBOEK
     //Prepare seque for the buttons
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "UrenboekPage"{
-            let popUpVC = segue.destination as! UrenboekNewPageController
+            let popUpVC = segue.destination as! HourNewPageController
             popUpVC.titleLbl = self.titleNPage
             popUpVC.contentLbl = self.contentNPage
         } else if segue.identifier == "UrenboekTable" {

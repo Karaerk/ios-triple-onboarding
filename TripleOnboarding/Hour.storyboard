@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Urenboek-->
+        <!--Hours-->
         <scene sceneID="One-bA-BbO">
             <objects>
-                <viewController id="eFQ-m5-aqG" customClass="UrenboekController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eFQ-m5-aqG" userLabel="Hours" customClass="HourController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iRq-49-2zn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,9 +79,9 @@
                     <navigationItem key="navigationItem" title="Urenboek" id="W2F-8K-HBZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outletCollection property="urenBoekBtns" destination="YSl-ci-yEo" collectionClass="NSMutableArray" id="nKa-j4-tZQ"/>
-                        <outletCollection property="urenBoekBtns" destination="57l-CO-ONR" collectionClass="NSMutableArray" id="fcy-tr-lmm"/>
-                        <outletCollection property="urenBoekBtns" destination="xTH-wO-DvB" collectionClass="NSMutableArray" id="voX-ES-qx0"/>
+                        <outletCollection property="hourBtns" destination="YSl-ci-yEo" collectionClass="NSMutableArray" id="nKa-j4-tZQ"/>
+                        <outletCollection property="hourBtns" destination="57l-CO-ONR" collectionClass="NSMutableArray" id="fcy-tr-lmm"/>
+                        <outletCollection property="hourBtns" destination="xTH-wO-DvB" collectionClass="NSMutableArray" id="voX-ES-qx0"/>
                         <segue destination="Yek-Ng-H1w" kind="show" identifier="UrenboekPage" id="oX8-1f-3vd"/>
                         <segue destination="Uea-85-lez" kind="show" identifier="UrenboekTable" id="DHZ-Lj-baa"/>
                     </connections>
@@ -93,7 +93,7 @@
         <!--Projectcodes Table-->
         <scene sceneID="J57-Hq-JIl">
             <objects>
-                <tableViewController id="Uea-85-lez" userLabel="Projectcodes Table" customClass="UrenboekTableContrl" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Uea-85-lez" userLabel="Projectcodes Table" customClass="HourTableControl" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ASi-uc-b3n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="1823" y="350"/>
         </scene>
-        <!--Urenboek Pop Up Contrl-->
+        <!--Hour Pop Up Contrl-->
         <scene sceneID="kjl-vk-emC">
             <objects>
-                <viewController id="ppR-uK-6Vd" customClass="UrenboekPopUpContrl" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ppR-uK-6Vd" customClass="HourPopUpContrl" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Zy-7i-uGg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
         <!--PopOver -->
         <scene sceneID="hAk-W9-Wy3">
             <objects>
-                <viewController storyboardIdentifier="UrenboekNewPageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yek-Ng-H1w" userLabel="PopOver " customClass="UrenboekNewPageController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UrenboekNewPageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yek-Ng-H1w" userLabel="PopOver " customClass="HourNewPageController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fg7-gI-6Gq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

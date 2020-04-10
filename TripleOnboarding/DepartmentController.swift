@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-struct departmentContent{
+struct DepartmentContent{
     var thumbnail : UIImage!
     var image : UIImage!
     var title : String
@@ -18,14 +18,14 @@ struct departmentContent{
 
 class DepartmentController: UITableViewController {
     
-    var ref: DatabaseReference!
+   private var ref: DatabaseReference!
     
     //Used for the popup controller
-    var departPageTitle: String!
-    var departPageContent: String!
-    var departPageImage: UIImage!
+    private var departPageTitle: String!
+    private var departPageContent: String!
+    private var departPageImage: UIImage!
     
-    var departContents = [departmentContent]()
+    private var departContents = [DepartmentContent]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,9 +53,9 @@ class DepartmentController: UITableViewController {
             //Image
             let imageData = try! Data(contentsOf: imageUrl!)
             let image = UIImage(data: imageData)
-            
+
             //Append the title and content from firebase to the struct
-            self.departContents.append(departmentContent(thumbnail: thumbnail, image: image, title: departTitle, content: departContent))
+            self.departContents.append(DepartmentContent(thumbnail: thumbnail, image: image, title: departTitle, content: departContent))
             self.tableView.reloadData()
         }
     }

@@ -9,21 +9,21 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-class FAQTableViewController: UITableViewController {
+class FAQController: UITableViewController {
     
-    var ref: DatabaseReference!
-    var myref: DatabaseReference!
+    private var ref: DatabaseReference!
+    private var myref: DatabaseReference!
     
-    var questions : [String] = []
-    var answers : [String] = []
+    private var questions : [String] = []
+    private var answers : [String] = []
     
-    var popUpTitle: String!
-    var popUpContent: String!
+    private var popUpTitle: String!
+    private var popUpContent: String!
     
-    var rowHeight : CGFloat = 75
-    var fontSize : CGFloat = 25
+    private var rowHeight : CGFloat = 75
+    private var fontSize : CGFloat = 25
     
-    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+    private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()

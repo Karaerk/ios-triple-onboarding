@@ -12,33 +12,33 @@ import FirebaseDatabase
 
 class QuizViewController: UIViewController {
     
-    @IBOutlet var answerBtns: [UIButton]!
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var questionNumberLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet private var answerBtns: [UIButton]!
+    @IBOutlet weak private var questionLabel: UILabel!
+    @IBOutlet weak private var questionNumberLabel: UILabel!
+    @IBOutlet weak private var scoreLabel: UILabel!
     
-    var ref: DatabaseReference!
+    private var ref: DatabaseReference!
     
-    var questionCounter: Int = 0
-    var quesionText: String!
+    private var questionCounter: Int = 0
+    private var quesionText: String!
     
     //variables for the score and round
-    var score = 0
-    var questionNumber = 1
+    private var score = 0
+    private var questionNumber = 1
     
-    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+    private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     
-    let haptic = UINotificationFeedbackGenerator()
+    private let haptic = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateQuiz()
+        updateContent()
         updateLabels()
     }
     
     //function for the quiz to get info from the database and show it
-    func updateQuiz(){
+    func updateContent(){
         resetUI()
         //Database for Question title
         ref = Database.database().reference()
@@ -112,7 +112,7 @@ class QuizViewController: UIViewController {
     func onRightAnswer(){
         score += 10
         updateLabels()
-        updateQuiz()
+        updateContent()
     }
     
     //function to set the segue towards the gamepopupviewcontroller

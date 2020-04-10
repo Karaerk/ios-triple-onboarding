@@ -10,10 +10,10 @@ import UIKit
 
 class DepartmentPopUpController: UIViewController {
     
-    @IBOutlet weak var departImage: UIImageView!
-    @IBOutlet weak var departTitleLbl: UILabel!
-    @IBOutlet weak var departContentLbl: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak private var departImage: UIImageView!
+    @IBOutlet weak private var departTitleLbl: UILabel!
+    @IBOutlet weak private var departContentLbl: UILabel!
+    @IBOutlet weak private var scrollView: UIScrollView!
     
     
     var titleLbl: String!
@@ -35,27 +35,4 @@ class DepartmentPopUpController: UIViewController {
     }
 }
 
-extension String {
-    func htmlAttributed(family: String?, size: CGFloat, color: UIColor) -> NSAttributedString? {
-        do {
-            let htmlCSSString = "<style>" +
-                "html *" +
-                "{" +
-                "font-size: \(size)pt !important;" +
-                "font-family: \(family ?? "Helvetica"), Helvetica !important;" +
-            "}</style> \(self)"
 
-            guard let data = htmlCSSString.data(using: String.Encoding.utf8) else {
-                return nil
-            }
-
-            return try NSAttributedString(data: data,
-                                          options: [.documentType: NSAttributedString.DocumentType.html,
-                                                    .characterEncoding: String.Encoding.utf8.rawValue],
-                                          documentAttributes: nil)
-        } catch {
-            print("error: ", error)
-            return nil
-        }
-    }
-}

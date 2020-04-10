@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-struct projectCodes{
+struct ProjectCode{
     var code: String
     var content: String
 }
 
-class UrenboekTableContrl: UITableViewController {          //Algemene projectcodes scherm
+class HourTableControl: UITableViewController {          //Algemene projectcodes scherm
     
-    var projectcode = [projectCodes]()
-    var ref: DatabaseReference!
+    private var projectcode = [ProjectCode]()
+    private var ref: DatabaseReference!
     
-    var urenPUCode: String!
-    var urenPUContent: String!
+    private var hourPUCode: String!
+    private var hourPUContent: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class UrenboekTableContrl: UITableViewController {          //Algemene projectco
                 let codeTitle = (firebaseResponse["code"] as? String)!
                 let codeContent = (firebaseResponse["content"] as? String)!
                 //Struct is used in tableview func
-                self.projectcode.append(projectCodes(code: codeTitle, content: codeContent))
+                self.projectcode.append(ProjectCode(code: codeTitle, content: codeContent))
                 self.tableView.reloadData()
         }
     }
@@ -60,16 +60,16 @@ class UrenboekTableContrl: UITableViewController {          //Algemene projectco
     //When row is selected urenPUCode = code & UrenPUContent = content (All from struct)
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let content = projectcode[indexPath.row]
-        urenPUCode = content.code
-        urenPUContent = content.content
+        hourPUCode = content.code
+        hourPUContent = content.content
         performSegue(withIdentifier: "UrenboekPopUp", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "UrenboekPopUp") {
-            let popUpVC = segue.destination as! UrenboekPopUpContrl
-            popUpVC.titleLbl = self.urenPUCode
-            popUpVC.contentLbl = self.urenPUContent
+            let popUpVC = segue.destination as! HourPopUpContrl
+            popUpVC.titleLbl = self.hourPUCode
+            popUpVC.contentLbl = self.hourPUContent
         }
     }
 }

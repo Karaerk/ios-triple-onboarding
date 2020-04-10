@@ -302,13 +302,13 @@
                                 <rect key="frame" x="10" y="35" width="355" height="596"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tre-MC-kTu">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="380"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="345.66666666666669"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-qM-cf3">
-                                        <rect key="frame" x="0.0" y="390" width="355" height="206"/>
+                                        <rect key="frame" x="0.0" y="355.66666666666669" width="355" height="240.33333333333331"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9p-g6-8wQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="52.666666666666664"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -321,7 +321,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7S-RN-x2c">
-                                                <rect key="frame" x="0.0" y="54" width="355" height="44"/>
+                                                <rect key="frame" x="0.0" y="62.666666666666686" width="355" height="52.666666666666657"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -334,7 +334,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-oN-eBd">
-                                                <rect key="frame" x="0.0" y="108" width="355" height="44"/>
+                                                <rect key="frame" x="0.0" y="125.3333333333333" width="355" height="52.333333333333329"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -347,7 +347,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx6-w5-taV">
-                                                <rect key="frame" x="0.0" y="162" width="355" height="44"/>
+                                                <rect key="frame" x="0.0" y="187.66666666666669" width="355" height="52.666666666666657"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -441,7 +441,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Bq-i8-at2"/>
                     <connections>
-                        <outlet property="ScoreLabel" destination="fin-b0-OPG" id="oyN-tk-akh"/>
+                        <outlet property="scoreLabel" destination="fin-b0-OPG" id="oyN-tk-akh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCN-8Y-TmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

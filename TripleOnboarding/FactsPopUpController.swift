@@ -10,9 +10,9 @@ import UIKit
 
 class FactsPopUpController: UIViewController {
 
-    @IBOutlet weak var titleUI: UILabel!
-    @IBOutlet weak var content: UILabel!
-    @IBOutlet weak var popUpContainer: UIView!
+    @IBOutlet weak private var titleUI: UILabel!
+    @IBOutlet weak private var content: UILabel!
+    @IBOutlet weak private var popUpContainer: UIView!
     
     var titleLbl: String!
     var contentLbl: String!

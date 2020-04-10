@@ -9,16 +9,16 @@
 import UIKit
 import SafariServices
 
-class UrenboekNewPageController: UIViewController {
+class HourNewPageController: UIViewController {
 
-    @IBOutlet weak var contentLblUI: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak private var contentLblUI: UILabel!
+    @IBOutlet weak private var scrollView: UIScrollView!
+    @IBOutlet weak private var button: UIButton!
     
     var contentLbl: String!
     var titleLbl: String!
     //Is tijdelijk, moet nog worden opgehaald van database
-    let urenWebsite = URL(string: "https://uren.wearetriple.com/")
+    private let hourWebsite = URL(string: "https://uren.wearetriple.com/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class UrenboekNewPageController: UIViewController {
     }
     //Laat internet pagina laden in de app zelf
     @IBAction func websiteBtn(_ sender: UIButton) {
-        let vc = SFSafariViewController(url: urenWebsite!)
+        let vc = SFSafariViewController(url: hourWebsite!)
         present(vc, animated: true, completion: nil)
     }
 }

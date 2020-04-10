@@ -9,24 +9,23 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-struct factsContent{
+struct FactsContent{
     var categorie: String!
     var content: String!
 }
 
 class FactsController: UITableViewController {
     
-    var ref: DatabaseReference!
-    var myref: DatabaseReference!
-    var factsCont = [factsContent]()
+    private var ref: DatabaseReference!
+    private var factsCont = [FactsContent]()
     //Used for the pop up controller
-    var popUpTitle: String!
-    var popUpContent: String!
+    private var popUpTitle: String!
+    private var popUpContent: String!
     
-    var rowHeight : CGFloat = 75
-    var fontSize : CGFloat = 25
+    private var rowHeight : CGFloat = 75
+    private var fontSize : CGFloat = 25
     
-    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+    private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +44,7 @@ class FactsController: UITableViewController {
             //Append the content and categorie to the struct
             let categorieTitle = (firebaseResponse["title"] as? String)!
             let contentText = (firebaseResponse["content"] as? String)!
-            self.factsCont.append(factsContent(categorie: categorieTitle, content: contentText))
+            self.factsCont.append(FactsContent(categorie: categorieTitle, content: contentText))
 
             self.tableView.reloadData()
         }

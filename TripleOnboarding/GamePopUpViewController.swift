@@ -10,14 +10,14 @@ import UIKit
 
 class GamePopUpViewController: UIViewController {
     
-    @IBOutlet weak var ScoreLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var scoreLbl: String!
     var contentLbl: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ScoreLabel.text = scoreLbl
+        scoreLabel.text = scoreLbl
         
         //hide the back button
         self.navigationItem.hidesBackButton = true

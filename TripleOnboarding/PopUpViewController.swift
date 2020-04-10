@@ -9,8 +9,8 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var contentLabel: UILabel!
     
     var titleLbl: String!
     var contentLbl: String!
