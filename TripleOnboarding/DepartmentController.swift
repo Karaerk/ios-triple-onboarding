@@ -18,12 +18,14 @@ struct DepartmentContent{
 
 class DepartmentController: UITableViewController {
     
-   private var ref: DatabaseReference!
+    private var ref: DatabaseReference!
     
     //Used for the popup controller
     private var departPageTitle: String!
     private var departPageContent: String!
     private var departPageImage: UIImage!
+    
+    private var sequeIdentifier = "DepartmentPage"
     
     private var departContents = [DepartmentContent]()
     override func viewDidLoad() {
@@ -53,7 +55,7 @@ class DepartmentController: UITableViewController {
             //Image
             let imageData = try! Data(contentsOf: imageUrl!)
             let image = UIImage(data: imageData)
-
+            
             //Append the title and content from firebase to the struct
             self.departContents.append(DepartmentContent(thumbnail: thumbnail, image: image, title: departTitle, content: departContent))
             self.tableView.reloadData()
@@ -80,11 +82,11 @@ class DepartmentController: UITableViewController {
         departPageTitle = content.title
         departPageContent = content.content
         departPageImage = content.image
-        performSegue(withIdentifier: "DepartmentPage", sender: self)
+        performSegue(withIdentifier: sequeIdentifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "DepartmentPage") {
+        if (segue.identifier == sequeIdentifier) {
             let departVC = segue.destination as! DepartmentPopUpController
             departVC.titleLbl = self.departPageTitle
             departVC.contentLbl = self.departPageContent

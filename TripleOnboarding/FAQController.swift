@@ -12,7 +12,6 @@ import FirebaseDatabase
 class FAQController: UITableViewController {
     
     private var ref: DatabaseReference!
-    private var myref: DatabaseReference!
     
     private var questions : [String] = []
     private var answers : [String] = []
@@ -33,11 +32,9 @@ class FAQController: UITableViewController {
     }
     
     func updateContent(){
+        ref = Database.database().reference().child("faq")
         
-        ref = Database.database().reference()
-        myref = ref.child("faq")
-        
-        myref.queryOrdered(byChild: "question").observe(.childAdded) { (snapshot) in
+        ref.queryOrdered(byChild: "question").observe(.childAdded) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }

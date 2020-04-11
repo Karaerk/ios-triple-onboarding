@@ -27,6 +27,9 @@ class FactsController: UITableViewController {
     
     private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     
+    private enum SegueIdentifier: String{
+    case PopUp
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,14 +83,17 @@ class FactsController: UITableViewController {
         let content = factsCont[indexPath.row]
         popUpContent = content.content
         popUpTitle = content.categorie
-        performSegue(withIdentifier: "PopUp", sender: self)
+        performSegue(withIdentifier: SegueIdentifier.PopUp.rawValue, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "PopUp") {
-            let popUpVC = segue.destination as! FactsPopUpController
-            popUpVC.titleLbl = self.popUpTitle
-            popUpVC.contentLbl = self.popUpContent
+        if let identifier = segue.identifier, let SegueIdentifier = SegueIdentifier(rawValue: identifier) {
+            switch SegueIdentifier {
+            case .PopUp:
+                let popUpVC = segue.destination as! FactsPopUpController
+                popUpVC.titleLbl = self.popUpTitle
+                popUpVC.contentLbl = self.popUpContent
+            }
         }
     }
 }

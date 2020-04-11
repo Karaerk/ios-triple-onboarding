@@ -14,6 +14,10 @@ struct HourContent{
     var title: String
     var content: String
 }
+enum SegueIdentifier: String{
+    case UrenboekPage
+    case UrenboekTable
+}
 class HourController: UIViewController {            //BEGIN SCHERM URENBOEK
     
     private var hourContents = [HourContent]()
@@ -50,23 +54,24 @@ class HourController: UIViewController {            //BEGIN SCHERM URENBOEK
         let hourContent = hourContents[sender.tag]
         titleNPage = hourContent.title
         contentNPage = hourContent.content
-        performSegue(withIdentifier: "UrenboekPage", sender: self)
+        performSegue(withIdentifier: SegueIdentifier.UrenboekPage.rawValue, sender: self)
     }
     //Button for "algemene projectcodes"
     @IBAction func projectCodeBtn(_ sender: Any) {
-        performSegue(withIdentifier: "UrenboekTable", sender: self)
+        performSegue(withIdentifier: SegueIdentifier.UrenboekTable.rawValue, sender: self)
     }
     //Prepare seque for the buttons
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "UrenboekPage"{
-            let popUpVC = segue.destination as! HourNewPageController
-            popUpVC.titleLbl = self.titleNPage
-            popUpVC.contentLbl = self.contentNPage
-        } else if segue.identifier == "UrenboekTable" {
-            //let urenTable = segue.destination as! UrenboekTableContrl
+        if let identifier = segue.identifier, let SegueIdentifier = SegueIdentifier(rawValue: identifier) {
+            switch SegueIdentifier {
+            case .UrenboekPage:
+                let popUpVC = segue.destination as! HourNewPageController
+                popUpVC.titleLbl = self.titleNPage
+                popUpVC.contentLbl = self.contentNPage
+            case .UrenboekTable:
+                return
+                //let urenTable = segue.destination as! HourPopUpContrl
+            }
         }
-        
     }
-
-    
 }
