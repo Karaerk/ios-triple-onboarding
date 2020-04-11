@@ -12,32 +12,32 @@ import FirebaseDatabase
 
 class MemoryViewController: UIViewController {
 
-    @IBOutlet var answerBtns: [UIButton]!
+    @IBOutlet private var answerBtns: [UIButton]!
     
     //@IBOutlet weak var employeePhoto: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var questionNumberLabel: UILabel!
-    @IBOutlet weak var employeePhotoUI: UIImageView!
-    var image : UIImage!
+    @IBOutlet weak private var scoreLabel: UILabel!
+    @IBOutlet weak private var questionNumberLabel: UILabel!
+    @IBOutlet weak private var employeePhotoUI: UIImageView!
+    private var image : UIImage!
     
-    var ref: DatabaseReference!
-    var counter: Int = 0
+    private var ref: DatabaseReference!
+    private var counter: Int = 0
     
     //variables for the score and round
-    var score = 0
-    var questionNumber = 1
+    private var score = 0
+    private var questionNumber = 1
     
-    let haptic = UINotificationFeedbackGenerator()
+    private let haptic = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateMemory()
+        updateContent()
         updateLabels()
     }
     
     //function for the memory to get info from the database and show it
-    func updateMemory(){
+    func updateContent(){
         resetUI()
 
         //database for the memory
@@ -116,7 +116,7 @@ class MemoryViewController: UIViewController {
     func onRightAnswer(){
         score += 10
         updateLabels()
-        updateMemory()
+        updateContent()
     }
     
     //function to set the segue towards the gamepopupviewcontroller

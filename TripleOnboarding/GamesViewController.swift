@@ -10,7 +10,7 @@ import UIKit
 
 class GamesViewController: UIViewController {
 
-    @IBOutlet var choiceBtns: [UIButton]!
+    @IBOutlet private var choiceBtns: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()

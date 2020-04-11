@@ -12,9 +12,9 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var ref: DatabaseReference!
-    let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
-    let blueColor = UIColor(red: 20/255, green: 32/255, blue: 67/255, alpha: 1)
+    private var ref: DatabaseReference!
+    private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
+    private let blueColor = UIColor(red: 20/255, green: 32/255, blue: 67/255, alpha: 1)
     //var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

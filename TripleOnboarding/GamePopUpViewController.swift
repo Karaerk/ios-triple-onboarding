@@ -10,7 +10,7 @@ import UIKit
 
 class GamePopUpViewController: UIViewController {
     
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak private var scoreLabel: UILabel!
     
     var scoreLbl: String!
     var contentLbl: String!
