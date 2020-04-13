@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bkw-qW-ywA">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Bold.ttf">
+            <string>Dosis-Bold</string>
+        </array>
+        <array key="Dosis-Regular.ttf">
+            <string>Dosis-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Feiten & Weetjes-->
         <scene sceneID="JaZ-Sn-bBh">
@@ -17,10 +25,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategorieCell" id="rp9-Gs-4Xn" customClass="ButtonsCell" customModule="TripleOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rp9-Gs-4Xn" id="vw3-ch-KX5">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -42,39 +50,63 @@
             </objects>
             <point key="canvasLocation" x="-2058" y="-13"/>
         </scene>
-        <!--FactsPopUpController-->
+        <!--PopUpController-->
         <scene sceneID="hFO-yP-4wh">
             <objects>
-                <viewController storyboardIdentifier="FactsPopUpController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T52-i9-Pg5" userLabel="FactsPopUpController" customClass="FactsPopUpController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FactsPopUpController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T52-i9-Pg5" userLabel="PopUpController" customClass="PopUpController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJi-vP-xcN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9M-Dq-eL3" userLabel="PopUp">
-                                <rect key="frame" x="49" y="307" width="316" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9M-Dq-eL3" userLabel="PopUp">
+                                <rect key="frame" x="49" y="276" width="316" height="290"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medewerkers" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vP-0C-NXn">
-                                        <rect key="frame" x="3" y="8" width="311" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vP-0C-NXn">
+                                        <rect key="frame" x="5" y="5" width="306" height="33"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-Ep-Bke">
-                                        <rect key="frame" x="8" y="43" width="300" height="186"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-Ep-Bke">
+                                        <rect key="frame" x="4" y="44" width="302" height="191"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-fl-kIk">
+                                        <rect key="frame" x="10" y="242" width="296" height="38"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="20"/>
+                                        <state key="normal" title="Terug">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backBtn:" destination="T52-i9-Pg5" eventType="touchUpInside" id="A8P-60-YcR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="4vP-0C-NXn" firstAttribute="top" secondItem="W9M-Dq-eL3" secondAttribute="top" constant="5" id="Ce3-hy-pXN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q9y-fl-kIk" secondAttribute="trailing" constant="10" id="Dkb-kb-LKd"/>
+                                    <constraint firstItem="4vP-0C-NXn" firstAttribute="leading" secondItem="W9M-Dq-eL3" secondAttribute="leading" constant="5" id="On8-ti-dO4"/>
+                                    <constraint firstItem="Q9y-fl-kIk" firstAttribute="leading" secondItem="W9M-Dq-eL3" secondAttribute="leading" constant="10" id="XEu-io-UiH"/>
+                                    <constraint firstAttribute="trailing" secondItem="4vP-0C-NXn" secondAttribute="trailing" constant="5" id="Z7j-cH-pU9"/>
+                                    <constraint firstAttribute="width" constant="316" id="hSx-qn-uwC"/>
+                                    <constraint firstAttribute="height" constant="290" id="i0t-JL-ryu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q9y-fl-kIk" secondAttribute="bottom" constant="10" id="u5v-zM-WVS"/>
+                                </constraints>
                             </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="W9M-Dq-eL3" firstAttribute="centerY" secondItem="hJi-vP-xcN" secondAttribute="centerY" id="5dk-JM-gq8"/>
+                            <constraint firstItem="W9M-Dq-eL3" firstAttribute="centerX" secondItem="hJi-vP-xcN" secondAttribute="centerX" id="j15-Ji-E0e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uXw-6U-sWE"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Q9y-fl-kIk" id="Bap-oY-X62"/>
                         <outlet property="content" destination="cnq-Ep-Bke" id="hMm-NI-gIf"/>
                         <outlet property="popUpContainer" destination="W9M-Dq-eL3" id="Qep-LR-BdS"/>
                         <outlet property="titleUI" destination="4vP-0C-NXn" id="sUI-Mw-In8"/>
@@ -82,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHq-qC-26z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1278.2608695652175" y="-16.741071428571427"/>
+            <point key="canvasLocation" x="-1279.7101449275362" y="-17.410714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="how-5o-gkg">

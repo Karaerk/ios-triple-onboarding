@@ -77,7 +77,7 @@ class FAQController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "PopUp") {
-            let popUpVC = segue.destination as! FAQpopupViewController
+            let popUpVC = segue.destination as! PopUpController
             popUpVC.titleLbl = self.popUpTitle
             popUpVC.contentLbl = self.popUpContent
         }

@@ -20,12 +20,11 @@
 		AF3666F12434B982009007C9 /* HourTableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666F02434B982009007C9 /* HourTableControl.swift */; };
 		AF3666F32434BACD009007C9 /* HourPopUpContrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666F22434BACD009007C9 /* HourPopUpContrl.swift */; };
 		AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A70472420CF9800BAD193 /* FactsController.swift */; };
-		AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */; };
+		AF3A704F2420DE5F00BAD193 /* PopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A704E2420DE5F00BAD193 /* PopUpController.swift */; };
 		AF596C8324409D5200138E9F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF596C8224409D5200138E9F /* String+Extension.swift */; };
 		AF596C862440A64100138E9F /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF596C852440A64100138E9F /* ButtonsCell.swift */; };
 		AF5BE1D0242226AE00659120 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5BE1CF242226AE00659120 /* FAQ.storyboard */; };
 		AF5BE1D6242226D500659120 /* FAQController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BE1D4242226D500659120 /* FAQController.swift */; };
-		AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */; };
 		AF7BCA7D242A11BD00550EBD /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */; };
 		AF7BCA87242A17BF00550EBD /* Dosis-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA80242A17BF00550EBD /* Dosis-ExtraBold.ttf */; };
 		AF7BCA88242A17BF00550EBD /* Dosis-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA81242A17BF00550EBD /* Dosis-Medium.ttf */; };
@@ -90,12 +89,11 @@
 		AF3666F02434B982009007C9 /* HourTableControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourTableControl.swift; sourceTree = "<group>"; };
 		AF3666F22434BACD009007C9 /* HourPopUpContrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPopUpContrl.swift; sourceTree = "<group>"; };
 		AF3A70472420CF9800BAD193 /* FactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsController.swift; sourceTree = "<group>"; };
-		AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPopUpController.swift; sourceTree = "<group>"; };
+		AF3A704E2420DE5F00BAD193 /* PopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpController.swift; sourceTree = "<group>"; };
 		AF596C8224409D5200138E9F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		AF596C852440A64100138E9F /* ButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
 		AF5BE1CF242226AE00659120 /* FAQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		AF5BE1D4242226D500659120 /* FAQController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQController.swift; sourceTree = "<group>"; };
-		AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQpopupViewController.swift; sourceTree = "<group>"; };
 		AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		AF7BCA80242A17BF00550EBD /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-ExtraBold.ttf"; sourceTree = "<group>"; };
 		AF7BCA81242A17BF00550EBD /* Dosis-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Medium.ttf"; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				AF3A70472420CF9800BAD193 /* FactsController.swift */,
-				AF3A704E2420DE5F00BAD193 /* FactsPopUpController.swift */,
 			);
 			name = Facts;
 			sourceTree = "<group>";
@@ -228,7 +225,6 @@
 		AF5BE1D3242226C700659120 /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
-				AF5BE1D5242226D500659120 /* FAQpopupViewController.swift */,
 				AF5BE1D4242226D500659120 /* FAQController.swift */,
 			);
 			name = FAQ;
@@ -297,6 +293,7 @@
 				AF5BE1D3242226C700659120 /* FAQ */,
 				AF3A704D2420DE4400BAD193 /* Facts */,
 				9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */,
+				AF3A704E2420DE5F00BAD193 /* PopUpController.swift */,
 				AF856261242A8F3800F995F5 /* TabBarController.swift */,
 			);
 			name = View;
@@ -636,7 +633,6 @@
 				9B641248243C681800DBA942 /* GamePopUpViewController.swift in Sources */,
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
-				AF5BE1D7242226D500659120 /* FAQpopupViewController.swift in Sources */,
 				AF5BE1D6242226D500659120 /* FAQController.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
 				AF596C8324409D5200138E9F /* String+Extension.swift in Sources */,
@@ -647,7 +643,7 @@
 				AF3666F12434B982009007C9 /* HourTableControl.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
 				AF856262242A8F3800F995F5 /* TabBarController.swift in Sources */,
-				AF3A704F2420DE5F00BAD193 /* FactsPopUpController.swift in Sources */,
+				AF3A704F2420DE5F00BAD193 /* PopUpController.swift in Sources */,
 				AFAD7857242BA2B3006735D0 /* DepartmentPopUpController.swift in Sources */,
 				AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */,
 			);

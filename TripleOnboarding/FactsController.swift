@@ -90,7 +90,7 @@ class FactsController: UITableViewController {
         if let identifier = segue.identifier, let SegueIdentifier = SegueIdentifier(rawValue: identifier) {
             switch SegueIdentifier {
             case .PopUp:
-                let popUpVC = segue.destination as! FactsPopUpController
+                let popUpVC = segue.destination as! PopUpController
                 popUpVC.titleLbl = self.popUpTitle
                 popUpVC.contentLbl = self.popUpContent
             }

@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
-class FactsPopUpController: UIViewController {
+//Wordt gebruikt door FAQ en Facts
+class PopUpController: UIViewController {
 
     @IBOutlet weak private var titleUI: UILabel!
     @IBOutlet weak private var content: UILabel!
     @IBOutlet weak private var popUpContainer: UIView!
+    @IBOutlet weak var backButton: UIButton!
     
     var titleLbl: String!
     var contentLbl: String!
@@ -23,7 +24,11 @@ class FactsPopUpController: UIViewController {
         titleUI.text = titleLbl
         content.text = contentLbl
         popUpContainer.layer.cornerRadius = 15
+        backButton.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func backBtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
