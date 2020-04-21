@@ -1,5 +1,5 @@
 //
-//  DepartmentCell.swift
+//  ImageTitleCell.swift
 //  TripleOnboarding
 //
 //  Created by Youri Berentsen on 24/03/2020.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class DepartmentCell: UITableViewCell {
+//Is used by Departments & Videos
+class ImageTitleCell: UITableViewCell {
     
-    @IBOutlet weak var departImage: UIImageView!
-    @IBOutlet weak var departTitle: UILabel!
+    @IBOutlet weak var imageViewUI: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

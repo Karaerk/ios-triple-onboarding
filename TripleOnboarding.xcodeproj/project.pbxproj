@@ -14,6 +14,8 @@
 		9B641248243C681800DBA942 /* GamePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B641247243C681800DBA942 /* GamePopUpViewController.swift */; };
 		9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */; };
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
+		AF0E8A5B244EDACC00D66D5A /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */; };
+		AF0E8A67244EDE5F00D66D5A /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E8A66244EDE5F00D66D5A /* VideoController.swift */; };
 		AF3666E324348479009007C9 /* Hour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3666E224348479009007C9 /* Hour.storyboard */; };
 		AF3666E924348BBD009007C9 /* HourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666E824348BBD009007C9 /* HourController.swift */; };
 		AF3666EB24348C4D009007C9 /* HourNewPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666EA24348C4D009007C9 /* HourNewPageController.swift */; };
@@ -35,7 +37,7 @@
 		AF7BCA8D242A17BF00550EBD /* Dosis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF7BCA86242A17BF00550EBD /* Dosis-Bold.ttf */; };
 		AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF823B3A240FF29100650AB0 /* PopUpViewController.swift */; };
 		AF85624B242A6D5800F995F5 /* Department.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF85624A242A6D5800F995F5 /* Department.storyboard */; };
-		AF85625E242A72F600F995F5 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85625D242A72F600F995F5 /* DepartmentCell.swift */; };
+		AF85625E242A72F600F995F5 /* ImageTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85625D242A72F600F995F5 /* ImageTitleCell.swift */; };
 		AF856260242A7E6100F995F5 /* DepartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85625F242A7E6100F995F5 /* DepartmentController.swift */; };
 		AF856262242A8F3800F995F5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF856261242A8F3800F995F5 /* TabBarController.swift */; };
 		AF87FC4324193F450064A7A9 /* Facts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF87FC4224193F450064A7A9 /* Facts.storyboard */; };
@@ -83,6 +85,8 @@
 		9B641247243C681800DBA942 /* GamePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePopUpViewController.swift; sourceTree = "<group>"; };
 		9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloorMap.storyboard; sourceTree = "<group>"; };
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
+		AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
+		AF0E8A66244EDE5F00D66D5A /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 		AF3666E224348479009007C9 /* Hour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hour.storyboard; sourceTree = "<group>"; };
 		AF3666E824348BBD009007C9 /* HourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourController.swift; sourceTree = "<group>"; };
 		AF3666EA24348C4D009007C9 /* HourNewPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourNewPageController.swift; sourceTree = "<group>"; };
@@ -104,7 +108,7 @@
 		AF7BCA86242A17BF00550EBD /* Dosis-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Bold.ttf"; sourceTree = "<group>"; };
 		AF823B3A240FF29100650AB0 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		AF85624A242A6D5800F995F5 /* Department.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Department.storyboard; sourceTree = "<group>"; };
-		AF85625D242A72F600F995F5 /* DepartmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
+		AF85625D242A72F600F995F5 /* ImageTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleCell.swift; sourceTree = "<group>"; };
 		AF85625F242A7E6100F995F5 /* DepartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentController.swift; sourceTree = "<group>"; };
 		AF856261242A8F3800F995F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AF87FC4224193F450064A7A9 /* Facts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Facts.storyboard; sourceTree = "<group>"; };
@@ -180,7 +184,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		AF3666E724348B76009007C9 /* Hours */ = {
+		AF0E8A5C244EDC3500D66D5A /* Hours */ = {
 			isa = PBXGroup;
 			children = (
 				AF3666E824348BBD009007C9 /* HourController.swift */,
@@ -188,7 +192,76 @@
 				AF3666F02434B982009007C9 /* HourTableControl.swift */,
 				AF3666F22434BACD009007C9 /* HourPopUpContrl.swift */,
 			);
-			name = Hours;
+			path = Hours;
+			sourceTree = "<group>";
+		};
+		AF0E8A5D244EDC4B00D66D5A /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				AF0E8A66244EDE5F00D66D5A /* VideoController.swift */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		AF0E8A5E244EDC8D00D66D5A /* Departments */ = {
+			isa = PBXGroup;
+			children = (
+				AF85625F242A7E6100F995F5 /* DepartmentController.swift */,
+				AFAD7856242BA2B3006735D0 /* DepartmentPopUpController.swift */,
+			);
+			path = Departments;
+			sourceTree = "<group>";
+		};
+		AF0E8A5F244EDC9B00D66D5A /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
+				AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */,
+				9B04FA95242239EB004522C5 /* MemoryViewController.swift */,
+				9B641247243C681800DBA942 /* GamePopUpViewController.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		AF0E8A61244EDCC800D66D5A /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				AF5BE1D4242226D500659120 /* FAQController.swift */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		AF0E8A62244EDCCF00D66D5A /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A70472420CF9800BAD193 /* FactsController.swift */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		AF0E8A63244EDCE100D66D5A /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
+				AFDC1DD0240E98C800CC0CDF /* InfoController.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		AF0E8A65244EDDE800D66D5A /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC1DD2240E98C800CC0CDF /* Main.storyboard */,
+				AFDC1DD7240E98C900CC0CDF /* LaunchScreen.storyboard */,
+				AFD8DD1924178C1500F50D07 /* Games.storyboard */,
+				9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */,
+				AF87FC4224193F450064A7A9 /* Facts.storyboard */,
+				AF5BE1CF242226AE00659120 /* FAQ.storyboard */,
+				AF85624A242A6D5800F995F5 /* Department.storyboard */,
+				AF3666E224348479009007C9 /* Hour.storyboard */,
+				AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */,
+			);
+			path = Story;
 			sourceTree = "<group>";
 		};
 		AF3A70492420D69000BAD193 /* Model */ = {
@@ -196,14 +269,6 @@
 			children = (
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		AF3A704D2420DE4400BAD193 /* Facts */ = {
-			isa = PBXGroup;
-			children = (
-				AF3A70472420CF9800BAD193 /* FactsController.swift */,
-			);
-			name = Facts;
 			sourceTree = "<group>";
 		};
 		AF596C8124409D3E00138E9F /* Extensions */ = {
@@ -214,40 +279,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AF596C842440A60700138E9F /* CustomCell */ = {
+		AF596C842440A60700138E9F /* Multiple_Uses */ = {
 			isa = PBXGroup;
 			children = (
 				AF596C852440A64100138E9F /* ButtonsCell.swift */,
+				AF85625D242A72F600F995F5 /* ImageTitleCell.swift */,
+				AF3A704E2420DE5F00BAD193 /* PopUpController.swift */,
 			);
-			path = CustomCell;
-			sourceTree = "<group>";
-		};
-		AF5BE1D3242226C700659120 /* FAQ */ = {
-			isa = PBXGroup;
-			children = (
-				AF5BE1D4242226D500659120 /* FAQController.swift */,
-			);
-			name = FAQ;
-			sourceTree = "<group>";
-		};
-		AF5BE1D8242227FB00659120 /* Info */ = {
-			isa = PBXGroup;
-			children = (
-				AF823B3A240FF29100650AB0 /* PopUpViewController.swift */,
-				AFDC1DD0240E98C800CC0CDF /* InfoController.swift */,
-			);
-			name = Info;
-			sourceTree = "<group>";
-		};
-		AF7BCA7B242A11A500550EBD /* Games */ = {
-			isa = PBXGroup;
-			children = (
-				AFD8DD252417AEAD00F50D07 /* QuizViewController.swift */,
-				AF7BCA7C242A11BD00550EBD /* GamesViewController.swift */,
-				9B04FA95242239EB004522C5 /* MemoryViewController.swift */,
-				9B641247243C681800DBA942 /* GamePopUpViewController.swift */,
-			);
-			name = Games;
+			path = Multiple_Uses;
 			sourceTree = "<group>";
 		};
 		AF7BCA7E242A177300550EBD /* Fonts */ = {
@@ -272,46 +311,21 @@
 			name = Dosis;
 			sourceTree = "<group>";
 		};
-		AF7BCA92242A342100550EBD /* Departments */ = {
-			isa = PBXGroup;
-			children = (
-				AF85625D242A72F600F995F5 /* DepartmentCell.swift */,
-				AF85625F242A7E6100F995F5 /* DepartmentController.swift */,
-				AFAD7856242BA2B3006735D0 /* DepartmentPopUpController.swift */,
-			);
-			name = Departments;
-			sourceTree = "<group>";
-		};
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AF596C842440A60700138E9F /* CustomCell */,
-				AF3666E724348B76009007C9 /* Hours */,
-				AF7BCA92242A342100550EBD /* Departments */,
-				AF7BCA7B242A11A500550EBD /* Games */,
-				AF5BE1D8242227FB00659120 /* Info */,
-				AF5BE1D3242226C700659120 /* FAQ */,
-				AF3A704D2420DE4400BAD193 /* Facts */,
+				AF0E8A5E244EDC8D00D66D5A /* Departments */,
+				AF0E8A62244EDCCF00D66D5A /* Facts */,
+				AF0E8A61244EDCC800D66D5A /* FAQ */,
+				AF0E8A5F244EDC9B00D66D5A /* Games */,
+				AF0E8A5C244EDC3500D66D5A /* Hours */,
+				AF0E8A63244EDCE100D66D5A /* Info */,
+				AF596C842440A60700138E9F /* Multiple_Uses */,
+				AF0E8A5D244EDC4B00D66D5A /* Videos */,
 				9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */,
-				AF3A704E2420DE5F00BAD193 /* PopUpController.swift */,
 				AF856261242A8F3800F995F5 /* TabBarController.swift */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		AF8EC20C24113EE100EC86F9 /* Story */ = {
-			isa = PBXGroup;
-			children = (
-				AFDC1DD2240E98C800CC0CDF /* Main.storyboard */,
-				AFDC1DD7240E98C900CC0CDF /* LaunchScreen.storyboard */,
-				AFD8DD1924178C1500F50D07 /* Games.storyboard */,
-				9BB05AC42418D48200BBB0C6 /* FloorMap.storyboard */,
-				AF87FC4224193F450064A7A9 /* Facts.storyboard */,
-				AF5BE1CF242226AE00659120 /* FAQ.storyboard */,
-				AF85624A242A6D5800F995F5 /* Department.storyboard */,
-				AF3666E224348479009007C9 /* Hour.storyboard */,
-			);
-			name = Story;
 			sourceTree = "<group>";
 		};
 		AFDC1DC0240E98C800CC0CDF = {
@@ -340,9 +354,9 @@
 		AFDC1DCB240E98C800CC0CDF /* TripleOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				AF0E8A65244EDDE800D66D5A /* Story */,
 				AF596C8124409D3E00138E9F /* Extensions */,
 				AF3A70492420D69000BAD193 /* Model */,
-				AF8EC20C24113EE100EC86F9 /* Story */,
 				AF8EC20B2410FD6500EC86F9 /* View */,
 				AFDC1DFC240E992300CC0CDF /* GoogleService-Info.plist */,
 				AFDC1DCC240E98C800CC0CDF /* AppDelegate.swift */,
@@ -482,6 +496,7 @@
 			files = (
 				AF85624B242A6D5800F995F5 /* Department.storyboard in Resources */,
 				AF7BCA8C242A17BF00550EBD /* Dosis-Regular.ttf in Resources */,
+				AF0E8A5B244EDACC00D66D5A /* Videos.storyboard in Resources */,
 				9BB05AC52418D48200BBB0C6 /* FloorMap.storyboard in Resources */,
 				AF7BCA87242A17BF00550EBD /* Dosis-ExtraBold.ttf in Resources */,
 				AFDC1DD9240E98C900CC0CDF /* LaunchScreen.storyboard in Resources */,
@@ -626,6 +641,7 @@
 			files = (
 				AFDC1DD1240E98C800CC0CDF /* InfoController.swift in Sources */,
 				9B04FA96242239EB004522C5 /* MemoryViewController.swift in Sources */,
+				AF0E8A67244EDE5F00D66D5A /* VideoController.swift in Sources */,
 				AFD8DD262417AEAD00F50D07 /* QuizViewController.swift in Sources */,
 				AF3666EB24348C4D009007C9 /* HourNewPageController.swift in Sources */,
 				AF3666F32434BACD009007C9 /* HourPopUpContrl.swift in Sources */,
@@ -636,7 +652,7 @@
 				AF5BE1D6242226D500659120 /* FAQController.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
 				AF596C8324409D5200138E9F /* String+Extension.swift in Sources */,
-				AF85625E242A72F600F995F5 /* DepartmentCell.swift in Sources */,
+				AF85625E242A72F600F995F5 /* ImageTitleCell.swift in Sources */,
 				AF596C862440A64100138E9F /* ButtonsCell.swift in Sources */,
 				AF7BCA7D242A11BD00550EBD /* GamesViewController.swift in Sources */,
 				AF856260242A7E6100F995F5 /* DepartmentController.swift in Sources */,

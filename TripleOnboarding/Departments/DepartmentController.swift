@@ -30,7 +30,7 @@ class DepartmentController: UITableViewController {
     private var departContents = [DepartmentContent]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         updateContent()
     }
@@ -69,10 +69,10 @@ class DepartmentController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Uses the variables from departmentcell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentCell", for: indexPath) as! DepartmentCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentCell", for: indexPath) as! ImageTitleCell
         let content = departContents[indexPath.row]
-        cell.departTitle.text = content.title
-        cell.departImage.image = content.thumbnail
+        cell.titleLabel.text = content.title
+        cell.imageViewUI.image = content.thumbnail
         return cell
     }
     

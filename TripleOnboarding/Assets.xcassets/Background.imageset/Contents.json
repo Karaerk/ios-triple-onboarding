@@ -1,21 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "TripleBackground.png",
       "idiom" : "universal",
-      "filename" : "Rectangle.pdf",
       "scale" : "1x"
     },
     {
+      "filename" : "TripleBackground@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "TripleBackground@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

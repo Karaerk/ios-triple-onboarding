@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xzp-CL-JOW">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -186,6 +186,7 @@
                         <segue destination="9Rg-nh-VS4" kind="relationship" relationship="viewControllers" id="Ulv-eF-dRU"/>
                         <segue destination="w0M-6S-QL8" kind="relationship" relationship="viewControllers" id="2NA-Kc-OCh"/>
                         <segue destination="v04-PW-ie6" kind="relationship" relationship="viewControllers" id="oRV-8f-fXI"/>
+                        <segue destination="C1H-qk-aKp" kind="relationship" relationship="viewControllers" id="6kY-gs-mnW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwy-GU-0gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -222,6 +223,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXs-FL-m2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1535" y="584"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="X3G-Vn-ZVB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Videos" id="C1H-qk-aKp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="CYd-jX-Us3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3p-l4-OTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="582"/>
         </scene>
         <!--Hour-->
         <scene sceneID="9Qd-fO-3Xn">
