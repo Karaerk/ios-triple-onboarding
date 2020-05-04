@@ -18,13 +18,13 @@ class HourNewPageController: UIViewController {
     var contentLbl: String!
     var titleLbl: String!
     //Is tijdelijk, moet nog worden opgehaald van database
-    private let hourWebsite = URL(string: "https://uren.wearetriple.com/")
+    private let hourWebsite = URL(string: "https://app.wearetriple.com/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         button.layer.cornerRadius = 20
-        contentLblUI.text = contentLbl
+        contentLblUI.attributedText = contentLbl.htmlAttributed(family: "Dosis-Regular", size: 12, color: .label)
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: contentLblUI.bottomAnchor).isActive = true
         self.navigationItem.title = titleLbl
     }

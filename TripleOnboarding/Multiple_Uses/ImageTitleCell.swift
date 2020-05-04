@@ -14,6 +14,9 @@ class ImageTitleCell: UITableViewCell {
     @IBOutlet weak var imageViewUI: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var playButton: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 

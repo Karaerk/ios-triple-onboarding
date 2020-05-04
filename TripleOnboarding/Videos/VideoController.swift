@@ -39,9 +39,19 @@ class VideoController: UITableViewController {
             let videoTitle = (firebaseResponse["title"] as? String)!
             let videoUrl = URL(string: (firebaseResponse["url"] as? String)!)
             
-            self.getThumbnailImageFromVideoUrl(url: videoUrl!) { (thumbImage) in
+            //Thumbnail, if thumbnail == nil than thumbnail is made from video.
+            if (firebaseResponse["thumbnail"] == nil) {
+                self.getThumbnailImageFromVideoUrl(url: videoUrl!) { (thumbImage) in
+                    self.videoContent.append(VideoContent(title: videoTitle, url: videoUrl, image: thumbImage))
+                    self.tableView.reloadData()
+                }
+            } else {
+                let thumbnailUrl = URL(string: (firebaseResponse["thumbnail"] as? String)!)
+                //Thumbnail
+                let thumbnailData = try! Data(contentsOf: thumbnailUrl!)
+                let thumbImage = UIImage(data: thumbnailData)
+                
                 self.videoContent.append(VideoContent(title: videoTitle, url: videoUrl, image: thumbImage))
-                print(self.videoContent)
                 self.tableView.reloadData()
             }
         }
@@ -70,10 +80,10 @@ class VideoController: UITableViewController {
     
     func playVideo(url: URL) {
         let player = AVPlayer(url: url)
-
+        
         let vc = AVPlayerViewController()
         vc.player = player
-
+        
         self.present(vc, animated: true) { vc.player?.play() }
     }
     
@@ -90,6 +100,7 @@ class VideoController: UITableViewController {
         let content = videoContent[indexPath.row]
         cell.titleLabel.text = content.title
         cell.imageViewUI.image = content.image
+        cell.playButton.image = #imageLiteral(resourceName: "play_button")
         return cell
     }
     

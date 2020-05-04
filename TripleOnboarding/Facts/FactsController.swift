@@ -64,14 +64,11 @@ class FactsController: UITableViewController {
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: fontSize)
         cell.textLabel?.textColor = UIColor.white
-        
-        //Is used for the lay-out from the tableview
-        let whiteRoundedView : UIView = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 70))
-        whiteRoundedView.layer.backgroundColor = pinkColor.cgColor
-        whiteRoundedView.layer.masksToBounds = false
-        whiteRoundedView.layer.cornerRadius = 10.0
-        cell.contentView.addSubview(whiteRoundedView)
-        cell.contentView.sendSubviewToBack(whiteRoundedView)
+        cell.backgroundColor = pinkColor
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderWidth = 5
+        cell.layer.cornerRadius = 20
+
         return cell
     }
     
