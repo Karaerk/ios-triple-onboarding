@@ -40,20 +40,20 @@ class VideoController: UITableViewController {
             let videoUrl = URL(string: (firebaseResponse["url"] as? String)!)
             
             //Thumbnail, if thumbnail == nil than thumbnail is made from video.
-            if (firebaseResponse["thumbnail"] == nil) {
-                self.getThumbnailImageFromVideoUrl(url: videoUrl!) { (thumbImage) in
-                    self.videoContent.append(VideoContent(title: videoTitle, url: videoUrl, image: thumbImage))
-                    self.tableView.reloadData()
-                }
-            } else {
-                let thumbnailUrl = URL(string: (firebaseResponse["thumbnail"] as? String)!)
-                //Thumbnail
-                let thumbnailData = try! Data(contentsOf: thumbnailUrl!)
-                let thumbImage = UIImage(data: thumbnailData)
-                
+            //if (firebaseResponse["thumbnail"] == nil) {
+            self.getThumbnailImageFromVideoUrl(url: videoUrl!) { (thumbImage) in
                 self.videoContent.append(VideoContent(title: videoTitle, url: videoUrl, image: thumbImage))
                 self.tableView.reloadData()
             }
+            //            } else {
+            //                let thumbnailUrl = URL(string: (firebaseResponse["thumbnail"] as? String)!)
+            //                //Thumbnail
+            //                let thumbnailData = try! Data(contentsOf: thumbnailUrl!)
+            //                let thumbImage = UIImage(data: thumbnailData)
+            //
+            //                self.videoContent.append(VideoContent(title: videoTitle, url: videoUrl, image: thumbImage))
+            //                self.tableView.reloadData()
+            //            }
         }
     }
     
@@ -62,7 +62,7 @@ class VideoController: UITableViewController {
             let asset = AVAsset(url: url)
             let avAssetImageGenerator = AVAssetImageGenerator(asset: asset)
             avAssetImageGenerator.appliesPreferredTrackTransform = true
-            let thumnailTime = CMTimeMake(value: 2, timescale: 10)
+            let thumnailTime = CMTimeMake(value: 2, timescale: 2)
             do {
                 let cgThumbImage = try avAssetImageGenerator.copyCGImage(at: thumnailTime, actualTime: nil)
                 let thumbImage = UIImage(cgImage: cgThumbImage)

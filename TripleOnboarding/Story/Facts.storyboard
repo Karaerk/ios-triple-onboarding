@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bkw-qW-ywA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9M-Dq-eL3" userLabel="PopUp">
-                                <rect key="frame" x="49" y="276" width="316" height="290"/>
+                                <rect key="frame" x="49" y="231" width="316" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vP-0C-NXn">
                                         <rect key="frame" x="5" y="5" width="306" height="33"/>
@@ -67,15 +67,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-Ep-Bke">
-                                        <rect key="frame" x="4" y="44" width="302" height="191"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-Ep-Bke">
+                                        <rect key="frame" x="20" y="58" width="276" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-fl-kIk">
-                                        <rect key="frame" x="10" y="242" width="296" height="38"/>
+                                        <rect key="frame" x="10" y="332" width="296" height="38"/>
                                         <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="20"/>
                                         <state key="normal" title="Terug">
@@ -88,14 +87,17 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="cnq-Ep-Bke" firstAttribute="top" secondItem="4vP-0C-NXn" secondAttribute="bottom" constant="20" id="4tc-uw-Kyt"/>
                                     <constraint firstItem="4vP-0C-NXn" firstAttribute="top" secondItem="W9M-Dq-eL3" secondAttribute="top" constant="5" id="Ce3-hy-pXN"/>
                                     <constraint firstAttribute="trailing" secondItem="Q9y-fl-kIk" secondAttribute="trailing" constant="10" id="Dkb-kb-LKd"/>
                                     <constraint firstItem="4vP-0C-NXn" firstAttribute="leading" secondItem="W9M-Dq-eL3" secondAttribute="leading" constant="5" id="On8-ti-dO4"/>
+                                    <constraint firstAttribute="trailing" secondItem="cnq-Ep-Bke" secondAttribute="trailing" constant="20" id="V6e-N9-Ck5"/>
                                     <constraint firstItem="Q9y-fl-kIk" firstAttribute="leading" secondItem="W9M-Dq-eL3" secondAttribute="leading" constant="10" id="XEu-io-UiH"/>
                                     <constraint firstAttribute="trailing" secondItem="4vP-0C-NXn" secondAttribute="trailing" constant="5" id="Z7j-cH-pU9"/>
                                     <constraint firstAttribute="width" constant="316" id="hSx-qn-uwC"/>
-                                    <constraint firstAttribute="height" constant="290" id="i0t-JL-ryu"/>
+                                    <constraint firstAttribute="height" constant="380" id="i0t-JL-ryu"/>
                                     <constraint firstAttribute="bottom" secondItem="Q9y-fl-kIk" secondAttribute="bottom" constant="10" id="u5v-zM-WVS"/>
+                                    <constraint firstItem="cnq-Ep-Bke" firstAttribute="leading" secondItem="W9M-Dq-eL3" secondAttribute="leading" constant="20" id="y0A-a4-fiC"/>
                                 </constraints>
                             </view>
                         </subviews>
