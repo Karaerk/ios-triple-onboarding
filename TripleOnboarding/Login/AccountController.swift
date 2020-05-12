@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import MSAL
 
 class AccountController: UIViewController {
-
+    
+    
     @IBOutlet weak var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
     }
-    @IBAction func logOutBtn(_ sender: Any) {
+    @IBAction func signOutBtn(_ sender: Any) {
+        controller = self
+        print(controller! as UIViewController)
         signOut(sender as! UIButton)
     }
-    
 }

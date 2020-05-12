@@ -38,17 +38,18 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         initUI()
+        loadMSAL()
         
         do {
             try self.initMSAL()
         } catch let error {
             self.updateLogging(text: "Unable to create Application Context \(error)")
         }
-        
+
         self.loadCurrentAccount()
         self.platformViewDidLoadSetup()
     }
-    
+
     
     func initUI() {
         
@@ -59,12 +60,7 @@ class LoginController: UIViewController {
     }
     
     func loginFinshed(){
-        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let homePage = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-        present(homePage, animated: true, completion: nil)
-        homePage.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        self.dismiss(animated: false, completion: nil)
-//        self.present(navigationController, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func platformViewDidLoadSetup() {

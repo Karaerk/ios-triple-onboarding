@@ -46,7 +46,7 @@ class InfoController: UIViewController {
         }
         
         for buttons in titleButtons{
-            buttons.layer.cornerRadius = 50
+            buttons.layer.cornerRadius = 25
         }
     }
     

@@ -20,6 +20,7 @@ var accessToken = String()
 var applicationContext : MSALPublicClientApplication?
 var webViewParameters : MSALWebviewParameters?
 var currentAccount: MSALAccount?
+var controller: UIViewController?
 
 //var loginSucces = false
 
@@ -57,28 +58,13 @@ func initMSAL() throws {
 }
 
 func initWebViewParams() {
-    webViewParameters = MSALWebviewParameters(authPresentationViewController: LoginController())
+    webViewParameters = MSALWebviewParameters(authPresentationViewController: GamesViewController())
 }
 
 func getGraphEndpoint() -> String {
     return kGraphEndpoint.hasSuffix("/") ? (kGraphEndpoint + "v1.0/me/") : (kGraphEndpoint + "/v1.0/me/");
 }
 
-func callLoginAPI(_ sender: UIButton) {
-    
-    loadCurrentAccount { (account) in
-        
-        guard let currentAccount = account else {
-            
-            // We check to see if we have a current logged in account.
-            // If we don't, then we need to sign someone in.
-            acquireTokenInteractively()
-            return
-        }
-        
-        acquireTokenSilently(currentAccount)
-    }
-}
 
 typealias AccountCompletion = (MSALAccount?) -> Void
 
@@ -116,96 +102,6 @@ func loadCurrentAccount(completion: AccountCompletion? = nil) {
             completion(nil)
         }
     })
-}
-
-func acquireTokenInteractively() {
-    
-    guard let applicationContext = applicationContext else { return }
-    guard let webViewParameters = webViewParameters else { return }
-    
-    // #1
-    let parameters = MSALInteractiveTokenParameters(scopes: kScopes, webviewParameters: webViewParameters)
-    parameters.promptType = .selectAccount
-    
-    // #2
-    applicationContext.acquireToken(with: parameters) { (result, error) in
-        
-        // #3
-        if let error = error {
-            
-            updateLogging(text: "Could not acquire token: \(error)")
-            return
-        }
-        
-        guard let result = result else {
-            
-            updateLogging(text: "Could not acquire token: No result returned")
-            return
-        }
-        
-        // #4
-        accessToken = result.accessToken
-        updateLogging(text: "Access token is \(accessToken)")
-        updateCurrentAccount(account: result.account)
-        getContentWithToken()
-    }
-}
-
-func acquireTokenSilently(_ account : MSALAccount!) {
-    
-    guard let applicationContext = applicationContext else { return }
-    
-    /**
-     
-     Acquire a token for an existing account silently
-     
-     - forScopes:           Permissions you want included in the access token received
-     in the result in the completionBlock. Not all scopes are
-     guaranteed to be included in the access token returned.
-     - account:             An account object that we retrieved from the application object before that the
-     authentication flow will be locked down to.
-     - completionBlock:     The completion block that will be called when the authentication
-     flow completes, or encounters an error.
-     */
-    
-    let parameters = MSALSilentTokenParameters(scopes: kScopes, account: account)
-    
-    applicationContext.acquireTokenSilent(with: parameters) { (result, error) in
-        
-        if let error = error {
-            
-            let nsError = error as NSError
-            
-            // interactionRequired means we need to ask the user to sign-in. This usually happens
-            // when the user's Refresh Token is expired or if the user has changed their password
-            // among other possible reasons.
-            
-            if (nsError.domain == MSALErrorDomain) {
-                
-                if (nsError.code == MSALError.interactionRequired.rawValue) {
-                    
-                    DispatchQueue.main.async {
-                        acquireTokenInteractively()
-                    }
-                    return
-                }
-            }
-            
-            updateLogging(text: "Could not acquire token silently: \(error)")
-            return
-        }
-        
-        guard let result = result else {
-            
-            updateLogging(text: "Could not acquire token: No result returned")
-            return
-        }
-        
-        accessToken = result.accessToken
-        updateLogging(text: "Refreshed Access token is \(accessToken)")
-        //self.updateSignOutButton(enabled: true)
-        getContentWithToken()
-    }
 }
 
 func getContentWithToken() {
@@ -264,7 +160,6 @@ func signOut(_ sender: UIButton) {
             accessToken = ""
             updateCurrentAccount(account: nil)
         })
-        
     }
 }
 
@@ -283,21 +178,3 @@ func updateCurrentAccount(account: MSALAccount?)  {
     currentAccount = account
 }
 
-func getDeviceMode(_ sender: AnyObject) {
-    
-    if #available(iOS 13.0, *) {
-        applicationContext?.getDeviceInformation(with: nil, completionBlock: { (deviceInformation, error) in
-            
-            guard let deviceInfo = deviceInformation else {
-                updateLogging(text: "Device info not returned. Error: \(String(describing: error))")
-                return
-            }
-            
-            let isSharedDevice = deviceInfo.deviceMode == .shared
-            let modeString = isSharedDevice ? "shared" : "private"
-            updateLogging(text: "Received device info. Device is in the \(modeString) mode.")
-        })
-    } else {
-        updateLogging(text: "Running on older iOS. GetDeviceInformation API is unavailable.")
-    }
-}
