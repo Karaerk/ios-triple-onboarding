@@ -6,7 +6,8 @@ target 'TripleOnboarding' do
   use_frameworks!
 
   # Pods for TripleOnboarding
-
+  pod 'MSAL'
+  
   target 'TripleOnboardingTests' do
     inherit! :search_paths
     # Pods for testing

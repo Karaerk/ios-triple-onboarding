@@ -22,11 +22,8 @@ class InfoController: UIViewController {
     private var popUpTitle: String!
     private var popUpContent: String!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         UpdateContent()
     }
     
@@ -34,7 +31,7 @@ class InfoController: UIViewController {
         
         ref = Database.database().reference().child("info")
         var counter = 0
-                
+        
         ref.queryOrdered(byChild: "title").queryLimited(toLast: 5).observe(.childAdded) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
@@ -55,12 +52,12 @@ class InfoController: UIViewController {
     
     @IBAction func infoBtn(_ sender: UIButton) {
         self.popUpTitle = sender.title(for: .normal)
-
+        
         //array uiContent is assigned to popUpContent
         self.popUpContent = uiContent[sender.tag]
         performSegue(withIdentifier: "Identifier", sender: self)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let popUpVC = segue.destination as! PopUpViewController
         popUpVC.titleLbl = self.popUpTitle

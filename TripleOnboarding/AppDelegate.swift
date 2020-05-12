@@ -8,17 +8,19 @@
 
 import UIKit
 import Firebase
+import MSAL
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var ref: DatabaseReference!
+    var window: UIWindow?
     private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     private let blueColor = UIColor(red: 20/255, green: 32/255, blue: 67/255, alpha: 1)
-    //var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         FirebaseApp.configure()
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.white
