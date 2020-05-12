@@ -23,9 +23,12 @@ class MemoryViewController: UIViewController {
     private var ref: DatabaseReference!
     private var counter: Int = 0
     
+    private let defaults = UserDefaults.standard
+    
     //variables for the score and round
     private var score = 0
     private var questionNumber = 1
+    private var highscore = UserDefaults.standard.integer(forKey: "HighScoreKey")
     
     private let haptic = UINotificationFeedbackGenerator()
     
@@ -117,6 +120,14 @@ class MemoryViewController: UIViewController {
         score += 10
         updateLabels()
         updateContent()
+        updateHighScore()
+    }
+    
+    func updateHighScore(){
+        if (score > highscore){
+            highscore = score
+            defaults.set(highscore, forKey: "HighScoreKey")
+        }
     }
     
     //function to set the segue towards the gamepopupviewcontroller
@@ -125,6 +136,7 @@ class MemoryViewController: UIViewController {
          let gamePopUpVC = segue.destination as! GamePopUpViewController
         
         gamePopUpVC.scoreLbl = String("Je score: \(score)")
+        gamePopUpVC.highScoreLbl = String("Highscore: \(highscore)")
      }
     }
 }
