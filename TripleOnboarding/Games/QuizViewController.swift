@@ -28,7 +28,7 @@ class QuizViewController: UIViewController {
     private var score = 0
     private var questionNumber = 1
     
-    private var highscore = UserDefaults.standard.integer(forKey: "HighScoreKey")
+    private var highscoreQuiz = UserDefaults.standard.integer(forKey: "HighScoreQuizKey")
     
     private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     
@@ -121,9 +121,9 @@ class QuizViewController: UIViewController {
      }
      
      func updateHighScore(){
-         if (score > highscore){
-             highscore = score
-             defaults.set(highscore, forKey: "HighScoreKey")
+         if (score > highscoreQuiz){
+             highscoreQuiz = score
+             defaults.set(highscoreQuiz, forKey: "HighScoreQuizKey")
          }
      }
     
@@ -132,7 +132,7 @@ class QuizViewController: UIViewController {
         if (segue.identifier == "QuizEndPopUp") {
             let gamePopUpVC = segue.destination as! GamePopUpViewController
             gamePopUpVC.scoreLbl = String("Je score: \(score)")
-            gamePopUpVC.highScoreLbl = String("Highscore: \(highscore)")
+            gamePopUpVC.highScoreLbl = String("Highscore: \(highscoreQuiz)")
         }
     }
     

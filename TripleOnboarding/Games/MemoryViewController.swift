@@ -28,7 +28,7 @@ class MemoryViewController: UIViewController {
     //variables for the score and round
     private var score = 0
     private var questionNumber = 1
-    private var highscore = UserDefaults.standard.integer(forKey: "HighScoreKey")
+    private var highscoreMemory = UserDefaults.standard.integer(forKey: "HighScoreMemoryKey")
     
     private let haptic = UINotificationFeedbackGenerator()
     
@@ -124,9 +124,9 @@ class MemoryViewController: UIViewController {
     }
     
     func updateHighScore(){
-        if (score > highscore){
-            highscore = score
-            defaults.set(highscore, forKey: "HighScoreKey")
+        if (score > highscoreMemory){
+            highscoreMemory = score
+            defaults.set(highscoreMemory, forKey: "HighScoreMemoryKey")
         }
     }
     
@@ -136,7 +136,7 @@ class MemoryViewController: UIViewController {
          let gamePopUpVC = segue.destination as! GamePopUpViewController
         
         gamePopUpVC.scoreLbl = String("Je score: \(score)")
-        gamePopUpVC.highScoreLbl = String("Highscore: \(highscore)")
+        gamePopUpVC.highScoreLbl = String("Highscore: \(highscoreMemory)")
      }
     }
 }
