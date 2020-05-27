@@ -18,6 +18,7 @@ class LoginController: UIViewController {
     let kGraphEndpoint = "https://graph.microsoft.com/"
     
     let kScopes: [String] = ["user.read"] // request permission to read the profile of the signed-in user
+    let defaults = UserDefaults()
     
     var accessToken = String()
     var applicationContext : MSALPublicClientApplication?
@@ -181,9 +182,12 @@ class LoginController: UIViewController {
             
             // #4
             self.accessToken = result.accessToken
+            self.defaults.set(self.accessToken, forKey: "accessToken")
             self.updateLogging(text: "Access token is \(self.accessToken)")
             self.updateCurrentAccount(account: result.account)
             self.getContentWithToken()
+            
+            
         }
     }
     
@@ -238,6 +242,7 @@ class LoginController: UIViewController {
             }
             
             self.accessToken = result.accessToken
+            self.defaults.set(self.accessToken, forKey: "accessToken")
             self.updateLogging(text: "Refreshed Access token is \(self.accessToken)")
             //self.updateSignOutButton(enabled: true)
             self.getContentWithToken()
@@ -298,6 +303,7 @@ class LoginController: UIViewController {
                 
                 self.updateLogging(text: "Sign out completed successfully")
                 self.accessToken = ""
+                self.defaults.set(self.accessToken, forKey: "accessToken")
                 self.updateCurrentAccount(account: nil)
             })
             

@@ -261,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="Kqm-97-yV9" userLabel="Info Stack">
-                                <rect key="frame" x="46.333333333333343" y="10" width="282.66666666666663" height="21.666666666666671"/>
+                                <rect key="frame" x="46.333333333333343" y="10.000000000000002" width="282.66666666666663" height="21.666666666666671"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jP4-fS-ipC">
                                         <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="21.666666666666668"/>
@@ -303,13 +303,16 @@
                                 <rect key="frame" x="10" y="35" width="355" height="596"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tre-MC-kTu">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="399.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tre-MC-kTu" secondAttribute="height" multiplier="71:70" id="309-Zv-jCd"/>
+                                        </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-qM-cf3">
-                                        <rect key="frame" x="0.0" y="409.33333333333337" width="355" height="186.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="360" width="355" height="236"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9p-g6-8wQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="355" height="39.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="51.666666666666664"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -322,7 +325,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7S-RN-x2c">
-                                                <rect key="frame" x="0.0" y="49.333333333333258" width="355" height="39"/>
+                                                <rect key="frame" x="0.0" y="61.666666666666629" width="355" height="51.333333333333343"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -335,7 +338,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-oN-eBd">
-                                                <rect key="frame" x="0.0" y="98.333333333333258" width="355" height="39.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="123.00000000000001" width="355" height="51.666666666666671"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -348,7 +351,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx6-w5-taV">
-                                                <rect key="frame" x="0.0" y="147.66666666666663" width="355" height="39"/>
+                                                <rect key="frame" x="0.0" y="184.66666666666663" width="355" height="51.333333333333343"/>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -390,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSE-Pp-ow5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018.840579710145" y="926.78571428571422"/>
+            <point key="canvasLocation" x="1018.4" y="926.60098522167493"/>
         </scene>
         <!--Game Pop Up View Controller-->
         <scene sceneID="f45-zS-gRw">

@@ -11,7 +11,7 @@ import UIKit
 import FirebaseDatabase
 
 class MemoryViewController: UIViewController {
-
+    
     @IBOutlet private var answerBtns: [UIButton]!
     
     //@IBOutlet weak var employeePhoto: UILabel!
@@ -27,31 +27,65 @@ class MemoryViewController: UIViewController {
     private var score = 0
     private var questionNumber = 1
     
+    private let defaults = UserDefaults()
     private let haptic = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateContent()
-        updateLabels()
+        //        guard let url = URL(string: "https://appapi.wearetriple.com/api/event/all") else {return}
+        //        var request = URLRequest(url: url)
+        //        request.httpMethod = "GET"
+        //        request.addValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        //
+        //        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        //            guard let dataResponse = data,
+        //                error == nil else {
+        //                    print(error?.localizedDescription ?? "Response Error")
+        //                    return }
+        //            do {
+        //                //here dataResponse received from a network request
+        //                let jsonResponse = try JSONSerialization.jsonObject(with:
+        //                    dataResponse, options: [])
+        //                print(jsonResponse) //Response result
+        //            } catch let parsingError {
+        //                print("Error: ", parsingError)
+        //            }
+        //        }
+        //        task.resume()
+        
+        let token = defaults.string(forKey: "accessToken")
+        let urlRequest = NSMutableURLRequest()
+        urlRequest.url = URL(string: "https://acc-appapi.wearetriple.com/api/Init/v1")!
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = [ "Authorization" : "Bearer \(token!)" ]
+        
+        let task = URLSession.shared.dataTask(with: urlRequest as URLRequest) { (data: Data?, response: URLResponse?, error: Error?) in
+            print(token!)
+
+        }
+        task.resume()
+        
+        //updateContent()
+        //updateLabels()
     }
     
     //function for the memory to get info from the database and show it
     func updateContent(){
         resetUI()
-
+        
         //database for the memory
         ref = Database.database().reference()
         let empoloyeePhotos = Database.database().reference().child("memory")
         let empoloyeePhoto = empoloyeePhotos.child("\(counter)")
         let answers = empoloyeePhoto.child("answer")
-
+        
         //returns the end game popup after the last quistion is answered
         empoloyeePhoto.observeSingleEvent(of: .value) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return self.performSegue(withIdentifier: "EndGamePopUp", sender: self)
             }
-        
+            
             //get the image from the db
             let imageUrl = URL(string: (firebaseResponse["image"] as? String)!)
             let imageData = try! Data(contentsOf: imageUrl!)
@@ -121,10 +155,10 @@ class MemoryViewController: UIViewController {
     
     //function to set the segue towards the gamepopupviewcontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if (segue.identifier == "EndGamePopUp") {
-         let gamePopUpVC = segue.destination as! GamePopUpViewController
-        
-        gamePopUpVC.scoreLbl = String("Je score: \(score)")
-     }
+        if (segue.identifier == "EndGamePopUp") {
+            let gamePopUpVC = segue.destination as! GamePopUpViewController
+            
+            gamePopUpVC.scoreLbl = String("Je score: \(score)")
+        }
     }
 }
