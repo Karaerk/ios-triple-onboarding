@@ -35,6 +35,8 @@ class DepartmentController: UITableViewController {
     }
     
     func updateContent(){
+        let noImage = #imageLiteral(resourceName: "Triple Logo").pngData()
+        
         
         ref = Database.database().reference().child("department")
         
@@ -49,11 +51,11 @@ class DepartmentController: UITableViewController {
             let imageUrl = URL(string: (firebaseResponse["image"] as? String)!)
             
             //Thumbnail
-            let thumbnailData = try! Data(contentsOf: thumbnailUrl!)
-            let thumbnail = UIImage(data: thumbnailData)
+            let thumbnailData = try? Data(contentsOf: thumbnailUrl!)
+            let thumbnail = UIImage(data: thumbnailData ?? noImage!)
             //Image
-            let imageData = try! Data(contentsOf: imageUrl!)
-            let image = UIImage(data: imageData)
+            let imageData = try? Data(contentsOf: imageUrl!)
+            let image = UIImage(data: imageData ?? noImage!)
             
             //Append the title and content from firebase to the struct
             self.departContents.append(DepartmentContent(thumbnail: thumbnail, image: image, title: departTitle, content: departContent))

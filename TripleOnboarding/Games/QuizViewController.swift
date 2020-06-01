@@ -22,9 +22,13 @@ class QuizViewController: UIViewController {
     private var questionCounter: Int = 0
     private var quesionText: String!
     
+    private let defaults = UserDefaults.standard
+    
     //variables for the score and round
     private var score = 0
     private var questionNumber = 1
+    
+    private var highscoreQuiz = UserDefaults.standard.integer(forKey: "HighScoreQuizKey")
     
     private let pinkColor = UIColor(red: 236/255, green: 102/255, blue: 118/255, alpha: 1)
     
@@ -113,13 +117,22 @@ class QuizViewController: UIViewController {
         score += 10
         updateLabels()
         updateContent()
-    }
+        updateHighScore()
+     }
+     
+     func updateHighScore(){
+         if (score > highscoreQuiz){
+             highscoreQuiz = score
+             defaults.set(highscoreQuiz, forKey: "HighScoreQuizKey")
+         }
+     }
     
     //function to set the segue towards the gamepopupviewcontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "QuizEndPopUp") {
             let gamePopUpVC = segue.destination as! GamePopUpViewController
             gamePopUpVC.scoreLbl = String("Je score: \(score)")
+            gamePopUpVC.highScoreLbl = String("Highscore: \(highscoreQuiz)")
         }
     }
     

@@ -23,9 +23,10 @@ class MemoryViewController: UIViewController {
     private var ref: DatabaseReference!
     private var counter: Int = 0
     
-    //variables for the score and round
+       //variables for the score and round
     private var score = 0
     private var questionNumber = 1
+    private var highscoreMemory = UserDefaults.standard.integer(forKey: "HighScoreMemoryKey")
     
     private let defaults = UserDefaults()
     private let haptic = UINotificationFeedbackGenerator()
@@ -151,14 +152,23 @@ class MemoryViewController: UIViewController {
         score += 10
         updateLabels()
         updateContent()
+        updateHighScore()
+    }
+    
+       func updateHighScore(){
+        if (score > highscoreMemory){
+            highscoreMemory = score
+            defaults.set(highscoreMemory, forKey: "HighScoreMemoryKey")
+        }
     }
     
     //function to set the segue towards the gamepopupviewcontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "EndGamePopUp") {
-            let gamePopUpVC = segue.destination as! GamePopUpViewController
-            
-            gamePopUpVC.scoreLbl = String("Je score: \(score)")
-        }
+     if (segue.identifier == "EndGamePopUp") {
+         let gamePopUpVC = segue.destination as! GamePopUpViewController
+        
+        gamePopUpVC.scoreLbl = String("Je score: \(score)")
+        gamePopUpVC.highScoreLbl = String("Highscore: \(highscoreMemory)")
+     }
     }
 }
