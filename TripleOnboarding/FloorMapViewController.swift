@@ -15,24 +15,25 @@ class FloorMapViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var floorBtns: [UIButton]!
     
     @IBAction func firstFloor(_ sender: UIButton) {
-        if(self.imageView.image != UIImage(named: "Image")){
-            imageView.image = UIImage(named: "Image")
+        if(self.imageView.image != UIImage(named: "Plattegrond 1e")){
+            imageView.image = UIImage(named: "Plattegrond 1e")
         }
     }
     
     @IBAction func secondFloor(_ sender: UIButton) {
-        imageView.image = UIImage(named: "image2")
+        imageView.image = UIImage(named: "Plattegrond 2e")
     }
     
     
     @IBAction func thirdFloor(_ sender: UIButton) {
-        imageView.image = UIImage(named: "image3")
+        imageView.image = UIImage(named: "Plattegrond 3e")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scroll.delegate = self
         
+        imageView.image = UIImage(named: "Plattegrond 1e")
         for buttons in floorBtns{
             buttons.layer.cornerRadius = 10
         }

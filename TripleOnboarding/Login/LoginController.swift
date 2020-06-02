@@ -57,7 +57,6 @@ class LoginController: UIViewController {
         loginButton.layer.cornerRadius = 25
         loginButton.addTarget(self, action: #selector(callGraphAPI(_:)), for: .touchUpInside)
         self.view.addSubview(loginButton)
-        
     }
     
     func loginFinshed(){
@@ -181,6 +180,7 @@ class LoginController: UIViewController {
             }
             
             // #4
+            //Save token
             self.accessToken = result.accessToken
             self.defaults.set(self.accessToken, forKey: "accessToken")
             self.updateLogging(text: "Access token is \(self.accessToken)")

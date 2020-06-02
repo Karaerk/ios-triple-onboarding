@@ -22,6 +22,14 @@ class TabBarController: UITabBarController {
         self.navigationController?.navigationBar.barTintColor = blueColor
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 
     /*
     // MARK: - Navigation

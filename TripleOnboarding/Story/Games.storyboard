@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7b-nh-eyd">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -23,18 +23,15 @@
             <objects>
                 <viewController storyboardIdentifier="GameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpf-Wm-7WU" customClass="GamesViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hau-kU-by1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dHY-vU-Y0q">
-                                <rect key="frame" x="25" y="87" width="325" height="550"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="dHY-vU-Y0q">
+                                <rect key="frame" x="25" y="40" width="325" height="494"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-31-uup">
-                                        <rect key="frame" x="0.0" y="0.0" width="325" height="225"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="222"/>
                                         <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="225" id="pGa-SN-99U"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="50"/>
                                         <state key="normal" title="Quiz">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,11 +41,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeS-vi-tCr">
-                                        <rect key="frame" x="0.0" y="325" width="325" height="225"/>
+                                        <rect key="frame" x="0.0" y="272" width="325" height="222"/>
                                         <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="225" id="ICu-wh-d6u"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="50"/>
                                         <state key="normal" title="Memory">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,9 +56,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GUk-Ry-3YH" firstAttribute="bottom" secondItem="dHY-vU-Y0q" secondAttribute="bottom" constant="40" id="6pl-rX-sWc"/>
+                            <constraint firstItem="dHY-vU-Y0q" firstAttribute="top" secondItem="GUk-Ry-3YH" secondAttribute="top" constant="40" id="78L-jm-JYJ"/>
                             <constraint firstItem="GUk-Ry-3YH" firstAttribute="trailing" secondItem="dHY-vU-Y0q" secondAttribute="trailing" constant="25" id="B1o-tV-JiN"/>
                             <constraint firstItem="dHY-vU-Y0q" firstAttribute="leading" secondItem="GUk-Ry-3YH" secondAttribute="leading" constant="25" id="KbW-LR-j1Y"/>
-                            <constraint firstItem="dHY-vU-Y0q" firstAttribute="centerY" secondItem="hau-kU-by1" secondAttribute="centerY" id="prl-HM-kBJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GUk-Ry-3YH"/>
                     </view>
@@ -86,20 +81,20 @@
             <objects>
                 <viewController id="zuG-vP-irD" userLabel="QuizVC" customClass="QuizViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cCL-w8-m9i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9L4-Ih-Res" userLabel="Info Stack">
-                                <rect key="frame" x="10" y="20" width="355" height="616"/>
+                                <rect key="frame" x="10" y="20" width="355" height="549"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfS-DG-agT">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="256"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AfS-DG-agT">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="189"/>
                                         <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="30"/>
                                         <color key="textColor" red="0.078431372550000003" green="0.12549019610000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-0Z-gj5">
-                                        <rect key="frame" x="0.0" y="266" width="355" height="80"/>
+                                        <rect key="frame" x="0.0" y="199" width="355" height="80"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="bmy-wi-dZO"/>
@@ -114,7 +109,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rt-BF-RuV">
-                                        <rect key="frame" x="0.0" y="356" width="355" height="80"/>
+                                        <rect key="frame" x="0.0" y="289" width="355" height="80"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="26x-BP-hhp"/>
@@ -129,7 +124,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFs-Pl-fIu">
-                                        <rect key="frame" x="0.0" y="446" width="355" height="80"/>
+                                        <rect key="frame" x="0.0" y="379" width="355" height="80"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="X7A-2d-tad"/>
@@ -144,7 +139,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sul-rM-f7r">
-                                        <rect key="frame" x="0.0" y="536" width="355" height="80"/>
+                                        <rect key="frame" x="0.0" y="469" width="355" height="80"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Itx-u2-QTA"/>
@@ -161,19 +156,19 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="aiF-14-UJX" userLabel="Quiz Stack">
-                                <rect key="frame" x="46.333333333333343" y="10.000000000000002" width="282.66666666666663" height="21.666666666666671"/>
+                                <rect key="frame" x="46" y="10" width="283" height="21.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pCl-OB-tge">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="21.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="21.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vraag:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvp-vh-6RQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="21.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx5-O7-4XQ">
-                                                <rect key="frame" x="50.333333333333336" y="0.0" width="4" height="21.666666666666668"/>
+                                                <rect key="frame" x="50.5" y="0.0" width="4" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -181,16 +176,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vnV-LQ-zqh">
-                                        <rect key="frame" x="204.33333333333331" y="0.0" width="78.333333333333314" height="21.666666666666668"/>
+                                        <rect key="frame" x="204.5" y="0.0" width="78.5" height="21.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCM-z1-GNc">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="21.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEP-le-JXf">
-                                                <rect key="frame" x="60.000000000000036" y="0.0" width="18.333333333333336" height="21.666666666666668"/>
+                                                <rect key="frame" x="60" y="0.0" width="18.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -234,7 +229,7 @@
                     <tabBarItem key="tabBarItem" title="Games" image="gamecontroller" catalog="system" id="XOW-gK-5f9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="WTX-aM-g69">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="19"/>
@@ -257,23 +252,23 @@
             <objects>
                 <viewController storyboardIdentifier="MemoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aVs-94-Rnm" userLabel="MemoryVC" customClass="MemoryViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOq-aW-TAt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="Kqm-97-yV9" userLabel="Info Stack">
-                                <rect key="frame" x="46.333333333333343" y="10.000000000000002" width="282.66666666666663" height="21.666666666666671"/>
+                                <rect key="frame" x="46" y="10" width="283" height="21.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jP4-fS-ipC">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="21.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="21.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vraag:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-Ff-tui">
-                                                <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="21.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu7-pV-7ji">
-                                                <rect key="frame" x="50.333333333333336" y="0.0" width="4" height="21.666666666666668"/>
+                                                <rect key="frame" x="50.5" y="0.0" width="4" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -281,16 +276,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-rj-dDD">
-                                        <rect key="frame" x="204.33333333333331" y="0.0" width="78.333333333333314" height="21.666666666666668"/>
+                                        <rect key="frame" x="204.5" y="0.0" width="78.5" height="21.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-8w-sFZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="21.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUB-ni-Idq">
-                                                <rect key="frame" x="60.000000000000036" y="0.0" width="18.333333333333336" height="21.666666666666668"/>
+                                                <rect key="frame" x="60" y="0.0" width="18.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -299,82 +294,77 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-Rd-EeA" userLabel="Quiz Stack">
-                                <rect key="frame" x="-16.333333333333343" y="35" width="381.33333333333337" height="596"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tre-MC-kTu">
+                                <rect key="frame" x="37.5" y="39.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="CvM-3D-JwN"/>
+                                    <constraint firstAttribute="width" secondItem="tre-MC-kTu" secondAttribute="height" multiplier="1:1" id="L4L-3l-aRc"/>
+                                    <constraint firstAttribute="height" constant="300" id="iGV-Re-u19"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-qM-cf3">
+                                <rect key="frame" x="30" y="343" width="315" height="206"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tre-MC-kTu">
-                                        <rect key="frame" x="0.0" y="0.0" width="381.33333333333331" height="375.66666666666669"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="tre-MC-kTu" secondAttribute="height" multiplier="71:70" id="309-Zv-jCd"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-qM-cf3">
-                                        <rect key="frame" x="0.0" y="385.66666666666669" width="381.33333333333331" height="210.33333333333331"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9p-g6-8wQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="381.33333333333331" height="45.333333333333336"/>
-                                                <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
-                                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="A">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="5Hb-Xc-QOk"/>
-                                                    <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="qd4-kN-6hs"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7S-RN-x2c">
-                                                <rect key="frame" x="0.0" y="55.333333333333314" width="381.33333333333331" height="45"/>
-                                                <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
-                                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="B">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="nGA-cf-BXa"/>
-                                                    <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="XvN-cC-OeS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-oN-eBd">
-                                                <rect key="frame" x="0.0" y="110.33333333333331" width="381.33333333333331" height="45"/>
-                                                <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
-                                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="C">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="g40-YL-wh0"/>
-                                                    <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="tUE-a2-ad1"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx6-w5-taV">
-                                                <rect key="frame" x="0.0" y="165.33333333333331" width="381.33333333333331" height="45"/>
-                                                <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
-                                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="D">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="Cau-i2-ENm"/>
-                                                    <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="Q4h-wg-4cJ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9p-g6-8wQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="44"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
+                                        <state key="normal" title="A">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="5Hb-Xc-QOk"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="qd4-kN-6hs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7S-RN-x2c">
+                                        <rect key="frame" x="0.0" y="54" width="315" height="44"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="nGA-cf-BXa"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="XvN-cC-OeS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-oN-eBd">
+                                        <rect key="frame" x="0.0" y="108" width="315" height="44"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="g40-YL-wh0"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="tUE-a2-ad1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx6-w5-taV">
+                                        <rect key="frame" x="0.0" y="162" width="315" height="44"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
+                                        <state key="normal" title="D">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerBtn:" destination="zuG-vP-irD" eventType="touchUpInside" id="Cau-i2-ENm"/>
+                                            <action selector="answerButtons:" destination="aVs-94-Rnm" eventType="touchUpInside" id="Q4h-wg-4cJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qIi-hV-Ksz" firstAttribute="bottom" secondItem="9Qa-Rd-EeA" secondAttribute="bottom" constant="10" id="4tj-kH-N8c"/>
                             <constraint firstItem="Kqm-97-yV9" firstAttribute="top" secondItem="qIi-hV-Ksz" secondAttribute="top" constant="10" id="C6L-2v-xww"/>
                             <constraint firstItem="Kqm-97-yV9" firstAttribute="centerX" secondItem="rOq-aW-TAt" secondAttribute="centerX" id="D9g-lk-4Xa"/>
-                            <constraint firstItem="qIi-hV-Ksz" firstAttribute="trailing" secondItem="9Qa-Rd-EeA" secondAttribute="trailing" constant="10" id="bBx-66-nnS"/>
-                            <constraint firstItem="9Qa-Rd-EeA" firstAttribute="top" secondItem="Kqm-97-yV9" secondAttribute="top" constant="25" id="nfD-a5-ubC"/>
+                            <constraint firstItem="qIi-hV-Ksz" firstAttribute="bottom" secondItem="rvG-qM-cf3" secondAttribute="bottom" constant="25" id="FTu-IK-VcG"/>
+                            <constraint firstItem="tre-MC-kTu" firstAttribute="top" secondItem="Kqm-97-yV9" secondAttribute="bottom" constant="8" id="Szf-Et-rgC"/>
+                            <constraint firstItem="qIi-hV-Ksz" firstAttribute="trailing" secondItem="rvG-qM-cf3" secondAttribute="trailing" constant="30" id="avv-9M-Dms"/>
+                            <constraint firstItem="tre-MC-kTu" firstAttribute="centerX" secondItem="rOq-aW-TAt" secondAttribute="centerX" id="bEb-lN-1gt"/>
+                            <constraint firstItem="rvG-qM-cf3" firstAttribute="centerX" secondItem="rOq-aW-TAt" secondAttribute="centerX" id="h8V-w3-lSk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qIi-hV-Ksz"/>
                     </view>
@@ -383,48 +373,52 @@
                         <outlet property="employeePhotoUI" destination="tre-MC-kTu" id="otf-jp-uyM"/>
                         <outlet property="questionNumberLabel" destination="Wu7-pV-7ji" id="S8s-0r-r2B"/>
                         <outlet property="scoreLabel" destination="pUB-ni-Idq" id="Zhc-jL-UII"/>
-                        <outletCollection property="answerBtns" destination="U9p-g6-8wQ" collectionClass="NSMutableArray" id="hkk-fi-Q0C"/>
+                        <outletCollection property="answerBtns" destination="Zx6-w5-taV" collectionClass="NSMutableArray" id="IsH-nu-c4o"/>
                         <outletCollection property="answerBtns" destination="O7S-RN-x2c" collectionClass="NSMutableArray" id="vCv-eS-6BU"/>
                         <outletCollection property="answerBtns" destination="uYM-oN-eBd" collectionClass="NSMutableArray" id="XYS-Zg-vqv"/>
-                        <outletCollection property="answerBtns" destination="Zx6-w5-taV" collectionClass="NSMutableArray" id="IsH-nu-c4o"/>
+                        <outletCollection property="answerBtns" destination="U9p-g6-8wQ" collectionClass="NSMutableArray" id="hkk-fi-Q0C"/>
                         <segue destination="qQx-pB-D3i" kind="show" identifier="EndGamePopUp" id="lbY-sM-u4b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSE-Pp-ow5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="947"/>
+            <point key="canvasLocation" x="976.79999999999995" y="946.55172413793105"/>
         </scene>
         <!--Game Pop Up View Controller-->
         <scene sceneID="Avf-lL-j99">
             <objects>
                 <viewController id="qQx-pB-D3i" customClass="GamePopUpViewController" customModule="TripleOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z2l-l1-vgx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="2Tw-Xd-wUa">
-                                <rect key="frame" x="20" y="159" width="335" height="442"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congrats" highlightedImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="UKU-2u-Ygr">
+                                <rect key="frame" x="67" y="20" width="240" height="193"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tw-Xd-wUa">
+                                <rect key="frame" x="20" y="223" width="335" height="331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Gefeliciteerd!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDd-9c-juF">
-                                        <rect key="frame" x="104" y="0.0" width="127.33333333333331" height="31.666666666666668"/>
+                                        <rect key="frame" x="104" y="0.0" width="127.5" height="66.5"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cx1-UL-79T">
-                                        <rect key="frame" x="145.66666666666666" y="95.666666666666686" width="44" height="25.333333333333329"/>
+                                        <rect key="frame" x="145.5" y="59.5" width="44" height="66.5"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDD-Xz-ddT">
-                                        <rect key="frame" x="128.33333333333334" y="185" width="78.333333333333343" height="20.333333333333343"/>
+                                        <rect key="frame" x="128.5" y="125" width="78.5" height="67"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-SP-TNg">
-                                        <rect key="frame" x="127.66666666666666" y="269.33333333333337" width="80" height="42"/>
+                                        <rect key="frame" x="127.5" y="184" width="80" height="66.5"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="23"/>
                                         <state key="normal" title="Afsluiten">
                                             <color key="titleColor" red="0.92549019610000005" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -434,23 +428,20 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Triple Logo" translatesAutoresizingMaskIntoConstraints="NO" id="JYw-vT-oPK">
-                                        <rect key="frame" x="134.33333333333334" y="375.33333333333337" width="66.666666666666657" height="66.666666666666686"/>
+                                        <rect key="frame" x="134.5" y="264.5" width="66.5" height="66.5"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congrats" highlightedImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="UKU-2u-Ygr">
-                                <rect key="frame" x="67" y="31" width="240" height="128.66666666666666"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="UKU-2u-Ygr" firstAttribute="leading" secondItem="fbj-IU-wC2" secondAttribute="leading" constant="67" id="5W8-h4-ew2"/>
                             <constraint firstItem="fbj-IU-wC2" firstAttribute="trailing" secondItem="UKU-2u-Ygr" secondAttribute="trailing" constant="68" id="942-Ex-Gt4"/>
-                            <constraint firstItem="fbj-IU-wC2" firstAttribute="bottom" secondItem="2Tw-Xd-wUa" secondAttribute="bottom" constant="40" id="H76-JM-LcD"/>
-                            <constraint firstItem="2Tw-Xd-wUa" firstAttribute="leading" secondItem="fbj-IU-wC2" secondAttribute="leading" constant="20" id="HK3-QE-Nhn"/>
-                            <constraint firstItem="UKU-2u-Ygr" firstAttribute="top" secondItem="fbj-IU-wC2" secondAttribute="top" constant="31" id="JSE-Gm-oOL"/>
-                            <constraint firstItem="fbj-IU-wC2" firstAttribute="trailing" secondItem="2Tw-Xd-wUa" secondAttribute="trailing" constant="20" id="ZCQ-DK-HG4"/>
+                            <constraint firstItem="2Tw-Xd-wUa" firstAttribute="top" secondItem="UKU-2u-Ygr" secondAttribute="bottom" constant="10" id="Hzg-pD-6Cp"/>
+                            <constraint firstItem="UKU-2u-Ygr" firstAttribute="top" secondItem="fbj-IU-wC2" secondAttribute="top" constant="20" id="JSE-Gm-oOL"/>
+                            <constraint firstItem="2Tw-Xd-wUa" firstAttribute="leading" secondItem="fbj-IU-wC2" secondAttribute="leading" constant="20" id="Lxa-ry-X6D"/>
+                            <constraint firstItem="fbj-IU-wC2" firstAttribute="trailing" secondItem="2Tw-Xd-wUa" secondAttribute="trailing" constant="20" id="VPY-XZ-JV7"/>
+                            <constraint firstItem="fbj-IU-wC2" firstAttribute="bottom" secondItem="2Tw-Xd-wUa" secondAttribute="bottom" constant="20" id="psC-KL-dZh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fbj-IU-wC2"/>
                     </view>
@@ -466,13 +457,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lbY-sM-u4b"/>
+        <segue reference="cJv-4X-kBJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="I" width="128" height="128"/>
-        <image name="Triple Logo" width="66.666664123535156" height="66.666664123535156"/>
-        <image name="congrats" width="170.66667175292969" height="128.66667175292969"/>
+        <image name="Triple Logo" width="66.5" height="66.5"/>
+        <image name="congrats" width="256" height="193"/>
         <image name="gamecontroller" catalog="system" width="128" height="82"/>
     </resources>
 </document>

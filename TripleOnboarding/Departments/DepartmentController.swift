@@ -63,7 +63,6 @@ class DepartmentController: UITableViewController {
         }
     }
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return departContents.count     //Size of the struct
     }
