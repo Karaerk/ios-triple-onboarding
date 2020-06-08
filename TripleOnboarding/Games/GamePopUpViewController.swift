@@ -30,5 +30,11 @@ class GamePopUpViewController: UIViewController {
     @IBAction func CloseBtn(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
+    
+    //function to update the score and highscore of the games
+    func updateContent(score: String, highscore:String){
+        scoreLbl = score
+        highScoreLbl = highscore
+    }   
 
 }

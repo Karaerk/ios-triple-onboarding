@@ -135,8 +135,8 @@ class MemoryViewController: UIViewController {
         if (segue.identifier == "EndGamePopUp") {
             let gamePopUpVC = segue.destination as! GamePopUpViewController
             
-            gamePopUpVC.scoreLbl = String("Je score: \(score)")
-            gamePopUpVC.highScoreLbl = String("Highscore: \(highscoreMemory)")
+            //call the updateContent() method in the VC
+            gamePopUpVC.updateContent(score: String("Je score: \(score)"), highscore: String("Highscore: \(highscoreMemory)"))
         }
     }
 }

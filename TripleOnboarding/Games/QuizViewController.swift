@@ -132,8 +132,9 @@ class QuizViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "QuizEndPopUp") {
             let gamePopUpVC = segue.destination as! GamePopUpViewController
-            gamePopUpVC.scoreLbl = String("Je score: \(score)")
-            gamePopUpVC.highScoreLbl = String("Highscore: \(highscoreQuiz)")
+            
+            //call the updateContent() method in the VC
+            gamePopUpVC.updateContent(score: String("Je score: \(score)"), highscore: String("Highscore: \(highscoreQuiz)"))
         }
     }
     
