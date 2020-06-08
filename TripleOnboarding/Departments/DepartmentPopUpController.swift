@@ -32,7 +32,12 @@ class DepartmentPopUpController: UIViewController {
             ImageProcessors.Resize(size: departImage.bounds.size)
         ])
         
-        Nuke.loadImage(with: image, into: departImage)
+        let options = ImageLoadingOptions(
+            placeholder: #imageLiteral(resourceName: "Triple Logo"),
+            transition: .fadeIn(duration: 0.33)
+        )
+        
+        Nuke.loadImage(with: image, options: options, into: departImage)
         
         departImage.layer.cornerRadius = 10
         departContentLbl.attributedText = contentLbl.htmlAttributed(family: "Dosis-Regular", size: 12, color: .label)

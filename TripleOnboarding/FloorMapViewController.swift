@@ -35,7 +35,7 @@ class FloorMapViewController: UIViewController, UIScrollViewDelegate {
         
         imageView.image = UIImage(named: "Plattegrond 1e")
         for buttons in floorBtns{
-            buttons.layer.cornerRadius = 10
+            buttons.layer.cornerRadius = 3
         }
     }
 

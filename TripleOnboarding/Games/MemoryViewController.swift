@@ -34,44 +34,6 @@ class MemoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let token = defaults.string(forKey: "accessToken")
-        guard let url = URL(string: "https://appapi.wearetriple.com/api/facebook/getfaces") else {return}
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue("Bearer " + "\(token!)", forHTTPHeaderField: "Authorization")
-        
-        
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(response as Any)
-            guard let dataResponse = data,
-                error == nil else {
-                    print(error?.localizedDescription ?? "Response Error")
-                    return }
-            do {
-                //here dataResponse received from a network request
-                let jsonResponse = try JSONSerialization.jsonObject(with:
-                    dataResponse, options: [])
-                print(jsonResponse) //Response result
-            } catch let parsingError {
-                print("Error: ", parsingError)
-            }
-        }
-        task.resume()
-        
-        
-        //        let urlRequest = NSMutableURLRequest()
-        //        urlRequest.url = URL(string: "https://acc-appapi.wearetriple.com/api/Init/v1")!
-        //        urlRequest.httpMethod = "GET"
-        //        urlRequest.allHTTPHeaderFields = [ "Authorization" : "Bearer \(token!)" ]
-        
-        //        let task = URLSession.shared.dataTask(with: urlRequest as URLRequest) { (data: Data?, response: URLResponse?, error: Error?) in
-        //            print(token!)
-        //
-        //        }
-        //        task.resume()
-        
         updateContent()
         updateLabels()
     }
