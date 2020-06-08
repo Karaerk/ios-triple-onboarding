@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class DepartmentPopUpController: UIViewController {
     
@@ -18,19 +19,25 @@ class DepartmentPopUpController: UIViewController {
     
     var titleLbl: String!
     var contentLbl: String!
-    var imageView: UIImage!
+    var imageView: URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //departTitleLbl.text = titleLbl
-        departContentLbl.attributedText = contentLbl.htmlAttributed(family: "Dosis-Regular", size: 12, color: .label)
-        departImage.image = imageView
+        updateContent()
+    }
+    
+    func updateContent() {
+        let image = ImageRequest(url: imageView, processors: [
+            ImageProcessors.Resize(size: departImage.bounds.size)
+        ])
+        
+        Nuke.loadImage(with: image, into: departImage)
         
         departImage.layer.cornerRadius = 10
+        departContentLbl.attributedText = contentLbl.htmlAttributed(family: "Dosis-Regular", size: 12, color: .label)
         
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: departContentLbl.bottomAnchor).isActive = true
-        // Do any additional setup after loading the view.
         self.navigationItem.title = titleLbl
     }
 }

@@ -23,6 +23,18 @@ class ButtonsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func updateContent(text: String){
+        self.textLabel?.text = text
+        self.textLabel?.textAlignment = .center
+        self.textLabel?.font = UIFont(name: "Dosis-Regular", size: 25)
+        self.textLabel?.textColor = UIColor.white
+        self.backgroundColor = pinkColor
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.borderWidth = 5
+        self.layer.cornerRadius = 20
+
+    }
 
 
 }

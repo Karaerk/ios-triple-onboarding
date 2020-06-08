@@ -58,16 +58,9 @@ class FactsController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategorieCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategorieCell", for: indexPath) as! ButtonsCell
         let content = factsCont[indexPath.row]
-        cell.textLabel?.text = content.categorie
-        cell.textLabel?.textAlignment = .center
-        cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: fontSize)
-        cell.textLabel?.textColor = UIColor.white
-        cell.backgroundColor = pinkColor
-        cell.layer.borderColor = UIColor.white.cgColor
-        cell.layer.borderWidth = 5
-        cell.layer.cornerRadius = 20
+        cell.updateContent(text: content.categorie)
 
         return cell
     }

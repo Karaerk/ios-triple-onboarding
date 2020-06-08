@@ -50,15 +50,8 @@ class FAQController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
-        cell.textLabel?.text = questions[indexPath.row]
-        cell.textLabel?.textAlignment = .center
-        cell.textLabel?.font = UIFont(name: "Dosis-Regular", size: 25)
-        cell.textLabel?.textColor = UIColor.white
-        cell.backgroundColor = pinkColor
-        cell.layer.borderColor = UIColor.white.cgColor
-        cell.layer.borderWidth = 5
-        cell.layer.cornerRadius = 20
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! ButtonsCell
+        cell.updateContent(text: questions[indexPath.row])
 
         return cell
     }

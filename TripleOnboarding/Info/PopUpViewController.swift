@@ -11,6 +11,7 @@ import UIKit
 class PopUpViewController: UIViewController {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var contentLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     var titleLbl: String!
     var contentLbl: String!
@@ -21,5 +22,11 @@ class PopUpViewController: UIViewController {
         titleLabel.text = titleLbl
         contentLabel.text = contentLbl
         // Do any additional setup after loading the view.
+        backButton.setImage(#imageLiteral(resourceName: "user-interface"), for: .normal)
+    }
+    
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

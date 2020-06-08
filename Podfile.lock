@@ -45,11 +45,13 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - Nuke (9.1.0)
 
 DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - MSAL
+  - Nuke (~> 9.0)
 
 SPEC REPOS:
   trunk:
@@ -67,6 +69,7 @@ SPEC REPOS:
     - leveldb-library
     - MSAL
     - nanopb
+    - Nuke
 
 SPEC CHECKSUMS:
   Firebase: 0490eca762a72e4f1582319539153897f1508dee
@@ -83,7 +86,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MSAL: d62d5af3b89f9753be6d157035629bbd851e4d15
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  Nuke: c97bf6006d31687cfa7c28507305143de27a4aa1
 
-PODFILE CHECKSUM: 11895cceaa346c8b73a49b53f7c3d0dc98b62add
+PODFILE CHECKSUM: 4b22a3497b1702dafb9910eaf511664290bb4768
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.2

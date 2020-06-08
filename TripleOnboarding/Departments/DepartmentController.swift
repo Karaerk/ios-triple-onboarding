@@ -8,10 +8,11 @@
 import Foundation
 import UIKit
 import FirebaseDatabase
+import Nuke
 
 struct DepartmentContent{
-    var thumbnail : UIImage!
-    var image : UIImage!
+    var thumbnail : URL!
+    var image : URL!
     var title : String
     var content : String
 }
@@ -23,7 +24,7 @@ class DepartmentController: UITableViewController {
     //Used for the popup controller
     private var departPageTitle: String!
     private var departPageContent: String!
-    private var departPageImage: UIImage!
+    private var departPageImage: URL!
     
     private var sequeIdentifier = "DepartmentPage"
     
@@ -35,9 +36,6 @@ class DepartmentController: UITableViewController {
     }
     
     func updateContent(){
-        let noImage = #imageLiteral(resourceName: "Triple Logo").pngData()
-        
-        
         ref = Database.database().reference().child("department")
         
         ref.observe(.childAdded) { (snapshot) in
@@ -50,15 +48,8 @@ class DepartmentController: UITableViewController {
             let thumbnailUrl = URL(string: (firebaseResponse["thumbnail"] as? String)!)
             let imageUrl = URL(string: (firebaseResponse["image"] as? String)!)
             
-            //Thumbnail
-            let thumbnailData = try? Data(contentsOf: thumbnailUrl!)
-            let thumbnail = UIImage(data: thumbnailData ?? noImage!)
-            //Image
-            let imageData = try? Data(contentsOf: imageUrl!)
-            let image = UIImage(data: imageData ?? noImage!)
-            
             //Append the title and content from firebase to the struct
-            self.departContents.append(DepartmentContent(thumbnail: thumbnail, image: image, title: departTitle, content: departContent))
+            self.departContents.append(DepartmentContent(thumbnail: thumbnailUrl, image: imageUrl, title: departTitle, content: departContent))
             self.tableView.reloadData()
         }
     }
@@ -71,8 +62,13 @@ class DepartmentController: UITableViewController {
         //Uses the variables from departmentcell
         let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentCell", for: indexPath) as! ImageTitleCell
         let content = departContents[indexPath.row]
+        //Image processing
+        let options = ImageLoadingOptions(
+            placeholder: #imageLiteral(resourceName: "Triple Logo"),
+            transition: .fadeIn(duration: 0.33)
+        )
         cell.titleLabel.text = content.title
-        cell.imageViewUI.image = content.thumbnail
+        Nuke.loadImage(with: content.thumbnail, options: options, into: cell.imageViewUI)
         return cell
     }
     

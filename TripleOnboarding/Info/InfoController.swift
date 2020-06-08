@@ -60,6 +60,7 @@ class InfoController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let popUpVC = segue.destination as! PopUpViewController
+        
         popUpVC.titleLbl = self.popUpTitle
         popUpVC.contentLbl = self.popUpContent
     }

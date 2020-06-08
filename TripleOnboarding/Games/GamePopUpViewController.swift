@@ -11,7 +11,7 @@ import UIKit
 class GamePopUpViewController: UIViewController {
     
     @IBOutlet weak private var scoreLabel: UILabel!
-    @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak private var highScoreLabel: UILabel!
     
     var scoreLbl: String!
     var contentLbl: String!
