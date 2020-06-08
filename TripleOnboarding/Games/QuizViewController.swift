@@ -120,6 +120,7 @@ class QuizViewController: UIViewController {
         updateHighScore()
      }
      
+    //function to update the highscore
      func updateHighScore(){
          if (score > highscoreQuiz){
              highscoreQuiz = score

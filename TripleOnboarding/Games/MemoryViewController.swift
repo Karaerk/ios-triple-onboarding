@@ -122,6 +122,7 @@ class MemoryViewController: UIViewController {
         updateHighScore()
     }
     
+    //function to update the highscore
     func updateHighScore(){
         if (score > highscoreMemory){
             highscoreMemory = score
