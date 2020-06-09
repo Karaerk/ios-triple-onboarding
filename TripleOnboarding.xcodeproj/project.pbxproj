@@ -17,10 +17,7 @@
 		AF0E8A5B244EDACC00D66D5A /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */; };
 		AF0E8A67244EDE5F00D66D5A /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E8A66244EDE5F00D66D5A /* VideoController.swift */; };
 		AF1AE235246AA818001165A7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1AE234246AA818001165A7 /* Login.storyboard */; };
-		AF1AE23A246AA89E001165A7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AE239246AA89E001165A7 /* LoginController.swift */; };
-		AF1AE23D246AC877001165A7 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AE23C246AC877001165A7 /* Login.swift */; };
 		AF1AE23F246AE170001165A7 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1AE23E246AE170001165A7 /* Account.storyboard */; };
-		AF1AE241246AE1AF001165A7 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AE240246AE1AF001165A7 /* AccountController.swift */; };
 		AF3666E324348479009007C9 /* Hour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3666E224348479009007C9 /* Hour.storyboard */; };
 		AF3666E924348BBD009007C9 /* HourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666E824348BBD009007C9 /* HourController.swift */; };
 		AF3666EB24348C4D009007C9 /* HourNewPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666EA24348C4D009007C9 /* HourNewPageController.swift */; };
@@ -93,11 +90,8 @@
 		AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
 		AF0E8A66244EDE5F00D66D5A /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 		AF1AE234246AA818001165A7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		AF1AE239246AA89E001165A7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AF1AE23B246AABFF001165A7 /* TripleOnboarding.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TripleOnboarding.entitlements; sourceTree = "<group>"; };
-		AF1AE23C246AC877001165A7 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AF1AE23E246AE170001165A7 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
-		AF1AE240246AE1AF001165A7 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		AF3666E224348479009007C9 /* Hour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hour.storyboard; sourceTree = "<group>"; };
 		AF3666E824348BBD009007C9 /* HourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourController.swift; sourceTree = "<group>"; };
 		AF3666EA24348C4D009007C9 /* HourNewPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourNewPageController.swift; sourceTree = "<group>"; };
@@ -277,16 +271,6 @@
 			path = Story;
 			sourceTree = "<group>";
 		};
-		AF1AE236246AA834001165A7 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				AF1AE239246AA89E001165A7 /* LoginController.swift */,
-				AF1AE23C246AC877001165A7 /* Login.swift */,
-				AF1AE240246AE1AF001165A7 /* AccountController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		AF3A70492420D69000BAD193 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,7 +321,6 @@
 		AF8EC20B2410FD6500EC86F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AF1AE236246AA834001165A7 /* Login */,
 				AF0E8A5E244EDC8D00D66D5A /* Departments */,
 				AF0E8A62244EDCCF00D66D5A /* Facts */,
 				AF0E8A61244EDCC800D66D5A /* FAQ */,
@@ -677,10 +660,8 @@
 				AFDC1DCD240E98C800CC0CDF /* AppDelegate.swift in Sources */,
 				AFDC1DCF240E98C800CC0CDF /* SceneDelegate.swift in Sources */,
 				AF5BE1D6242226D500659120 /* FAQController.swift in Sources */,
-				AF1AE241246AE1AF001165A7 /* AccountController.swift in Sources */,
 				AF823B3B240FF29100650AB0 /* PopUpViewController.swift in Sources */,
 				AF596C8324409D5200138E9F /* String+Extension.swift in Sources */,
-				AF1AE23A246AA89E001165A7 /* LoginController.swift in Sources */,
 				AF85625E242A72F600F995F5 /* ImageTitleCell.swift in Sources */,
 				AF596C862440A64100138E9F /* ButtonsCell.swift in Sources */,
 				AF7BCA7D242A11BD00550EBD /* GamesViewController.swift in Sources */,
@@ -688,7 +669,6 @@
 				AF3666F12434B982009007C9 /* HourTableControl.swift in Sources */,
 				9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */,
 				AF856262242A8F3800F995F5 /* TabBarController.swift in Sources */,
-				AF1AE23D246AC877001165A7 /* Login.swift in Sources */,
 				AF3A704F2420DE5F00BAD193 /* PopUpController.swift in Sources */,
 				AFAD7857242BA2B3006735D0 /* DepartmentPopUpController.swift in Sources */,
 				AF3A70482420CF9800BAD193 /* FactsController.swift in Sources */,

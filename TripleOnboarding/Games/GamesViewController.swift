@@ -19,21 +19,4 @@ class GamesViewController: UIViewController {
             buttons.layer.cornerRadius = 50
         }
     }
-    @IBAction func memoryBtn(_ sender: Any) {
-        
-        let loadAccount = DispatchGroup()
-        loadAccount.enter()
-        loadMSAL()
-        loadAccount.leave()
-        loadAccount.notify(queue: .main) {
-            if loginSucces() {
-                self.performSegue(withIdentifier: "memory", sender: nil)
-            } else {
-                let mainStoryboard:UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-                let homePage = mainStoryboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
-                self.present(homePage, animated: true, completion: nil)
-                homePage.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-            }
-        }
-    }
 }
