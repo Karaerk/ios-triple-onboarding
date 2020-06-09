@@ -16,7 +16,6 @@
 		9BB05AC72418D49100BBB0C6 /* FloorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */; };
 		AF0E8A5B244EDACC00D66D5A /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */; };
 		AF0E8A67244EDE5F00D66D5A /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E8A66244EDE5F00D66D5A /* VideoController.swift */; };
-		AF1AE235246AA818001165A7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1AE234246AA818001165A7 /* Login.storyboard */; };
 		AF1AE23F246AE170001165A7 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1AE23E246AE170001165A7 /* Account.storyboard */; };
 		AF3666E324348479009007C9 /* Hour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3666E224348479009007C9 /* Hour.storyboard */; };
 		AF3666E924348BBD009007C9 /* HourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3666E824348BBD009007C9 /* HourController.swift */; };
@@ -89,7 +88,6 @@
 		9BB05AC62418D49100BBB0C6 /* FloorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapViewController.swift; sourceTree = "<group>"; };
 		AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
 		AF0E8A66244EDE5F00D66D5A /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
-		AF1AE234246AA818001165A7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		AF1AE23B246AABFF001165A7 /* TripleOnboarding.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TripleOnboarding.entitlements; sourceTree = "<group>"; };
 		AF1AE23E246AE170001165A7 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		AF3666E224348479009007C9 /* Hour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hour.storyboard; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 				AF85624A242A6D5800F995F5 /* Department.storyboard */,
 				AF3666E224348479009007C9 /* Hour.storyboard */,
 				AF0E8A5A244EDACC00D66D5A /* Videos.storyboard */,
-				AF1AE234246AA818001165A7 /* Login.storyboard */,
 				AF1AE23E246AE170001165A7 /* Account.storyboard */,
 			);
 			path = Story;
@@ -503,7 +500,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF85624B242A6D5800F995F5 /* Department.storyboard in Resources */,
-				AF1AE235246AA818001165A7 /* Login.storyboard in Resources */,
 				AF1AE23F246AE170001165A7 /* Account.storyboard in Resources */,
 				AF7BCA8C242A17BF00550EBD /* Dosis-Regular.ttf in Resources */,
 				AF0E8A5B244EDACC00D66D5A /* Videos.storyboard in Resources */,

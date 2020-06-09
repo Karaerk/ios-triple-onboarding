@@ -32,7 +32,7 @@ class InfoController: UIViewController {
         ref = Database.database().reference().child("info")
         var counter = 0
         
-        ref.queryOrdered(byChild: "title").queryLimited(toLast: 5).observe(.childAdded) { (snapshot) in
+        ref.queryOrdered(byChild: "title").queryLimited(toLast: 4).observe(.childAdded) { (snapshot) in
             guard let firebaseResponse = snapshot.value as? [String:Any] else{
                 return
             }

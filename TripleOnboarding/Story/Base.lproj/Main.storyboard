@@ -26,11 +26,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-Ci-hHb">
-                                <rect key="frame" x="15" y="108" width="345" height="601"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-Ci-hHb">
+                                <rect key="frame" x="30" y="108" width="315" height="601"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-5g-YqY">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="104.33333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="127.66666666666667"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title="  ">
@@ -42,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wua-QT-43V">
-                                        <rect key="frame" x="0.0" y="124.33333333333334" width="345" height="104"/>
+                                        <rect key="frame" x="0.0" y="157.66666666666669" width="315" height="128"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title="  ">
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUQ-Uo-09v">
-                                        <rect key="frame" x="0.0" y="248.33333333333334" width="345" height="104.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="315.66666666666669" width="315" height="127.66666666666669"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-fX-qWz">
-                                        <rect key="frame" x="0.0" y="372.66666666666669" width="345" height="104"/>
+                                        <rect key="frame" x="0.0" y="473.33333333333343" width="315" height="127.66666666666669"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
                                         <state key="normal" title=" ">
@@ -77,25 +77,14 @@
                                             <segue destination="BIz-lt-7mH" kind="presentation" identifier="Identifier" id="WoR-Up-gQt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L43-ns-gn8">
-                                        <rect key="frame" x="0.0" y="496.66666666666657" width="345" height="104.33333333333331"/>
-                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="28"/>
-                                        <state key="normal" title=" ">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="infoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hn-0L-aQb"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Pds-Ci-hHb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2KH-nD-4YA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pds-Ci-hHb" secondAttribute="trailing" constant="15" id="GgZ-dk-buu"/>
-                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QIy-Sa-VEN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pds-Ci-hHb" secondAttribute="trailing" constant="30" id="GgZ-dk-buu"/>
+                            <constraint firstItem="Pds-Ci-hHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QIy-Sa-VEN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pds-Ci-hHb" secondAttribute="bottom" constant="20" id="SoU-BP-GHf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -106,7 +95,6 @@
                         <outletCollection property="titleButtons" destination="wua-QT-43V" collectionClass="NSMutableArray" id="USY-Vv-Bp4"/>
                         <outletCollection property="titleButtons" destination="jUQ-Uo-09v" collectionClass="NSMutableArray" id="Rnd-1u-L7z"/>
                         <outletCollection property="titleButtons" destination="dfL-fX-qWz" collectionClass="NSMutableArray" id="wS4-uA-Uu7"/>
-                        <outletCollection property="titleButtons" destination="L43-ns-gn8" collectionClass="NSMutableArray" id="f6L-Fb-uoi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
