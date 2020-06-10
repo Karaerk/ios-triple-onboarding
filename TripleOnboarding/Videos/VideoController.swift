@@ -39,21 +39,10 @@ class VideoController: UITableViewController {
             let videoTitle = (firebaseResponse["title"] as? String)!
             let videoUrl = URL(string: (firebaseResponse["url"] as? String)!)
             
-            //Thumbnail, if thumbnail == nil than thumbnail is made from video.
-            //if (firebaseResponse["thumbnail"] == nil) {
             self.getThumbnailImageFromVideoUrl(url: videoUrl!) { (thumbImage) in
                 self.videoContent.append(VideoContent(title: videoTitle, url: videoUrl, image: thumbImage))
                 self.tableView.reloadData()
             }
-            //            } else {
-            //                let thumbnailUrl = URL(string: (firebaseResponse["thumbnail"] as? String)!)
-            //                //Thumbnail
-            //                let thumbnailData = try! Data(contentsOf: thumbnailUrl!)
-            //                let thumbImage = UIImage(data: thumbnailData)
-            //
-            //                self.videoContent.append(VideoContent(title: videoTitle, url: videoUrl, image: thumbImage))
-            //                self.tableView.reloadData()
-            //            }
         }
     }
     

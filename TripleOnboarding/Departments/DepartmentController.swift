@@ -62,13 +62,16 @@ class DepartmentController: UITableViewController {
         //Uses the variables from departmentcell
         let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentCell", for: indexPath) as! ImageTitleCell
         let content = departContents[indexPath.row]
+        
         //Image processing
         let options = ImageLoadingOptions(
-            placeholder: #imageLiteral(resourceName: "Triple Logo"),
+            placeholder: #imageLiteral(resourceName: "congrats"),
             transition: .fadeIn(duration: 0.33)
         )
-        cell.titleLabel.text = content.title
         Nuke.loadImage(with: content.thumbnail, options: options, into: cell.imageViewUI)
+        
+        //Title
+        cell.titleLabel.text = content.title
         return cell
     }
     

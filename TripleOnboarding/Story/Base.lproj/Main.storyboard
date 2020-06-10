@@ -189,7 +189,6 @@
                         <segue destination="w0M-6S-QL8" kind="relationship" relationship="viewControllers" id="2NA-Kc-OCh"/>
                         <segue destination="v04-PW-ie6" kind="relationship" relationship="viewControllers" id="oRV-8f-fXI"/>
                         <segue destination="C1H-qk-aKp" kind="relationship" relationship="viewControllers" id="6kY-gs-mnW"/>
-                        <segue destination="57Y-WA-7fE" kind="relationship" relationship="viewControllers" id="feM-qJ-vhU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwy-GU-0gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,16 +284,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wr-mE-FIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2021.5999999999999" y="138.17733990147784"/>
-        </scene>
-        <!--Account-->
-        <scene sceneID="w6l-yD-SgR">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Account" id="57Y-WA-7fE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WfR-gD-Jce"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aLJ-dt-Wbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1690" y="572"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -16,7 +16,6 @@ class DepartmentPopUpController: UIViewController {
     @IBOutlet weak private var departContentLbl: UILabel!
     @IBOutlet weak private var scrollView: UIScrollView!
     
-    
     var titleLbl: String!
     var contentLbl: String!
     var imageView: URL!
